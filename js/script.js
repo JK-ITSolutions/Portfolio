@@ -20,3 +20,27 @@ function animateSkills() {
 
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
+
+const portfolioImages = document.querySelectorAll('.portfolio-item img');
+
+const lightbox = document.getElementById('lightbox');
+
+const lightboxImg = document.getElementById('lightbox-img');
+
+portfolioImages.forEach(img => {
+
+img.addEventListener('click', () => {
+
+lightbox.style.display = "flex";
+
+lightboxImg.src = img.src;
+
+});
+
+});
+
+lightbox.addEventListener('click', () => {
+
+lightbox.style.display = "none";
+
+});
