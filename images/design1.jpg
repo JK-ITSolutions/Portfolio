@@ -1,0 +1,30 @@
+<div class="flex items-center bg-black p-10 justify-center min-h-screen">
+  <div class="flex items-stretch h-16 bg-[#A3FF00] font-sans">
+    
+    <div class="flex items-center justify-center px-4 border-r border-black/20">
+      <div class="w-10 h-10 rounded-full border-2 border-black flex items-center justify-center overflow-hidden">
+        <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.5" class="w-8 h-8">
+          <path d="M12 2a7 7 0 0 0-7 7c0 3 2.5 5 2.5 5l.5 2h8l.5-2s2.5-2 2.5-5a7 7 0 0 0-7-7z" />
+          <circle cx="12" cy="9" r="2" />
+          <path d="M9 21h6" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="relative w-24 overflow-hidden flex items-center">
+       <svg viewBox="0 0 100 100" class="absolute inset-0 h-full w-full text-black opacity-90">
+         <path d="M0 20 h30 L45 5 M0 50 h40 L55 35 M0 80 h25 L40 95" stroke="currentColor" fill="none" stroke-width="2"/>
+         <circle cx="45" cy="5" r="3" fill="currentColor"/>
+         <circle cx="55" cy="35" r="3" fill="currentColor"/>
+         <circle cx="40" cy="95" r="3" fill="currentColor"/>
+       </svg>
+    </div>
+
+    <div class="flex items-center pr-8 pl-2">
+      <span class="text-3xl font-black tracking-tighter text-black">JK</span>
+      <span class="mx-2 w-4 h-1 bg-red-600 self-center mt-1"></span>
+      <span class="text-3xl font-black tracking-widest text-black">TECH</span>
+    </div>
+    
+  </div>
+</div>
