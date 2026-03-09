@@ -1,174 +1,100 @@
-# 🚀 JK IT Solutions – Official Portfolio Website
+🚀 JK Tech – Professional Portfolio Website
+Welcome to the official repository of JK Tech, a digital solutions provider delivering cutting-edge services in Shopify Development, Python Automation, Web Development, ERP Integration, and Digital Marketing for businesses in Pakistan and worldwide.
+🌐 This repository contains the full source code of the JK Tech professional portfolio website, designed to showcase services, expertise, and projects.
+👨‍💻 About JK Tech
+JK Tech is a technology-driven agency helping businesses grow through smart websites, automation, and eCommerce solutions.
+Founder: Jehangir Khan
+Location: Rawalpindi & Islamabad, Pakistan
+Experience: 10+ Years in IT Support, Web Development, ERP & Automation
+Our mission: Empowering businesses with digital tools that drive growth and efficiency.
+🌐 Live Website
+GitHub Pages: https://jk-itsolutions.github.io⁠�
+Custom Domain (Optional): https://jktech.pk⁠�
+📁 Project Structure
+The repository is structured for fast loading, SEO optimization, and mobile responsiveness:
+Copy code
 
-Welcome to the official portfolio repository of **JK IT Solutions**, a digital solutions provider specializing in Shopify Development, Python Software, Automation Systems, and Web Development for businesses in Pakistan and globally.
-
-🌐 This repository contains the complete source code of the JK IT Solutions professional portfolio website.
-
----
-
-# 👨‍💻 About JK IT Solutions
-
-JK IT Solutions is a technology-focused digital service provider helping businesses grow through smart websites, automation, and eCommerce solutions.
-
-📍 Based in: Rawalpindi & Islamabad, Pakistan
-💼 Founder: Jehangir Khan
-🧠 Experience: 10+ Years in IT Support, Web Development, ERP & Automation
-
----
-
-# 🌐 Live Website (GitHub Pages)
-
-Once deployed:
-
-```
-https://jk-itsolutions.github.io
-```
-
-Custom Domain (Optional):
-
-```
-https://jktech.pk
-```
-
----
-
-# 📁 Project Structure
-
-This repository is structured for SEO optimization, fast loading, and mobile responsiveness.
-
-```
 JK-ITSolutions-Portfolio/
 │
-├── index.html              # Homepage / Main Portfolio
-├── shopify.html            # Shopify Services Page
+├── index.html              # Homepage / Portfolio Overview
+├── shopify.html            # Shopify Services
 ├── python.html             # Python & Automation Services
 ├── web-dev.html            # Web Development Services
-├── social-media.html       # Digital Marketing Services
-├── business-coaching.html  # Business Coaching Services
-├── experience.html         # Professional Experience Page
-├── contact.html            # Contact Page
+├── social-media.html       # Social Media Marketing
+├── business-coaching.html  # Business Coaching
+├── experience.html         # Professional Experience Timeline
+├── contact.html            # Contact / Inquiry Page
 │
 ├── css/
-│   └── style.css           # Main Stylesheet (Responsive Design)
-│
+│   └── style.css           # Main stylesheet (Responsive & Modern UI)
 ├── js/
-│   └── script.js           # Animations & Scroll Reveal Logic
-│
-├── images/                 # Website Images & Assets
+│   └── script.js           # Animations, Scroll Reveal, Lightbox
+├── images/                 # Website images & assets
 ├── .gitignore              # Git ignore file
 └── README.md               # Project Documentation
-```
-
----
-
-# 🧠 Core Skills & Expertise
-
-## 🛒 Shopify Development
-
-* Complete Shopify Store Setup
-* Theme Customization (Liquid)
-* SEO Optimized Product Pages
-* Speed Optimization
-* WhatsApp Integration
-* Conversion-Focused UI/UX
-
-## 🐍 Python Software Development
-
-* POS System Development (Kivy & CustomTkinter)
-* Business Automation Software
-* Desktop Applications
-* Inventory & Reporting Systems
-* Local Database (SQLite) Solutions
-
-## 🌐 Web Development
-
-* Responsive Website Design
-* Portfolio Websites
-* Business Websites
-* Landing Pages (High Conversion)
-* Mobile-Friendly UI/UX Design
-
-## ⚙️ Automation & ERP
-
-* Python Automation Tools
-* Office Management Systems
-* Expense Tracking Dashboards
-* ERP Support (Odoo & Business Systems)
-
----
-
-# 🏆 Featured Portfolio Sections
-
-This website includes multiple professional service pages:
-
-* 🏠 Home (index.html)
-* 🛍 Shopify Services
-* 🐍 Python & Automation
-* 🌐 Web Development
-* 📱 Social Media Services
-* 💼 Experience & Career Timeline
-* 📞 Contact Page for Clients
-
----
-
-# 📱 Mobile & SEO Optimization
-
-This portfolio is built with:
-
-* Responsive Design (Mobile Friendly)
-* SEO Optimized Meta Tags
-* Clean Semantic HTML5 Structure
-* Fast Loading Assets
-* Optimized Navigation & Accessibility
-* Scroll Reveal Animations for Better UX
-
----
-
-# 🛠️ Technologies Used
-
-* HTML5 (Semantic & SEO Structured)
-* CSS3 (Responsive & Modern UI)
-* JavaScript (Animations & Interactions)
-* ScrollReveal.js (UI Animations)
-* GitHub Pages (Hosting)
-
----
-
-# 🎯 Professional Experience Highlights
-
-* 10+ Years in IT Support & Digital Solutions
-* International Exposure (UAE, Malaysia & Pakistan)
-* Shopify Store Development & Optimization
-* Custom Python POS & Business Software
-* Business Automation & Workflow Systems
-
----
-
-# 📈 SEO Keywords (Portfolio Targeting)
-
-* Shopify Developer Pakistan
-* Python Developer Pakistan
-* POS System Developer
-* Web Developer Islamabad Rawalpindi
-* Automation Expert Pakistan
-* Digital Solutions Agency Pakistan
-
----
-
-# 📞 Contact & Business Inquiries
-
-📧 Email: [ithelpdesktop1@gmail.com](mailto:ithelpdesktop1@gmail.com)
-💬 WhatsApp: Available for Non-Tech Clients
-📍 Location: Pakistan (Islamabad & Rawalpindi)
-
----
-
-# 🔒 License
-
+🧠 Core Skills & Expertise
+🛒 Shopify Development
+Complete Shopify Store Setup & Theme Customization (Liquid)
+SEO-Optimized Product Pages
+High-Speed, Conversion-Focused UI/UX
+WhatsApp Integration & Checkout Optimization
+🐍 Python Software Development
+POS Systems (Kivy & CustomTkinter)
+Business Automation & Workflow Tools
+Desktop Applications & Reporting Dashboards
+Inventory & Local Database (SQLite) Management
+🌐 Web Development
+Responsive Websites & Landing Pages
+Portfolio & Business Websites
+High-Conversion UI/UX Design
+Mobile-Friendly Layouts
+⚙️ Automation & ERP
+Python Automation Scripts & Tools
+Office Management Systems & Expense Tracking
+ERP Integration (Odoo & Custom Solutions)
+Business Process Automation
+🏆 Featured Portfolio Pages
+The website includes professional service sections:
+🏠 Home
+🛍 Shopify Services
+🐍 Python & Automation
+🌐 Web Development
+📱 Social Media Marketing
+💼 Experience & Career Timeline
+📞 Contact Form
+📱 Mobile & SEO Optimization
+Built with performance and accessibility in mind:
+Fully Responsive & Mobile-First Design
+SEO Optimized Meta Tags & Semantic HTML5
+Fast Loading Assets
+Smooth ScrollReveal Animations
+Accessibility-Friendly Navigation
+🛠️ Technologies Used
+HTML5 – Semantic structure & SEO-ready
+CSS3 – Responsive, modern, with custom animations
+JavaScript – Animations, lightbox, scroll interactions
+ScrollReveal.js – Engaging on-scroll animations
+GitHub Pages – Hosting & live deployment
+🎯 Professional Experience Highlights
+10+ Years in IT Support & Digital Solutions
+International Exposure: UAE, Malaysia & Pakistan
+Shopify Store Development & Optimization
+Custom Python POS & Business Software
+Automation & Workflow System Development
+📈 SEO Keywords
+Targeted for portfolio visibility and client search:
+Shopify Developer Pakistan
+Python Developer Pakistan
+POS System Developer
+Web Developer Islamabad / Rawalpindi
+Automation Expert Pakistan
+Digital Solutions Agency
+📞 Contact & Inquiries
+Email: ithelpdesktop1@gmail.com
+WhatsApp: Available for non-technical clients
+Location: Pakistan (Islamabad & Rawalpindi)
+💼 Available for freelance projects, long-term contracts, and custom software solutions
+🚀 Focused on building smart digital solutions for modern businesses
+🔒 License
 This project is licensed under the MIT License.
-All rights reserved © JK IT Solutions.
-
----
-
-> 💼 Available for Freelance Projects, Long-Term Contracts & Business Software Development
-> 🚀 Building Smart Digital Solutions for Modern Businesses
+© 2026 JK Tech – All rights reserved.
