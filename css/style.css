@@ -139,12 +139,15 @@ header {
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.8rem;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    /* Remove the text-specific gradients since it's an image now */
+}
+
+.logo img {
+    max-height: 50px; /* Adjust this to fit your header height */
+    width: auto;      /* Keeps the aspect ratio perfect */
+    display: block;
 }
 
 nav {
