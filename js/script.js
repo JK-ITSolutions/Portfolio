@@ -109,31 +109,3 @@ offset = offset === 0 ? -15 : 0;
 logoImg.style.transform = translateY(${offset}px);
 }, 3000);
 }
-
-// NAVIGATION SLIDER & HAMBURGER
-const navLinks = document.querySelectorAll('.nav-links a');
-const slider = document.querySelector('.nav-slider');
-const navLinksContainer = document.querySelector('.nav-links');
-const navToggle = document.querySelector('.nav-toggle');
-
-// HAMBURGER TOGGLE
-navToggle.addEventListener('click', () => {
-navLinksContainer.classList.toggle('open');
-});
-
-// SLIDER EFFECT
-function moveSlider(el) {
-const rect = el.getBoundingClientRect();
-const parentRect = el.parentElement.getBoundingClientRect();
-slider.style.width = rect.width + "px";
-slider.style.left = (rect.left - parentRect.left) + "px";
-}
-
-navLinks.forEach(link => {
-link.addEventListener('mouseenter', (e) => moveSlider(e.target));
-link.addEventListener('click', (e) => moveSlider(e.target));
-});
-
-// Set slider on current page
-const currentLink = document.querySelector('.nav-links a[aria-current="page"]');
-if(currentLink) moveSlider(currentLink);
