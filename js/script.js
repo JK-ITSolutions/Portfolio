@@ -27,7 +27,6 @@ function animateSkills() {
     });
 }
 
-// Trigger on scroll and load
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
@@ -47,15 +46,12 @@ function showLightbox(index) {
     lightboxImg.src = portfolioImages[currentIndex].src;
 }
 
-// Click on portfolio images
 portfolioImages.forEach((img, i) => {
     img.addEventListener('click', () => showLightbox(i));
 });
 
-// Close lightbox
 closeBtn.addEventListener('click', () => lightbox.style.display = 'none');
 
-// Navigate images
 function showNext() {
     currentIndex = (currentIndex + 1) % portfolioImages.length;
     lightboxImg.src = portfolioImages[currentIndex].src;
@@ -68,7 +64,6 @@ function showPrev() {
 nextBtn.addEventListener('click', showNext);
 prevBtn.addEventListener('click', showPrev);
 
-// Keyboard support
 document.addEventListener('keydown', (e) => {
     if (lightbox.style.display === 'flex') {
         if (e.key === 'ArrowRight') showNext();
@@ -77,15 +72,14 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Swipe support for mobile
 let touchStartX = 0;
 let touchEndX = 0;
 
 lightbox.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
 lightbox.addEventListener('touchend', e => {
     touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX - touchStartX > 50) showPrev();      // Swipe right
-    if (touchStartX - touchEndX > 50) showNext();      // Swipe left
+    if (touchEndX - touchStartX > 50) showPrev();
+    if (touchStartX - touchEndX > 50) showNext();
 });
 
 // ==================== SMOOTH SCROLL FOR NAV LINKS ====================
@@ -109,30 +103,47 @@ if (logoImg) {
     }, 3000);
 }
 
-// NAVIGATION SLIDER & HAMBURGER
+// ==================== NAVIGATION SLIDER & HAMBURGER PREMIUM ====================
 const navLinks = document.querySelectorAll('.nav-links a');
-const slider = document.querySelector('.nav-slider');
 const navLinksContainer = document.querySelector('.nav-links');
 const navToggle = document.querySelector('.nav-toggle');
 
-// HAMBURGER TOGGLE
+// Create gradient slider element
+let slider = document.createElement('div');
+slider.classList.add('nav-slider');
+navLinksContainer.appendChild(slider);
+
+// HAMBURGER TOGGLE & ANIMATION
 navToggle.addEventListener('click', () => {
-  navLinksContainer.classList.toggle('open');
+    navLinksContainer.classList.toggle('open');
+    navToggle.classList.toggle('active');
 });
 
-// SLIDER EFFECT
+// Function to move slider with smooth gradient transition
 function moveSlider(el) {
-  const rect = el.getBoundingClientRect();
-  const parentRect = el.parentElement.getBoundingClientRect();
-  slider.style.width = rect.width + "px";
-  slider.style.left = (rect.left - parentRect.left) + "px";
+    const rect = el.getBoundingClientRect();
+    const parentRect = el.parentElement.getBoundingClientRect();
+    slider.style.width = rect.width + 'px';
+    slider.style.left = (rect.left - parentRect.left) + 'px';
+    slider.style.transition = 'all 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+    slider.style.background = 'linear-gradient(90deg, #ff00ff, #00ffff, #ff9900)';
+    slider.style.height = '3px';
+    slider.style.position = 'absolute';
+    slider.style.bottom = '0';
+    slider.style.borderRadius = '2px';
 }
 
+// Hover & click events for slider
 navLinks.forEach(link => {
-  link.addEventListener('mouseenter', (e) => moveSlider(e.target));
-  link.addEventListener('click', (e) => moveSlider(e.target));
+    link.addEventListener('mouseenter', () => moveSlider(link));
+    link.addEventListener('click', () => moveSlider(link));
 });
 
-// Set slider on current page
+// Set slider to current page
 const currentLink = document.querySelector('.nav-links a[aria-current="page"]');
 if(currentLink) moveSlider(currentLink);
+
+// Reset slider to current page on mouse leave
+navLinksContainer.addEventListener('mouseleave', () => {
+    if(currentLink) moveSlider(currentLink);
+});
