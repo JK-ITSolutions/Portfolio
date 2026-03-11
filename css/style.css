@@ -149,101 +149,44 @@ header {
     display: block;
 }
 
-/* ===== ADVANCED NAVIGATION ===== */
-/* ===== NAVIGATION ENHANCED ===== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background: rgba(3,6,0,0.85);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.logo {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #8EFE00;
-  text-shadow: 0 0 8px #8EFE00, 0 0 15px #579B00;
-}
-
-.navbar {
-  position: relative;
-}
-
+/* NAVIGATION SLIDER */
 .nav-links {
-  display: flex;
-  gap: 1.5rem;
-  position: relative;
+    position: relative;
 }
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a[aria-current="page"] {
-  color: #8EFE00;
-  text-shadow: 0 0 8px #8EFE00, 0 0 15px #579B00;
-}
-
-/* SLIDING UNDERLINE */
 .nav-slider {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #8EFE00, #579B00);
-  border-radius: 2px;
-  transition: all 0.3s ease;
+    pointer-events: none;
 }
 
-/* HAMBURGER */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
+/* HAMBURGER ANIMATION */
 .nav-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: all 0.4s ease;
+}
+.nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* MOBILE */
-@media (max-width: 992px) {
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
+/* NAV OPEN MOBILE */
+.nav-links.open {
+    display: flex;
     flex-direction: column;
-    background: rgba(3,6,0,0.95);
-    width: 250px;
-    max-height: 0;
-    overflow: hidden;
-    border-radius: 0 0 10px 10px;
-    transition: max-height 0.4s ease;
-  }
-  .nav-links.open { max-height: 500px; }
-
-  .nav-toggle { display: flex; }
-  .nav-slider { display: none; }
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    z-index: 100;
 }
 
 /* ===== HERO SECTION ===== */
