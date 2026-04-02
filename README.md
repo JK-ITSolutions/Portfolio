@@ -25,7 +25,7 @@ Our mission: Empowering businesses with digital tools that drive growth and effi
 
 🌐 Live Website
 
-GitHub Pages: https://jk-itsolutions.github.io
+GitHub Pages: https://jk-itsolutions.github.io/Portfolio
 
 Custom Domain (Optional): https://jktech.pk
 
