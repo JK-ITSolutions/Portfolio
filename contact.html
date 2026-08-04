@@ -1,156 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hire Jehangir Khan | JK Tech</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Send your full project requirements to Jehangir Khan at JK Tech. Shopify, Web Development, Automation & Business Solutions for serious business owners.">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Contact Jehangir Khan | JK Tech – Premium Digital Solutions</title>
+    <meta name="title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
+    <meta name="description" content="Contact Jehangir Khan at JK Tech for Shopify, Web Development, Python Automation, and Business Solutions. Serious inquiries only.">
+    <meta name="keywords" content="contact Shopify developer Pakistan, hire web developer, Python automation expert, business consulting contact">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/contact.html">
+    <meta property="og:title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
+    <meta property="og:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, and Business Solutions.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-contact.jpg">
+    <meta property="og:site_name" content="JK Tech">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/contact.html">
+    <meta property="twitter:title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
+    <meta property="twitter:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, and Business Solutions.">
+    <meta property="twitter:image" content="https://www.jktech.pk/images/og-contact.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/contact.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ============================================
+           CONTACT PAGE SPECIFIC STYLES
+           ============================================ */
+        
+        /* Hero Override */
+        .page-hero .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: var(--space-xl) var(--space-md);
+        }
+        .page-hero .hero-content .badge {
+            display: inline-block;
+            background: rgba(142, 254, 0, 0.12);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-full);
+            padding: 0.35rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+            letter-spacing: 0.5px;
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+            color: var(--text-dim);
+        }
+        .page-hero .hero-content .hero-subtitle strong {
+            color: var(--primary);
+        }
+        .hero-actions {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Contact Section */
+        .contact-pro {
+            padding: var(--space-xl) 0;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+        
+        /* Left Column - Info */
+        .contact-info h2 {
+            display: block;
+            margin-bottom: var(--space-md);
+        }
+        .contact-info h2::after {
+            left: 0;
+        }
+        .contact-info .intro-text {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin-bottom: var(--space-md);
+            line-height: 1.7;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: var(--space-md) 0;
+            padding: 0;
+        }
+        .benefits-list li {
+            padding: 0.7rem 0;
+            padding-left: 32px;
+            position: relative;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-light);
+            transition: color var(--transition-base);
+            line-height: 1.6;
+        }
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+        .benefits-list li:hover {
+            color: var(--text-light);
+        }
+        .benefits-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .benefits-list li strong {
+            color: var(--text-light);
+        }
+        
+        /* Info Boxes */
+        .info-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            margin-top: var(--space-sm);
+            transition: all var(--transition-base);
+        }
+        .info-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--border-medium);
+        }
+        .info-box h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: var(--space-xs);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-box h3 i {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .info-box p {
+            font-size: 1.05rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+        .info-box .whatsapp-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-base);
+        }
+        .info-box .whatsapp-link:hover {
+            color: var(--primary-light);
+            gap: 14px;
+        }
+        .info-box .whatsapp-link i {
+            font-size: 1.3rem;
+        }
+        
+        /* Right Column - Form */
+        .contact-form-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            transition: all var(--transition-base);
+        }
+        .contact-form-box:hover {
+            border-color: var(--border-medium);
+            box-shadow: var(--shadow-card);
+        }
+        .contact-form-box h2 {
+            display: block;
+            margin-bottom: var(--space-xs);
+        }
+        .contact-form-box h2::after {
+            left: 0;
+        }
+        .contact-form-box .form-note {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+            line-height: 1.7;
+        }
+        .contact-form-box .form-note strong {
+            color: var(--primary);
+        }
+        
+        /* Form Elements */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--space-sm);
+        }
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        .form-group label .required {
+            color: var(--primary);
+            margin-left: 2px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-light);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all var(--transition-base);
+            width: 100%;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(142, 254, 0, 0.1);
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-dim);
+            opacity: 0.5;
+        }
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238EFE00' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+        .form-group select option {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+        .form-group .helper-text {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 5px;
+            opacity: 0.7;
+        }
+        
+        /* Form Submit Button */
+        .contact-form-box .btn {
+            width: 100%;
+            margin-top: var(--space-sm);
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+        
+        /* Form Success Message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: var(--space-md);
+            background: rgba(142, 254, 0, 0.08);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-md);
+            margin-top: var(--space-sm);
+        }
+        .form-success.active {
+            display: block;
+        }
+        .form-success i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+        .form-success h3 {
+            color: var(--primary);
+            margin-bottom: var(--space-xs);
+            font-size: 1.4rem;
+        }
+        .form-success p {
+            color: var(--text-dim);
+            margin: 0;
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+        .trust-badges .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 0.4rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            transition: all var(--transition-base);
+        }
+        .trust-badges .badge:hover {
+            border-color: var(--primary);
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+        .trust-badges .badge i {
+            color: var(--primary);
+        }
+        
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+            .contact-info h2::after {
+                left: 0;
+            }
+            .trust-badges {
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-pro {
+                padding: var(--space-lg) 0;
+            }
+            .contact-form-box {
+                padding: var(--space-md);
+            }
+            .page-hero .hero-content {
+                padding: var(--space-lg) var(--space-sm);
+            }
+            .page-hero .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .page-hero .hero-content .hero-subtitle {
+                font-size: 1rem;
+            }
+            .benefits-list li {
+                font-size: 0.9rem;
+                padding-left: 28px;
+            }
+            .benefits-list li::before {
+                font-size: 1rem;
+                top: 0.6rem;
+            }
+            .trust-badges {
+                gap: var(--space-xs);
+                justify-content: center;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-form-box {
+                padding: var(--space-sm);
+            }
+            .info-box {
+                padding: var(--space-sm);
+            }
+            .info-box p {
+                font-size: 0.95rem;
+            }
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.95rem;
+            }
+            .page-hero .hero-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
-    <div class="logo">JK Tech</div>
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
         <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page">Home</a>
+            <a href="index.html">Home</a>
             <a href="shopify.html">Shopify</a>
-            <a href="odoo.html">Odoo ERP</a>
             <a href="social-media.html">Social Media</a>
-            <a href="graphics.html">Graphics Designing</a>
             <a href="python.html">Python</a>
             <a href="web-dev.html">Web Dev</a>
-            <a href="business-coaching.html">Business Coaching</a>
+            <a href="graphics.html">Graphics</a>
+            <a href="business-coaching.html">Coaching</a>
             <a href="experience.html">Experience</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" aria-current="page">Contact</a>
         </nav>
-</header>
+    </header>
 
-<main id="main-content">
+    <main id="main-content">
 
-<!-- HERO -->
-<section class="page-hero hero">
-    <div class="hero-content">
-        <h1>Hire Me, Let’s Build Your Digital Success</h1>
-        <p class="hero-subtitle">
-            I take on **serious clients only** who want results, not shortcuts. Submit full requirements to receive a strategy & personalized proposal.
-        </p>
-        <a href="#contact-form" class="btn btn-primary">Send Requirements Now</a>
-    </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section class="contact contact-pro">
-    <div class="container contact-grid">
-
-        <!-- LEFT: BENEFITS & AUTHORITY -->
-        <div class="contact-info">
-            <h2>Why You Should Contact Me</h2>
-            <ul class="benefits-list">
-                <li>✅ 10+ years experience delivering premium digital solutions across Pakistan, UAE & Malaysia</li>
-                <li>✅ Shopify, Web Development, Python Automation & SEO expertise</li>
-                <li>✅ I handle only a few clients at a time to ensure maximum results</li>
-                <li>✅ Priority response to detailed project requirements</li>
-                <li>✅ Optional WhatsApp support for non-tech clients</li>
-            </ul>
-
-            <div class="info-box">
-                <h3>Email (Primary)</h3>
-                <p>ithelpdesktop1@gmail.com</p>
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="hero-content">
+                <div class="badge">📩 Let's Work Together</div>
+                <h1>Hire Me, <span class="highlight">Let's Build Your Digital Success</span></h1>
+                <p class="hero-subtitle">
+                    I take on <strong>serious clients only</strong> who want results, not shortcuts.<br>
+                    Submit your project requirements and get a personalized strategy &amp; proposal.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact-form" class="btn">Send Requirements</a>
+                    <a href="experience.html" class="btn btn-outline">View My Portfolio</a>
+                </div>
             </div>
+        </section>
 
-            <div class="info-box">
-                <h3>WhatsApp (Optional)</h3>
-                <p><a href="https://wa.me/923001234567" target="_blank" class="whatsapp-link">Chat on WhatsApp</a></p>
+        <!-- CONTACT SECTION -->
+        <section class="contact contact-pro" id="contact-form">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- LEFT: BENEFITS & AUTHORITY -->
+                    <div class="contact-info">
+                        <h2>Why <span class="highlight">Work With Me</span></h2>
+                        <p class="intro-text">
+                            I deliver premium digital solutions for serious businesses. Here's what sets me apart.
+                        </p>
+                        
+                        <ul class="benefits-list">
+                            <li><strong>15+ years experience</strong> delivering digital solutions across Pakistan, UAE &amp; Malaysia</li>
+                            <li><strong>Shopify, Web Development, Python Automation</strong> &amp; SEO expertise</li>
+                            <li>I handle only <strong>a few clients at a time</strong> to ensure maximum quality and results</li>
+                            <li><strong>Priority response</strong> to detailed project requirements with clear communication</li>
+                            <li>Optional <strong>WhatsApp support</strong> for non-tech clients needing quick assistance</li>
+                        </ul>
+
+                        <!-- Trust Badges -->
+                        <div class="trust-badges">
+                            <span class="badge"><i class="fas fa-check-circle"></i> 15+ Years Experience</span>
+                            <span class="badge"><i class="fas fa-check-circle"></i> 100+ Projects Completed</span>
+                            <span class="badge"><i class="fas fa-check-circle"></i> 5★ Client Rating</span>
+                            <span class="badge"><i class="fas fa-check-circle"></i> 3 Countries Served</span>
+                        </div>
+
+                        <!-- Contact Info Boxes -->
+                        <div class="info-box">
+                            <h3><i class="fas fa-envelope"></i> Email (Primary)</h3>
+                            <p><a href="mailto:ithelpdesktop1@gmail.com" style="color: var(--text-light);">ithelpdesktop1@gmail.com</a></p>
+                        </div>
+
+                        <div class="info-box">
+                            <h3><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp (Optional)</h3>
+                            <p>
+                                <a href="https://wa.me/923125262317" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="info-box">
+                            <h3><i class="fas fa-clock"></i> Response Time</h3>
+                            <p>Within 24 hours for detailed inquiries</p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: FORM -->
+                    <div class="contact-form-box">
+                        <h2>Send <span class="highlight">Project Requirements</span></h2>
+                        <p class="form-note">
+                            The more detail you provide, the better I can prepare a tailored strategy.
+                            <strong>Only serious inquiries are reviewed.</strong>
+                        </p>
+
+                        <form action="https://formsubmit.co/ithelpdesktop1@gmail.com" method="POST" id="contactForm">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="🔥 New Project Inquiry - JK Tech">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://www.jktech.pk/thank-you.html">
+
+                            <div class="form-group">
+                                <label for="fullname">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullname" name="Full Name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="Email" required placeholder="your@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp Number</label>
+                                <input type="tel" id="whatsapp" name="WhatsApp" placeholder="+92 XXX XXX XXXX">
+                                <span class="helper-text">Optional — recommended for faster communication</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company / Brand</label>
+                                <input type="text" id="company" name="Company" placeholder="Your business or brand name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Required <span class="required">*</span></label>
+                                <select id="service" name="Service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Shopify Development">Shopify Development</option>
+                                    <option value="Website Development">Website Development</option>
+                                    <option value="SEO Optimization">SEO Optimization</option>
+                                    <option value="Python Automation">Python Automation</option>
+                                    <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                    <option value="Business Coaching">Business Coaching</option>
+                                    <option value="Odoo ERP">Odoo ERP</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget">Project Budget <span class="required">*</span></label>
+                                <select id="budget" name="Budget" required>
+                                    <option value="">Select budget range</option>
+                                    <option value="$100 - $500">$100 - $500</option>
+                                    <option value="$500 - $1,000">$500 - $1,000</option>
+                                    <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                                    <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                                    <option value="$5,000+">$5,000+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="details">Project Details <span class="required">*</span></label>
+                                <textarea id="details" name="Project Details" rows="6" required 
+                                    placeholder="Explain your project goals, current challenges, timeline, and desired outcomes. The more detail you provide, the better I can help."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane" style="margin-right: 10px;"></i> Send Requirements
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Requirements Sent!</h3>
+                            <p>Thank you for your inquiry. I'll review your requirements and get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through technology and digital solutions.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="graphics.html">Graphics</a>
+                    <a href="business-coaching.html">Coaching</a>
+                    <a href="experience.html">Experience</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="shopify.html">Shopify Development</a>
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="python.html">Python Automation</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="graphics.html">Graphic Design</a>
+                    <a href="business-coaching.html">Business Coaching</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdesktop1@gmail.com">Email Me</a>
+                    <a href="https://wa.me/923125262317">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech | Digital Solutions Pakistan. All rights reserved.
             </div>
         </div>
+    </footer>
 
-        <!-- RIGHT: FORM -->
-        <div class="contact-form-box" id="contact-form">
-            <h2>Send Full Project Requirements</h2>
-            <p class="form-note">
-                The more detailed your requirements, the faster and better I can prepare a personalized strategy. Only serious inquiries are reviewed.
-            </p>
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
 
-            <form action="https://formsubmit.co/ithelpdesktop1@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="🔥 New Project Inquiry - JK Tech">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/923125262317" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with Jehangir</span>
+    </a>
 
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" name="Full Name" required placeholder="Your Name">
-                </div>
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
 
-                <div class="form-group">
-                    <label>Email Address *</label>
-                    <input type="email" name="Email" required placeholder="your@email.com">
-                </div>
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 400) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
-                <div class="form-group">
-                    <label>WhatsApp Number (Optional)</label>
-                    <input type="text" name="WhatsApp" placeholder="+92 345 9016204">
-                </div>
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
 
-                <div class="form-group">
-                    <label>Company / Brand</label>
-                    <input type="text" name="Company" placeholder="Your Business Name">
-                </div>
+            // ---- FORM SUBMISSION HANDLING ----
+            const form = document.getElementById('contactForm');
+            const successDiv = document.getElementById('formSuccess');
 
-                <div class="form-group">
-                    <label>Service Required *</label>
-                    <select name="Service" required>
-                        <option value="">Select Service</option>
-                        <option>Shopify Development</option>
-                        <option>Website Development</option>
-                        <option>SEO Optimization</option>
-                        <option>Python Automation</option>
-                        <option>Digital Marketing</option>
-                        <option>Business Consultation</option>
-                    </select>
-                </div>
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 10px;"></i> Sending...';
+                        submitBtn.disabled = true;
+                    }
+                });
+            }
 
-                <div class="form-group">
-                    <label>Project Budget *</label>
-                    <select name="Budget" required>
-                        <option value="">Select Budget</option>
-                        <option>$100 - $500</option>
-                        <option>$500 - $1000</option>
-                        <option>$1000 - $3000</option>
-                        <option>$3000+</option>
-                    </select>
-                </div>
+            // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
 
-                <div class="form-group">
-                    <label>Full Project Requirements *</label>
-                    <textarea name="Project Details" rows="6" required placeholder="Explain your project goals, current challenges, and desired outcomes..."></textarea>
-                </div>
+            // ---- LOG INITIALIZATION ----
+            console.log('🚀 JK Tech - Contact Page loaded');
+            console.log('📧 Primary Email: ithelpdesktop1@gmail.com');
+            console.log('💬 WhatsApp: +92 312 5262317');
 
-                <button type="submit" class="btn btn-primary">Send Requirements</button>
-            </form>
-        </div>
-
-    </div>
-</section>
-<!-- FULLSCREEN LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-    <span class="lightbox-close" aria-label="Close">&times;</span>
-    <img id="lightbox-img" alt="Portfolio Image">
-    <div class="lightbox-nav">
-        <span id="lightbox-prev" aria-label="Previous">&#10094;</span>
-        <span id="lightbox-next" aria-label="Next">&#10095;</span>
-    </div>
-</div>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/923459016204" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
-    💬
-</a>
-
-<footer>
-    <p>© 2026 JK Tech | Digital Solutions Pakistan. All rights reserved.</p>
-</footer>
+        })();
+    </script>
 
 </body>
 </html>
