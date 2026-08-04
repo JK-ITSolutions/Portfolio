@@ -1,416 +1,744 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Python Development & Automation Pakistan | JK Tech</title>
-
-<meta name="description" content="Custom Python automation, Excel scripts, web scraping, APIs and business tools for Pakistani companies. Automate workflows and save hours of manual work.">
-
-<meta name="keywords" content="Python development Pakistan, automation scripts, Excel automation, web scraping, data processing, Python software">
-
-<meta name="author" content="Jehangir Khan">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://www.jktech.pk/python.html">
-
-<meta property="og:title" content="Python Automation & Software Development | JK Tech">
-<meta property="og:description" content="Automate your business with Python scripts, Excel automation, APIs and custom software.">
-<meta property="og:image" content="https://www.jktech.pk/images/og-python.jpg">
-<meta property="og:type" content="website">
-
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
-<script src="https://unpkg.com/scrollreveal" defer></script>
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Service",
- "serviceType":"Python Automation",
- "provider":{
- "@type":"Person",
- "name":"Jehangir Khan"
- },
- "areaServed":{
- "@type":"Country",
- "name":"Pakistan"
- },
- "description":"Custom Python scripts, automation tools, data processing and web scraping solutions."
-}
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Python Development Portfolio | JK Tech – Automation & Data Projects</title>
+    <meta name="title" content="Python Development Portfolio | JK Tech – Automation & Data Projects">
+    <meta name="description" content="View my Python portfolio featuring automation scripts, web scraping, data processing, and custom tools. Real projects for real business problems.">
+    <meta name="keywords" content="Python portfolio, automation projects, web scraping, data processing, Python developer Pakistan">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/python.html">
+    <meta property="og:title" content="Python Development Portfolio | JK Tech">
+    <meta property="og:description" content="View my Python portfolio featuring automation scripts, web scraping, data processing, and custom tools.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-python.jpg">
+    <meta property="og:site_name" content="JK Tech">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/python.html">
+    <meta property="twitter:title" content="Python Development Portfolio | JK Tech">
+    <meta property="twitter:description" content="View my Python portfolio featuring automation scripts, web scraping, data processing, and custom tools.">
+    <meta property="twitter:image" content="https://www.jktech.pk/images/og-python.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/python.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ============================================
+           PYTHON PORTFOLIO PAGE SPECIFIC STYLES
+           ============================================ */
+        
+        /* Hero Override */
+        .page-hero .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-lg) var(--space-md);
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+        }
+        .hero-badge .python-icon {
+            color: var(--primary);
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-stats .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .hero-stats .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+        
+        /* Portfolio Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .project-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .project-card .project-header {
+            background: var(--primary-gradient);
+            padding: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            min-height: 80px;
+        }
+        .project-card .project-header .icon {
+            font-size: 2.5rem;
+            color: var(--bg-dark);
+            flex-shrink: 0;
+        }
+        .project-card .project-header h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--bg-dark);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .project-card .project-body {
+            padding: var(--space-md);
+        }
+        .project-card .project-body p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin: 0 0 var(--space-sm);
+            line-height: 1.7;
+        }
+        .project-card .project-body .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: var(--space-sm);
+        }
+        .project-card .project-body .tech-tags span {
+            background: rgba(142, 254, 0, 0.08);
+            padding: 2px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
+        }
+        .project-card .project-body .btn-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap var(--transition-base);
+            font-size: 0.9rem;
+        }
+        .project-card .project-body .btn-link:hover {
+            gap: 12px;
+        }
+        
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .expertise-item {
+            background: var(--bg-card);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all var(--transition-base);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .expertise-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--border-medium);
+        }
+        .expertise-item .icon {
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* Tech Stack */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            justify-content: center;
+        }
+        .tech-badge {
+            background: var(--bg-card);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+        }
+        .tech-badge:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--border-medium);
+        }
+        .tech-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .tech-badge .dot.python { background: #306998; }
+        .tech-badge .dot.pandas { background: #150458; }
+        .tech-badge .dot.selenium { background: #43B02A; }
+        .tech-badge .dot.flask { background: #000000; }
+        .tech-badge .dot.django { background: #092E20; }
+        .tech-badge .dot.sql { background: #00758F; }
+        .tech-badge .dot.green { background: var(--primary); }
+        .tech-badge .dot.orange { background: #f59e0b; }
+        .tech-badge .dot.red { background: #ef4444; }
+        
+        /* CTA */
+        .cta-section {
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            border-radius: var(--radius-lg);
+            padding: 64px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            color: var(--bg-dark);
+            font-size: 2.8rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2::after {
+            background: var(--bg-dark);
+        }
+        .cta-section p {
+            color: rgba(3, 6, 0, 0.8);
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn {
+            background: var(--bg-dark);
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn:hover {
+            background: #0a1a00;
+            color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-stats {
+                gap: 24px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-hero .hero-content {
+                padding: var(--space-md) var(--space-sm);
+            }
+            .page-hero .hero-content h1 {
+                font-size: 2rem;
+            }
+            .cta-section {
+                padding: 40px 24px;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.8rem;
+            }
+            .project-card .project-header {
+                padding: var(--space-sm);
+                min-height: 60px;
+            }
+            .project-card .project-header .icon {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tech-badge {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.8rem;
+            }
+            .project-card .project-body {
+                padding: var(--space-sm);
+            }
+        }
+    </style>
 </head>
-
-
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-
-<header>
-
-<div class="logo">JK Tech</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="shopify.html">Shopify</a>
-<a href="odoo.html">Odoo ERP</a>
-<a href="social-media.html">Social Media</a>
-<a href="graphics.html">Graphics</a>
-<a href="python.html" aria-current="page">Python</a>
-<a href="web-dev.html">Web Dev</a>
-<a href="business-coaching.html">Business Coaching</a>
-<a href="experience.html">Experience</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-
-<main id="main-content">
-
-
-<!-- HERO -->
-
-<section class="hero page-hero">
-
-<div class="hero-content">
-
-<h1>Python Automation & Software Development</h1>
-
-<p class="hero-subtitle">
-
-Custom Python scripts and automation tools that eliminate repetitive tasks and improve business productivity.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#packages" class="btn">View Solutions</a>
-
-<a href="contact.html" class="btn btn-outline">Free Consultation</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services">
-
-<h2>Python Development Services</h2>
-
-<div class="cards-grid">
-
-<div class="service-card">
-<div class="card-icon">⚙️</div>
-<h3>Business Automation</h3>
-<p>Automate repetitive tasks, reporting and internal processes.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">📊</div>
-<h3>Excel Automation</h3>
-<p>Process spreadsheets automatically and generate reports.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🕸️</div>
-<h3>Web Scraping</h3>
-<p>Collect data from websites for research and analytics.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🔌</div>
-<h3>API Integrations</h3>
-<p>Connect different software systems using APIs.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🛠️</div>
-<h3>Custom Tools</h3>
-<p>Build custom Python applications for your business.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">📈</div>
-<h3>Data Processing</h3>
-<p>Clean and analyze large datasets for insights.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TECHNOLOGIES -->
-
-<section class="expertise">
-
-<h2>Python Technologies</h2>
-
-<ul class="expertise-list">
-
-<li>✔ Python Automation Scripts</li>
-<li>✔ Pandas Data Processing</li>
-<li>✔ Web Scraping (BeautifulSoup / Selenium)</li>
-<li>✔ Excel Automation (OpenPyXL / Pandas)</li>
-<li>✔ REST API Integrations</li>
-<li>✔ Desktop GUI Tools (Tkinter)</li>
-<li>✔ Data Analysis</li>
-<li>✔ Task Scheduling & Bots</li>
-
-</ul>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section class="process">
-
-<h2>Our Development Process</h2>
-
-<div class="steps">
-
-<div class="step">
-<span class="step-number">1</span>
-<h3>Analysis</h3>
-<p>Understand your workflow and identify automation opportunities.</p>
-</div>
-
-<div class="step">
-<span class="step-number">2</span>
-<h3>Planning</h3>
-<p>Define solution architecture and development timeline.</p>
-</div>
-
-<div class="step">
-<span class="step-number">3</span>
-<h3>Development</h3>
-<p>Build efficient Python scripts and tools.</p>
-</div>
-
-<div class="step">
-<span class="step-number">4</span>
-<h3>Deployment</h3>
-<p>Testing, documentation and delivery.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio">
-
-<h2>Automation Examples</h2>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<h3>Excel Report Automation</h3>
-<p>Python tool generating daily reports automatically.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Web Scraping Tool</h3>
-<p>Data extraction system collecting market data.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Business Workflow Automation</h3>
-<p>Automated process saving hours of manual work.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<h2>Client Testimonials</h2>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-<p>The automation script saved our team hours every week.</p>
-<h4>Ali Raza</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Professional Python developer with great problem solving skills.</p>
-<h4>Hassan Khan</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Our data processing tasks are now fully automated.</p>
-<h4>Sarah Malik</h4>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section class="pricing" id="packages">
-
-<h2>Python Automation Solutions</h2>
-
-<div class="pricing-grid">
-
-<div class="pricing-card">
-
-<h3>Basic Script</h3>
-
-<p class="price">PKR 35,000+</p>
-
-<ul>
-<li>Single Task Automation</li>
-<li>Excel / File Processing</li>
-<li>Basic Error Handling</li>
-<li>5-7 Day Delivery</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Start Small</a>
-
-</div>
-
-
-<div class="pricing-card featured">
-
-<h3>Automation Suite</h3>
-
-<p class="price">PKR 75,000+</p>
-
-<ul>
-<li>Multi-Step Automation</li>
-<li>Web Scraping</li>
-<li>API Integrations</li>
-<li>30 Days Support</li>
-</ul>
-
-<a href="contact.html" class="btn">Get Started</a>
-
-</div>
-
-
-<div class="pricing-card">
-
-<h3>Enterprise</h3>
-
-<p class="price">Custom Quote</p>
-
-<ul>
-<li>Large Scale Automation</li>
-<li>Complex Integrations</li>
-<li>Priority Support</li>
-<li>Full Documentation</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Contact</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LEAD FORM -->
-
-<section class="lead-form">
-
-<h2>Automate Your Workflow</h2>
-
-<form class="project-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<input type="text" placeholder="Company / Business">
-
-<select>
-
-<option>Select Service</option>
-<option>Python Automation</option>
-<option>Excel Automation</option>
-<option>Web Scraping</option>
-
-</select>
-
-<textarea placeholder="Describe your automation project"></textarea>
-
-<button type="submit" class="btn">Send Request</button>
-
-</form>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="contact">
-
-<h2>Ready to Automate Your Business?</h2>
-
-<p>Let Python handle repetitive tasks while you focus on growth.</p>
-
-<a href="contact.html" class="btn">Discuss Your Project</a>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<p>© 2026 JK Tech | Python Development Pakistan</p>
-
-<p>Automation • Web Scraping • Data Processing • Python Software</p>
-
-</footer>
-
-
-<script src="js/script.js" defer></script>
-
-<script>
-
-document.addEventListener('DOMContentLoaded',function(){
-
-if(typeof ScrollReveal !== 'undefined'){
-
-ScrollReveal().reveal('.service-card,.step,.portfolio-item,.pricing-card,.testimonial-card',{interval:100,distance:'30px',origin:'bottom',duration:800});
-
-}
-
-});
-
-</script>
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shopify.html">Shopify</a>
+            <a href="social-media.html">Social Media</a>
+            <a href="python.html" aria-current="page">Python</a>
+            <a href="web-dev.html">Web Dev</a>
+            <a href="business-coaching.html">Coaching</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fab fa-python python-icon"></i> Python Developer Portfolio
+                </div>
+                <h1>Python <span class="highlight">Projects &amp; Automation</span></h1>
+                <p class="hero-subtitle">
+                    Real-world Python solutions I've built — from automation scripts to data processing tools.
+                </p>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="contact.html" class="btn btn-outline">Discuss Your Project</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Automations Built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Hours Saved</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="expertise-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="expertise-heading">Python <span class="highlight">Expertise</span></h2>
+                    <p>Core areas where I build Python solutions for businesses.</p>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-item"><span class="icon">✔</span> Automation Scripts</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Web Scraping</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Data Processing</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Excel Automation</div>
+                    <div class="expertise-item"><span class="icon">✔</span> API Integration</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Desktop Applications</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Web Apps (Flask/Django)</div>
+                    <div class="expertise-item"><span class="icon">✔</span> ETL Pipelines</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="projects-heading">Featured <span class="highlight">Python Projects</span></h2>
+                    <p>Real projects built to solve real business problems.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📊</span>
+                            <h3>Office Expense Tracker</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Python desktop application for tracking office expenses with Excel export, automated reports, and data visualization.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>Pandas</span>
+                                <span>OpenPyXL</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🕸️</span>
+                            <h3>Web Scraping Tool</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Custom web scraper that extracts product data, pricing, and competitor information from e-commerce websites automatically.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>BeautifulSoup</span>
+                                <span>Selenium</span>
+                                <span>Requests</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📈</span>
+                            <h3>Data Processing Pipeline</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Automated data pipeline that cleans, transforms, and visualizes large datasets for business intelligence and reporting.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Plotly</span>
+                                <span>SQLite</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🤖</span>
+                            <h3>Task Automation Suite</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Multi-step automation suite that handles file organization, email automation, and report generation for business operations.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>PyAutoGUI</span>
+                                <span>OpenPyXL</span>
+                                <span>SMTP</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🔌</span>
+                            <h3>API Integration Dashboard</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Custom dashboard that integrates multiple third-party APIs for real-time data aggregation and reporting.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>Requests</span>
+                                <span>JSON</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📦</span>
+                            <h3>Inventory Management System</h3>
+                        </div>
+                        <div class="project-body">
+                            <p>Complete inventory management system with barcode scanning, stock tracking, and automated reorder notifications.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>SQLite</span>
+                                <span>Pandas</span>
+                                <span>Tkinter</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="tech-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="tech-heading">Python <span class="highlight">Tech Stack</span></h2>
+                    <p>Libraries and frameworks I work with regularly.</p>
+                </div>
+                <div class="tech-grid">
+                    <span class="tech-badge"><span class="dot python"></span> Python 3</span>
+                    <span class="tech-badge"><span class="dot pandas"></span> Pandas</span>
+                    <span class="tech-badge"><span class="dot selenium"></span> Selenium</span>
+                    <span class="tech-badge"><span class="dot flask"></span> Flask</span>
+                    <span class="tech-badge"><span class="dot django"></span> Django</span>
+                    <span class="tech-badge"><span class="dot sql"></span> SQLite</span>
+                    <span class="tech-badge"><span class="dot green"></span> BeautifulSoup</span>
+                    <span class="tech-badge"><span class="dot orange"></span> OpenPyXL</span>
+                    <span class="tech-badge"><span class="dot red"></span> Plotly</span>
+                    <span class="tech-badge"><span class="dot green"></span> Tkinter</span>
+                    <span class="tech-badge"><span class="dot green"></span> PyAutoGUI</span>
+                    <span class="tech-badge"><span class="dot green"></span> Requests</span>
+                    <span class="tech-badge"><span class="dot green"></span> SQLAlchemy</span>
+                    <span class="tech-badge"><span class="dot green"></span> Matplotlib</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="testimonials-heading">Client <span class="highlight">Feedback</span></h2>
+                    <p>What clients say about my Python work.</p>
+                </div>
+                <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md);">
+                    <div class="testimonial-card scale-in" style="background: var(--bg-card); padding: var(--space-md); border-radius: var(--radius-lg); border: 1px solid var(--border-light); text-align: center;">
+                        <div class="quote-icon" style="font-size: 2rem; color: var(--primary); opacity: 0.3; margin-bottom: var(--space-xs);"><i class="fas fa-quote-left"></i></div>
+                        <p style="font-style: italic; font-size: 1rem; margin: var(--space-xs) 0; color: var(--text-dim);">The automation script saved us 20+ hours per week. Jehangir delivered exactly what we needed.</p>
+                        <h4 style="font-weight: 600; color: var(--primary); margin: 0;">Ahmed Raza</h4>
+                    </div>
+                    <div class="testimonial-card scale-in" style="background: var(--bg-card); padding: var(--space-md); border-radius: var(--radius-lg); border: 1px solid var(--border-light); text-align: center;">
+                        <div class="quote-icon" style="font-size: 2rem; color: var(--primary); opacity: 0.3; margin-bottom: var(--space-xs);"><i class="fas fa-quote-left"></i></div>
+                        <p style="font-style: italic; font-size: 1rem; margin: var(--space-xs) 0; color: var(--text-dim);">Professional, reliable, and great communication. The data processing tool transformed our reporting.</p>
+                        <h4 style="font-weight: 600; color: var(--primary); margin: 0;">Sarah Malik</h4>
+                    </div>
+                    <div class="testimonial-card scale-in" style="background: var(--bg-card); padding: var(--space-md); border-radius: var(--radius-lg); border: 1px solid var(--border-light); text-align: center;">
+                        <div class="quote-icon" style="font-size: 2rem; color: var(--primary); opacity: 0.3; margin-bottom: var(--space-xs);"><i class="fas fa-quote-left"></i></div>
+                        <p style="font-style: italic; font-size: 1rem; margin: var(--space-xs) 0; color: var(--text-dim);">The web scraping tool gave us real-time competitor insights. Highly recommend working with Jehangir.</p>
+                        <h4 style="font-weight: 600; color: var(--primary); margin: 0;">Usman Khan</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="container">
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Need a Python <br>Solution for Your Business?</h2>
+                <p>Tell me what you need – I'll build a custom Python solution to save you time and money.</p>
+                <a href="contact.html" class="btn">Discuss Your Project</a>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through technology and automation.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="business-coaching.html">Coaching</a>
+                    <a href="experience.html">Experience</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="python.html">Python Automation</a>
+                    <a href="python.html#projects">Web Scraping</a>
+                    <a href="python.html#projects">Data Processing</a>
+                    <a href="python.html#projects">API Integration</a>
+                    <a href="python.html#projects">Custom Tools</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdesktop1@gmail.com">Email Us</a>
+                    <a href="https://wa.me/923001234567">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech | Python Developer Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Get Free Consultation</span>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 400) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
+
+            // ---- SCROLL REVEAL ----
+            const revealElements = document.querySelectorAll('.fade-up, .scale-in');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // ---- SMOOTH SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ---- LOG ----
+            console.log('🚀 JK Tech - Python Portfolio loaded');
+            console.log('💚 Theme: Dark Green / Lime Flash');
+            console.log('🐍 6 Python projects showcased');
+
+        })();
+    </script>
 
 </body>
 </html>
