@@ -2,36 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Work Experience | Jehangir Khan – JK Tech Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta -->
-    <meta name="description" content="International Work Experience of Jehangir Khan – IT Support UAE, Logistics Supervisor, Marketing Manager, CEO, and Shopify SEO Developer with 15+ years experience.">
-    <meta name="keywords" content="Jehangir Khan Experience, IT Support UAE, Shopify Developer Pakistan, Marketing Manager Portfolio">
+    <title>Work Experience | Jehangir Khan – 15+ Years International Expertise</title>
+    <meta name="description" content="International Work Experience of Jehangir Khan – IT Support UAE, Logistics Supervisor, Marketing Manager, CEO, and Shopify SEO Developer with 15+ years experience across 3 countries.">
+    <meta name="keywords" content="Jehangir Khan Experience, IT Support UAE, Shopify Developer Pakistan, Marketing Manager Portfolio, Business Coach, Odoo ERP">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/experience.html">
+    <meta property="og:title" content="Work Experience | Jehangir Khan – 15+ Years International Expertise">
+    <meta property="og:description" content="International Work Experience spanning UAE, Malaysia, and Pakistan. IT Support, Logistics, Marketing, and Shopify Development.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-experience.jpg">
+    <meta property="og:site_name" content="JK Tech">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/experience.html">
+    <meta property="twitter:title" content="Work Experience | Jehangir Khan – 15+ Years International Expertise">
+    <meta property="twitter:description" content="International Work Experience spanning UAE, Malaysia, and Pakistan.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/experience.html">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/scrollreveal" defer></script>
 
     <style>
-        /* ===== EXPERIENCE PAGE ENHANCED TIMELINE ===== */
-        .page-hero {
+        /* ============================================
+           EXPERIENCE PAGE SPECIFIC STYLES
+           ============================================ */
+
+        /* Hero Override */
+        .page-hero .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
-            padding: 80px 20px 40px;
+            padding: var(--space-lg) var(--space-md);
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
         }
 
-        .page-hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-stats .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .hero-stats .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-dim);
         }
 
+        /* Timeline */
         .timeline-wrapper {
             position: relative;
             max-width: 1100px;
-            margin: 60px auto;
+            margin: 0 auto;
             padding: 20px;
         }
-
-        /* Vertical Line */
         .timeline-wrapper::before {
             content: "";
             position: absolute;
@@ -39,7 +104,7 @@
             top: 0;
             width: 3px;
             height: 100%;
-            background: linear-gradient(to bottom, #00f0ff, #7a5cff);
+            background: var(--primary-gradient);
             transform: translateX(-50%);
             opacity: 0.6;
         }
@@ -49,89 +114,313 @@
             width: 50%;
             padding: 30px 40px;
             box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .timeline-item.left {
             left: 0;
             text-align: right;
+            padding-right: 60px;
         }
-
         .timeline-item.right {
             left: 50%;
+            padding-left: 60px;
         }
 
-        /* Timeline Dot */
         .timeline-item::after {
             content: "";
             position: absolute;
             top: 40px;
             width: 18px;
             height: 18px;
-            background: #00f0ff;
+            background: var(--primary);
             border-radius: 50%;
-            box-shadow: 0 0 15px #00f0ff;
+            box-shadow: 0 0 20px rgba(142, 254, 0, 0.4);
+            border: 3px solid var(--bg-dark);
+            transition: all 0.3s;
+            z-index: 2;
         }
-
+        .timeline-item:hover::after {
+            transform: scale(1.3);
+            box-shadow: 0 0 30px rgba(142, 254, 0, 0.6);
+        }
         .timeline-item.left::after {
             right: -9px;
         }
-
         .timeline-item.right::after {
             left: -9px;
         }
 
-        /* Glass Card */
-        .timeline-content {
-            background: rgba(20, 20, 35, 0.75);
-            border: 1px solid rgba(122, 92, 255, 0.3);
-            border-radius: 14px;
-            padding: 25px;
-            backdrop-filter: blur(12px);
-            transition: 0.3s ease;
+        .timeline-item .icon-wrapper {
+            position: absolute;
+            top: 35px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-dark);
+            font-size: 1.2rem;
+            box-shadow: 0 8px 24px rgba(142, 254, 0, 0.3);
+            z-index: 3;
+        }
+        .timeline-item.left .icon-wrapper {
+            right: -24px;
+        }
+        .timeline-item.right .icon-wrapper {
+            left: -24px;
         }
 
+        .timeline-content {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+        .timeline-content:hover::before {
+            transform: scaleX(1);
+        }
         .timeline-content:hover {
             transform: translateY(-6px);
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
         }
 
-        .timeline-content h3 {
-            margin-bottom: 5px;
-            color: #00f0ff;
+        .timeline-content .company-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
         }
-
-        .company {
+        .timeline-content .company-name .flag {
+            font-size: 1.4rem;
+        }
+        .timeline-content .company-name h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .timeline-content .company {
             font-weight: 600;
-            color: #ffffff;
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: #bdbdfc;
+            color: var(--primary);
             display: block;
-            margin-bottom: 10px;
+            font-size: 1.05rem;
         }
-
+        .timeline-content .date {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            display: inline-block;
+            background: rgba(142, 254, 0, 0.08);
+            padding: 2px 16px;
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            margin: 8px 0 12px;
+            border: 1px solid var(--border-light);
+        }
         .timeline-content p {
-            line-height: 1.6;
-            color: #d6d6f0;
+            line-height: 1.7;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+        .timeline-content .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .timeline-content .tech-tags span {
+            background: rgba(142, 254, 0, 0.08);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
         }
 
-        /* Mobile Responsive */
+        /* Why Section */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .why-card {
+            background: var(--bg-card);
+            padding: 32px 28px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            transition: all 0.4s;
+            position: relative;
+        }
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .why-card .icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .why-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        .why-card p {
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+        .why-card ul {
+            list-style: none;
+            margin-top: 12px;
+        }
+        .why-card ul li {
+            padding: 4px 0;
+            color: var(--text-dim);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .why-card ul li::before {
+            content: '✔';
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .why-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* CTA */
+        .cta-section {
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            border-radius: var(--radius-lg);
+            padding: 64px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            color: var(--bg-dark);
+            font-size: 2.8rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2::after {
+            background: var(--bg-dark);
+        }
+        .cta-section p {
+            color: rgba(3, 6, 0, 0.8);
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn {
+            background: var(--bg-dark);
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn:hover {
+            background: #0a1a00;
+            color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-stats {
+                gap: 24px;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .timeline-wrapper::before {
                 left: 20px;
             }
-
             .timeline-item {
                 width: 100%;
-                padding-left: 60px;
+                padding-left: 60px !important;
+                padding-right: 20px !important;
                 text-align: left !important;
                 left: 0 !important;
             }
-
             .timeline-item::after {
                 left: 12px !important;
+                right: auto !important;
+            }
+            .timeline-item .icon-wrapper {
+                left: -4px !important;
+                right: auto !important;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .timeline-content .company-name {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .cta-section {
+                padding: 40px 24px;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero .hero-content h1 {
+                font-size: 2rem;
+            }
+            .why-card {
+                padding: 24px 20px;
             }
         }
     </style>
@@ -139,230 +428,515 @@
 
 <body>
 
-<header>
-    <div class="logo">JK Tech</div>
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
         <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page">Home</a>
+            <a href="index.html">Home</a>
             <a href="shopify.html">Shopify</a>
-            <a href="odoo.html">Odoo ERP</a>
             <a href="social-media.html">Social Media</a>
-            <a href="graphics.html">Graphics Designing</a>
             <a href="python.html">Python</a>
             <a href="web-dev.html">Web Dev</a>
-            <a href="business-coaching.html">Business Coaching</a>
-            <a href="experience.html">Experience</a>
+            <a href="business-coaching.html">Coaching</a>
+            <a href="experience.html" aria-current="page">Experience</a>
             <a href="contact.html">Contact</a>
         </nav>
-</header>
+    </header>
 
-<main>
+    <main id="main-content">
 
-    <!-- HERO -->
-    <section class="page-hero">
-        <h1>International Work Experience</h1>
-        <p>15+ Years | UAE 🇦🇪 • Malaysia 🇲🇾 • Pakistan 🇵🇰</p>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="timeline-wrapper">
-
-        <div class="timeline-item left reveal">
-            <div class="timeline-content">
-                <h3>IT Assistant (Level 1 & 2)</h3>
-                <span class="company">NGI – Ras Al Khaimah, UAE</span>
-                <span class="date">2008 – 2011 | 3 Years</span>
-                <p>
-                    Provided full IT support including hardware troubleshooting, software installation,
-                    system maintenance, and end-user technical support. Maintained office IT systems
-                    and ensured minimal downtime for daily operations.
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="hero-content">
+                <div class="badge"><i class="fas fa-briefcase"></i> 15+ Years of International Experience</div>
+                <h1>Work <span class="highlight">Experience</span></h1>
+                <p class="hero-subtitle">
+                    UAE 🇦🇪 • Malaysia 🇲🇾 • Pakistan 🇵🇰 — IT Support, Logistics, Marketing, and Shopify Development
                 </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Roles &amp; Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="timeline-wrapper" aria-labelledby="timeline-heading">
+            <div class="timeline-item left" data-delay="100">
+                <div class="icon-wrapper"><i class="fas fa-laptop"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇦🇪</span>
+                        <h3>IT Assistant (Level 1 &amp; 2)</h3>
+                    </div>
+                    <span class="company">NGI – Ras Al Khaimah, UAE</span>
+                    <span class="date">2008 – 2011 | 3 Years</span>
+                    <p>
+                        Provided comprehensive IT support including hardware troubleshooting, software installation,
+                        system maintenance, and end-user technical support. Maintained office IT infrastructure
+                        and ensured minimal downtime for daily operations across multiple departments.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Hardware</span>
+                        <span>Networking</span>
+                        <span>Windows</span>
+                        <span>IT Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-delay="200">
+                <div class="icon-wrapper"><i class="fas fa-truck"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇦🇪</span>
+                        <h3>Logistics Supervisor</h3>
+                    </div>
+                    <span class="company">NGI – Ras Al Khaimah, UAE</span>
+                    <span class="date">2011 – 2013 | 2 Years</span>
+                    <p>
+                        Managed end-to-end logistics operations, inventory tracking, shipment coordination,
+                        and team supervision. Successfully improved workflow efficiency and delivery management
+                        systems, reducing delivery times by 15%.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Inventory</span>
+                        <span>Team Management</span>
+                        <span>Supply Chain</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-delay="300">
+                <div class="icon-wrapper"><i class="fas fa-microchip"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇦🇪</span>
+                        <h3>IT Hardware &amp; Maintenance Specialist</h3>
+                    </div>
+                    <span class="company">Al Tasmeem Al Raqi – Sharjah, UAE</span>
+                    <span class="date">2013 – 2016 | 3 Years</span>
+                    <p>
+                        Specialized in PC and laptop repair, OS installation, hardware upgrades,
+                        virus removal, and system optimization for business and personal clients.
+                        Built a reputation for fast, reliable service and technical expertise.
+                    </p>
+                    <div class="tech-tags">
+                        <span>PC Repair</span>
+                        <span>OS Installation</span>
+                        <span>System Optimization</span>
+                        <span>Hardware</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-delay="400">
+                <div class="icon-wrapper"><i class="fas fa-store"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇲🇾</span>
+                        <h3>Salesman &amp; Supplier</h3>
+                    </div>
+                    <span class="company">Jempol Bakery Kedai Nasir – Negeri Sembilan, Malaysia</span>
+                    <span class="date">2016 – 2019 | 3 Years</span>
+                    <p>
+                        Managed product supply to local shops, customer relations, and sales growth.
+                        Successfully expanded distribution network, improved local market reach,
+                        and built long-term relationships with retail partners.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Sales</span>
+                        <span>Distribution</span>
+                        <span>Customer Relations</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-delay="500">
+                <div class="icon-wrapper"><i class="fas fa-bullhorn"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇵🇰</span>
+                        <h3>Lead Generation &amp; Social Media Manager</h3>
+                    </div>
+                    <span class="company">3 Star Marketing &amp; Real Estate – Pakistan</span>
+                    <span class="date">2019 | 3 Months</span>
+                    <p>
+                        Managed Facebook marketing campaigns, generated real estate leads,
+                        and handled digital promotions. Developed targeted ad strategies
+                        that increased lead generation by 40% during the engagement.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Social Media</span>
+                        <span>Lead Generation</span>
+                        <span>Facebook Ads</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-delay="600">
+                <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇵🇰</span>
+                        <h3>Marketing Manager &amp; IT Advisor</h3>
+                    </div>
+                    <span class="company">Broadway Property Solution – Pakistan</span>
+                    <span class="date">2019 – 2021 | 2 Years</span>
+                    <p>
+                        Led comprehensive digital marketing strategies, branding initiatives,
+                        client acquisition campaigns, and provided IT consultation for
+                        business operations and systems. Successfully increased brand visibility
+                        and client engagement by 60%.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Digital Marketing</span>
+                        <span>IT Consulting</span>
+                        <span>Branding</span>
+                        <span>Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-delay="700">
+                <div class="icon-wrapper"><i class="fas fa-building"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇵🇰</span>
+                        <h3>Marketing Manager</h3>
+                    </div>
+                    <span class="company">Baryal Marketing Real Estate – Pakistan</span>
+                    <span class="date">2021 | 6 Months</span>
+                    <p>
+                        Directed property marketing campaigns, advertisement strategies,
+                        and client handling for real estate projects. Developed promotional
+                        materials and managed client relationships for multiple properties.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Real Estate</span>
+                        <span>Marketing</span>
+                        <span>Client Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-delay="800">
+                <div class="icon-wrapper"><i class="fas fa-crown"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇵🇰</span>
+                        <h3>CEO – Look-Out Real Property</h3>
+                    </div>
+                    <span class="company">Real Estate Marketing Office – Pakistan</span>
+                    <span class="date">2021 – 2026 | 5 Years</span>
+                    <p>
+                        Founded and managed a successful real estate marketing office, overseeing
+                        team leadership, business development, marketing strategy, and client
+                        project management. Scaled the business from concept to a thriving
+                        operation with a strong market presence.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Leadership</span>
+                        <span>Business Development</span>
+                        <span>Strategy</span>
+                        <span>Entrepreneurship</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-delay="900">
+                <div class="icon-wrapper"><i class="fas fa-code"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🇵🇰</span>
+                        <h3>Freelance Shopify SEO &amp; Developer</h3>
+                    </div>
+                    <span class="company">Nawria (Women's Clothing Brand) – Islamabad</span>
+                    <span class="date">2024 – Present</span>
+                    <p>
+                        Providing comprehensive Shopify store development, advanced SEO optimization,
+                        speed optimization, mobile UX improvement, and high-conversion
+                        product listing optimization for eCommerce growth. Delivered measurable
+                        results including 3x increase in organic traffic.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Shopify</span>
+                        <span>SEO</span>
+                        <span>Liquid</span>
+                        <span>Performance</span>
+                        <span>UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-delay="950">
+                <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
+                <div class="timeline-content">
+                    <div class="company-name">
+                        <span class="flag">🌐</span>
+                        <h3>Freelance Python Automation &amp; Odoo Developer</h3>
+                    </div>
+                    <span class="company">Various Clients – Pakistan &amp; International</span>
+                    <span class="date">2024 – Present</span>
+                    <p>
+                        Building custom Python automation solutions, Excel automation scripts,
+                        web scraping tools, and Odoo ERP customizations for businesses across
+                        multiple industries. Helping clients save hundreds of hours through
+                        intelligent automation.
+                    </p>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Odoo ERP</span>
+                        <span>Automation</span>
+                        <span>Web Scraping</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY WORK WITH ME -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="why-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="why-heading">Why Work With <span class="highlight">Me?</span></h2>
+                    <p>I bring more than skills — I bring business experience, strategic thinking, and a commitment to your success.</p>
+                </div>
+
+                <div class="why-grid">
+                    <div class="why-card fade-up">
+                        <div class="icon">🎯</div>
+                        <h3>I Don't Sell Hours — I Build Results</h3>
+                        <p>
+                            Most freelancers focus on completing tasks. I focus on improving systems, increasing revenue,
+                            strengthening brand positioning, and building long-term scalable digital assets.
+                        </p>
+                    </div>
+
+                    <div class="why-card fade-up">
+                        <div class="icon">🌍</div>
+                        <h3>15+ Years of Real Business Experience</h3>
+                        <p>
+                            I have worked in corporate IT environments in the UAE, managed logistics operations,
+                            handled physical supply chains in Malaysia, led marketing campaigns, and founded my own
+                            real estate company. I understand business from the inside — not just from a laptop screen.
+                        </p>
+                    </div>
+
+                    <div class="why-card fade-up">
+                        <div class="icon">🧠</div>
+                        <h3>Premium Work Ethic &amp; Strategic Thinking</h3>
+                        <p>
+                            I analyze before I act. I optimize before I scale. Every decision I make is aligned with
+                            growth, long-term sustainability, and measurable performance.
+                        </p>
+                    </div>
+
+                    <div class="why-card fade-up">
+                        <div class="icon">💎</div>
+                        <h3>Why I May Cost More Than the Average Freelancer</h3>
+                        <p>
+                            I am not the cheapest option — and that is intentional. Quality, reliability, accountability,
+                            and experience come at a higher standard. When you hire me, you are investing in stability,
+                            performance, and professional execution.
+                        </p>
+                    </div>
+
+                    <div class="why-card full-width fade-up">
+                        <div class="icon">⭐</div>
+                        <h3>What You Gain By Hiring Me</h3>
+                        <ul>
+                            <li>Reduced technical errors and downtime</li>
+                            <li>Better SEO visibility and store performance</li>
+                            <li>Strategic marketing direction</li>
+                            <li>Clear communication and accountability</li>
+                            <li>Long-term partnership mindset</li>
+                        </ul>
+                        <p style="margin-top:12px;font-weight:600;color:var(--text-light);">
+                            I treat every project as if it were my own business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="container">
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Serious About <span style="color: var(--bg-dark);">Growth?</span></h2>
+                <p>
+                    If you are looking for someone who thinks long-term, executes professionally,
+                    and protects your brand reputation, let's build something that lasts.
+                </p>
+                <a href="contact.html" class="btn">Let's Discuss Your Project</a>
+            </section>
         </div>
 
-        <div class="timeline-item right reveal">
-            <div class="timeline-content">
-                <h3>Logistics Supervisor</h3>
-                <span class="company">NGI – Ras Al Khaimah, UAE</span>
-                <span class="date">2011 – 2013 | 2 Years</span>
-                <p>
-                    Managed logistics operations, inventory tracking, shipment coordination,
-                    and team supervision. Improved workflow efficiency and delivery management.
-                </p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through technology and strategic consulting.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="business-coaching.html">Coaching</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="shopify.html">Shopify Development</a>
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="python.html">Python Automation</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="business-coaching.html">Business Coaching</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdesktop1@gmail.com">Email Us</a>
+                    <a href="https://wa.me/923001234567">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech | Jehangir Khan Portfolio. All rights reserved.
             </div>
         </div>
+    </footer>
 
-        <div class="timeline-item left reveal">
-            <div class="timeline-content">
-                <h3>IT Hardware & Maintenance Specialist</h3>
-                <span class="company">Al Tasmeem Al Raqi – Sharjah, UAE</span>
-                <span class="date">2013 – 2016 | 2+ Years</span>
-                <p>
-                    Expert in PC and laptop repair, OS installation, hardware upgrades,
-                    virus removal, and system optimization for business and personal clients.
-                </p>
-            </div>
-        </div>
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Get Free Consultation</span>
+    </a>
 
-        <div class="timeline-item right reveal">
-            <div class="timeline-content">
-                <h3>Salesman & Supplier</h3>
-                <span class="company">Jempol Bakery Kedai Nasir – Negeri Sembilan, Malaysia</span>
-                <span class="date">2016 – 2019 | 2.5 Years</span>
-                <p>
-                    Handled product supply to local shops, customer relations, and sales growth.
-                    Managed distribution logistics and improved local market reach.
-                </p>
-            </div>
-        </div>
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
 
-        <div class="timeline-item left reveal">
-            <div class="timeline-content">
-                <h3>Lead Generation & Social Media Manager</h3>
-                <span class="company">3 Star Marketing & Real Estate – Pakistan</span>
-                <span class="date">2019 | 3 Months</span>
-                <p>
-                    Managed Facebook marketing campaigns, generated real estate leads,
-                    and handled digital promotions before company closure due to partnership conflict.
-                </p>
-            </div>
-        </div>
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
 
-        <div class="timeline-item right reveal">
-            <div class="timeline-content">
-                <h3>Marketing Manager & IT Advisor</h3>
-                <span class="company">Broadway Property Solution – Pakistan</span>
-                <span class="date">2019 – 2021 | 2 Years</span>
-                <p>
-                    Led digital marketing strategies, branding, client acquisition campaigns,
-                    and provided IT consultation for business operations and systems.
-                </p>
-            </div>
-        </div>
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 400) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
-        <div class="timeline-item left reveal">
-            <div class="timeline-content">
-                <h3>Marketing Manager</h3>
-                <span class="company">Baryal Marketing Real Estate – Pakistan</span>
-                <span class="date">2021 | 6 Months</span>
-                <p>
-                    Managed property marketing, advertisements, and client handling
-                    for real estate projects and promotional campaigns.
-                </p>
-            </div>
-        </div>
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
 
-        <div class="timeline-item right reveal">
-            <div class="timeline-content">
-                <h3>CEO – Look-Out Real Property</h3>
-                <span class="company">Real Estate Marketing Office – Pakistan</span>
-                <span class="date">2021 – 2026</span>
-                <p>
-                    Founded and managed a real estate marketing office, overseeing team leadership,
-                    business development, marketing strategy, and client project management.
-                </p>
-            </div>
-        </div>
+            // ---- TIMELINE ANIMATION ----
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const timelineObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const delay = parseInt(entry.target.dataset.delay) || 100;
+                        setTimeout(function() {
+                            entry.target.classList.add('visible');
+                        }, delay);
+                    }
+                });
+            }, { threshold: 0.15 });
 
-        <div class="timeline-item left reveal">
-            <div class="timeline-content">
-                <h3>Freelance Shopify SEO & Developer</h3>
-                <span class="company">Nawria (Women’s Clothing Brand) – Islamabad</span>
-                <span class="date">2024 – Present</span>
-                <p>
-                    Providing Shopify store development, advanced SEO optimization,
-                    speed optimization, mobile UX improvement, and high-conversion
-                    product listing optimization for eCommerce growth.
-                </p>
-            </div>
-        </div>
+            timelineItems.forEach(function(item) {
+                timelineObserver.observe(item);
+            });
 
-    </section>
-    <section class="experience">
-    <div class="container">
-        <h2>Why Work With Me?</h2>
+            // ---- SCROLL REVEAL ----
+            const revealElements = document.querySelectorAll('.fade-up');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
 
-        <div class="timeline">
-            <div class="job">
-                <h3>I Don’t Sell Hours — I Build Results</h3>
-                <p>
-                    Most freelancers focus on completing tasks. 
-                    I focus on improving systems, increasing revenue, 
-                    strengthening brand positioning, and building 
-                    long-term scalable digital assets.
-                </p>
-            </div>
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
 
-            <div class="job">
-                <h3>15+ Years of Real Business Experience</h3>
-                <p>
-                    I have worked in corporate IT environments in the UAE, 
-                    managed logistics operations, handled physical supply chains 
-                    in Malaysia, led marketing campaigns, and founded my own 
-                    real estate company. I understand business from the inside — 
-                    not just from a laptop screen.
-                </p>
-            </div>
+            // ---- SMOOTH SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
 
-            <div class="job">
-                <h3>Premium Work Ethic & Strategic Thinking</h3>
-                <p>
-                    I analyze before I act. I optimize before I scale. 
-                    Every decision I make is aligned with growth, 
-                    long-term sustainability, and measurable performance.
-                </p>
-            </div>
+            // ---- LOG ----
+            console.log('🚀 JK Tech - Experience page loaded');
+            console.log('💚 Theme: Dark Green / Lime Flash');
+            console.log('📋 10+ roles displayed across 3 countries');
 
-            <div class="job">
-                <h3>Why I May Cost More Than the Average Freelancer</h3>
-                <p>
-                    I am not the cheapest option — and that is intentional.
-                    Quality, reliability, accountability, and experience 
-                    come at a higher standard. When you hire me, you are 
-                    investing in stability, performance, and professional execution.
-                </p>
-            </div>
-
-            <div class="job">
-                <h3>What You Gain By Hiring Me</h3>
-                <p>
-                    ✔ Reduced technical errors and downtime<br>
-                    ✔ Better SEO visibility and store performance<br>
-                    ✔ Strategic marketing direction<br>
-                    ✔ Clear communication and accountability<br>
-                    ✔ Long-term partnership mindset<br><br>
-                    I treat every project as if it were my own business.
-                </p>
-            </div>
-        </div>
-
-        <div style="text-align:center; margin-top:40px;">
-            <h3>Serious About Growth?</h3>
-            <p>
-                If you are looking for someone who thinks long-term, 
-                executes professionally, and protects your brand reputation,
-                let’s build something that lasts.
-            </p>
-            <a href="contact.html" class="cta-button">Let’s Discuss Your Project</a>
-        </div>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 JK Tech | Jehangir Khan Portfolio</p>
-</footer>
-
-<script>
-    // Scroll Reveal Animation
-    ScrollReveal().reveal('.reveal', {
-        distance: '50px',
-        duration: 1000,
-        easing: 'ease-in-out',
-        origin: 'bottom',
-        interval: 200
-    });
-</script>
+        })();
+    </script>
 
 </body>
 </html>
