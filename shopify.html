@@ -58,10 +58,202 @@
             --shopify-gradient: linear-gradient(145deg, #5E8E3E, #96BF48);
         }
         
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(3, 6, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+        header.shrink {
+            padding: 8px 0;
+            background: rgba(3, 6, 0, 0.95);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+            z-index: 1001;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 4px 0;
+            position: relative;
+            transition: color var(--transition-base);
+        }
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width var(--transition-base);
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        nav a:hover::before,
+        nav a[aria-current="page"]::before {
+            width: 100%;
+        }
+        nav a[aria-current="page"] {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary-gradient);
+            color: var(--bg-dark) !important;
+            padding: 0.4rem 1.2rem !important;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .nav-cta::before {
+            display: none !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+            color: var(--bg-dark) !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3px 0;
+            border-radius: 2px;
+            transition: all var(--transition-base);
+        }
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bg-dark);
+            padding: var(--space-xl) 0 var(--space-md);
+            border-top: 1px solid var(--border-light);
+            margin-top: var(--space-xl);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .footer-brand .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        .footer-brand p {
+            color: var(--text-dim);
+            max-width: 300px;
+            margin: var(--space-sm) 0 var(--space-md);
+            font-size: 0.95rem;
+        }
+        .footer-socials {
+            display: flex;
+            gap: var(--space-sm);
+            font-size: 1.4rem;
+        }
+        .footer-socials a {
+            color: var(--text-dim);
+            transition: all var(--transition-base);
+        }
+        .footer-socials a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: var(--space-sm);
+        }
+        .footer-col a {
+            display: block;
+            color: var(--text-dim);
+            padding: 4px 0;
+            font-size: 0.9rem;
+            transition: color var(--transition-base);
+        }
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--border-light);
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
         /* ===== HERO ===== */
         .page-hero {
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
         .page-hero .hero-content {
             max-width: 900px;
@@ -128,7 +320,6 @@
             margin-top: 2px;
         }
         
-        /* Floating Elements */
         .floating-shapes {
             position: absolute;
             inset: 0;
@@ -172,7 +363,66 @@
             33% { transform: translate(30px, -40px) scale(1.1); }
             66% { transform: translate(-20px, 30px) scale(0.9); }
         }
-        
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow-glow);
+            min-width: 180px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--transition-slow);
+            z-index: -1;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow-hover);
+            color: var(--bg-dark);
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: var(--shadow-glow);
+        }
+
         /* ===== TRUST BAR ===== */
         .trust-bar {
             background: var(--bg-card);
@@ -186,6 +436,9 @@
             align-items: center;
             flex-wrap: wrap;
             gap: var(--space-md);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
         .trust-bar p {
             color: var(--text-dim);
@@ -210,7 +463,7 @@
             color: var(--primary);
             transform: scale(1.15) translateY(-3px);
         }
-        
+
         /* ===== EXPERTISE ===== */
         .expertise-grid {
             display: grid;
@@ -243,12 +496,54 @@
             flex-shrink: 0;
             font-size: 1.1rem;
         }
-        
+
+        /* ===== SECTION TITLE ===== */
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 16px;
+        }
+        .section-title h2 .highlight {
+            background: var(--shopify-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--shopify-gradient);
+            border-radius: 2px;
+        }
+        .section-title p {
+            max-width: 600px;
+            margin: var(--space-sm) auto 0;
+            color: var(--text-dim);
+            font-size: 1.15rem;
+        }
+
         /* ===== PROJECT CARDS ===== */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
         .project-card {
             background: var(--bg-card);
@@ -423,7 +718,7 @@
         .project-card .project-body .btn-link:hover i {
             transform: translateX(6px);
         }
-        
+
         /* ===== TECH STACK ===== */
         .tech-grid {
             display: flex;
@@ -432,6 +727,7 @@
             justify-content: center;
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 24px;
         }
         .tech-badge {
             background: var(--bg-card);
@@ -466,12 +762,15 @@
         .tech-badge .dot.green { background: var(--primary); }
         .tech-badge .dot.purple { background: #7c3aed; }
         .tech-badge .dot.orange { background: #f59e0b; }
-        
+
         /* ===== TESTIMONIALS ===== */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-md);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
         .testimonial-card {
             background: var(--bg-card);
@@ -521,7 +820,7 @@
             color: var(--text-dim);
             margin: 0;
         }
-        
+
         /* ===== CTA ===== */
         .cta-section {
             background: var(--shopify-gradient);
@@ -529,6 +828,8 @@
             border-radius: var(--radius-lg);
             padding: 72px 56px;
             text-align: center;
+            max-width: 1200px;
+            margin: 0 auto 40px;
             position: relative;
             overflow: hidden;
         }
@@ -586,7 +887,100 @@
             box-shadow: 0 12px 36px rgba(0,0,0,0.3);
             transform: translateY(-3px);
         }
-        
+
+        /* ===== FLOATING ELEMENTS ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-glow);
+        }
+        #back-to-top:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow-glow-hover);
+        }
+        #back-to-top.visible {
+            display: flex;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: var(--radius-full);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+        }
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* ===== SKIP LINK ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 8px 16px;
+            z-index: 1001;
+            text-decoration: none;
+            border-radius: 0 0 var(--radius-sm) 0;
+            transition: top var(--transition-base);
+            font-weight: 600;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .projects-grid {
@@ -609,9 +1003,53 @@
                 justify-content: center;
                 text-align: center;
             }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-md);
+            }
         }
-        
+
         @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                transition: right var(--transition-base);
+                box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+                z-index: 1000;
+                border-left: 1px solid var(--border-light);
+                gap: var(--space-sm);
+                overflow-y: auto;
+                align-items: flex-start;
+            }
+            nav.active {
+                right: 0;
+            }
+            nav a {
+                font-size: 1.1rem;
+                padding: 0.5rem 0;
+            }
+            .nav-cta {
+                margin-top: var(--space-xs);
+            }
+            body.no-scroll {
+                overflow: hidden;
+            }
+
             .page-hero .hero-content {
                 padding: var(--space-lg) var(--space-sm);
             }
@@ -621,7 +1059,7 @@
             .page-hero .hero-content .hero-subtitle {
                 font-size: 1rem;
             }
-            
+
             .projects-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-md);
@@ -632,7 +1070,7 @@
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .hero-stats {
                 gap: 20px;
                 margin-top: 32px;
@@ -641,7 +1079,7 @@
             .hero-stats .stat-number {
                 font-size: 1.8rem;
             }
-            
+
             .project-card .project-header {
                 padding: var(--space-md);
                 min-height: 100px;
@@ -652,14 +1090,15 @@
             .project-card .project-header h3 {
                 font-size: 1rem;
             }
-            
+
             .project-card .project-body .project-metrics {
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 4px;
             }
-            
+
             .cta-section {
                 padding: 48px 24px;
+                margin: 0 24px 40px;
             }
             .cta-section h2 {
                 font-size: 2rem;
@@ -667,13 +1106,38 @@
             .cta-section p {
                 font-size: 1rem;
             }
-            
+
             .trust-icons {
                 gap: 20px;
                 font-size: 1.6rem;
             }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+                text-align: center;
+            }
+            .footer-brand p {
+                margin: var(--space-sm) auto;
+            }
+            .footer-socials {
+                justify-content: center;
+            }
+
+            .whatsapp-float span {
+                display: none;
+            }
+            .whatsapp-float {
+                border-radius: 50%;
+                padding: 14px;
+            }
+            #back-to-top {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+            }
         }
-        
+
         @media (max-width: 480px) {
             .expertise-grid {
                 grid-template-columns: 1fr;
@@ -687,7 +1151,7 @@
             .hero-stats .stat-label {
                 font-size: 0.75rem;
             }
-            
+
             .project-card .project-body .project-metrics {
                 grid-template-columns: 1fr;
                 gap: 8px;
@@ -701,7 +1165,7 @@
             .project-card .project-body .project-metrics .metric:last-child {
                 border-bottom: none;
             }
-            
+
             .tech-badge {
                 font-size: 0.75rem;
                 padding: 0.4rem 1rem;
@@ -715,6 +1179,33 @@
                 font-size: 0.95rem;
                 width: 100%;
             }
+            .logo {
+                font-size: 1.4rem;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
         }
     </style>
 </head>
@@ -727,20 +1218,27 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
-    <header>
-        <div class="logo">JK Tech</div>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="shopify.html" aria-current="page">Shopify</a>
-            <a href="social-media.html">Social Media</a>
-            <a href="python.html">Python</a>
-            <a href="web-dev.html">Web Dev</a>
-            <a href="graphics.html">Graphics</a>
-            <a href="seo.html">SEO</a>
-            <a href="business-coaching.html">Coaching</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-        </nav>
+    <header id="main-header">
+        <div class="header-inner">
+            <div class="logo">JK Tech</div>
+            <nav aria-label="Main navigation" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shopify.html" aria-current="page">Shopify</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="python.html">Python</a>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="graphics.html">Graphics</a>
+                <a href="seo.html">SEO</a>
+                <a href="business-coaching.html">Coaching</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
 
     <main id="main-content">
@@ -761,7 +1259,7 @@
                     Real e-commerce stores I've built — from custom designs and SEO optimization 
                     to measurable sales growth and conversion improvements.
                 </p>
-                <div class="hero-actions" style="justify-content: center;">
+                <div class="hero-actions">
                     <a href="#projects" class="btn">View Projects</a>
                     <a href="contact.html" class="btn btn-outline">Discuss Your Store</a>
                 </div>
@@ -1041,50 +1539,51 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">JK Tech</div>
-                    <p>Helping businesses grow through technology and e-commerce solutions.</p>
-                    <div class="footer-socials">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="shopify.html">Shopify</a>
-                    <a href="social-media.html">Social Media</a>
-                    <a href="python.html">Python</a>
-                    <a href="web-dev.html">Web Dev</a>
-                    <a href="graphics.html">Graphics</a>
-                    <a href="seo.html">SEO</a>
-                    <a href="business-coaching.html">Coaching</a>
-                    <a href="experience.html">Experience</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="shopify.html">Shopify Development</a>
-                    <a href="shopify.html#projects">Theme Customization</a>
-                    <a href="shopify.html#projects">SEO Optimization</a>
-                    <a href="shopify.html#projects">Payment Integration</a>
-                    <a href="shopify.html#projects">Speed Optimization</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="mailto:ithelpdesktop1@gmail.com">Email Us</a>
-                    <a href="https://wa.me/923125262317">WhatsApp</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">JK Tech</div>
+                <p>Helping businesses grow through technology and e-commerce solutions.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                © 2026 JK Tech | Shopify Developer Portfolio. All rights reserved.
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shopify.html">Shopify</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="python.html">Python</a>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="graphics.html">Graphics</a>
+                <a href="seo.html">SEO</a>
+                <a href="business-coaching.html">Coaching</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
             </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="https://jk-itsolutions.github.io/Shopify-Services/services/development.html">Shopify Development</a>
+                <a href="https://jk-itsolutions.github.io/Shopify-Services/services/redesign.html">Store Redesign</a>
+                <a href="https://jk-itsolutions.github.io/Shopify-Services/services/seo.html">SEO Services</a>
+                <a href="https://jk-itsolutions.github.io/Shopify-Services/services/setup.html">Store Setup & Launch</a>
+                <a href="https://jk-itsolutions.github.io/Shopify-Services/services/product.html">Product Optimization</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:ithelpdesktop1@gmail.com">Email Me</a>
+                <a href="https://wa.me/923125262317">WhatsApp</a>
+                <a href="#">LinkedIn</a>
+                <a href="https://jk-itsolutions.github.io/Portfolio/">GitHub</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 JK Tech | Shopify Developer Portfolio. All rights reserved.
         </div>
     </footer>
 
@@ -1104,14 +1603,59 @@
         (function() {
             'use strict';
 
+            // ---- HEADER SHRINK ----
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('shrink');
+                } else {
+                    header.classList.remove('shrink');
+                }
+            });
+
+            // ---- MOBILE MENU ----
+            const menuToggle = document.getElementById('mobile-menu');
+            const nav = document.getElementById('main-nav');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function() {
+                    const isOpen = nav.classList.contains('active');
+                    nav.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', !isOpen);
+                    document.body.classList.toggle('no-scroll');
+                });
+
+                nav.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        nav.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (nav.classList.contains('active')) {
+                        const isClickInside = nav.contains(e.target) || menuToggle.contains(e.target);
+                        if (!isClickInside) {
+                            nav.classList.remove('active');
+                            menuToggle.classList.remove('active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    }
+                });
+            }
+
             // ---- BACK TO TOP ----
             const backBtn = document.getElementById('back-to-top');
             if (backBtn) {
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 400) {
-                        backBtn.style.display = 'flex';
+                        backBtn.classList.add('visible');
                     } else {
-                        backBtn.style.display = 'none';
+                        backBtn.classList.remove('visible');
                     }
                 });
                 backBtn.addEventListener('click', function() {
