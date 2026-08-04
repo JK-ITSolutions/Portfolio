@@ -2,415 +2,1032 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Business Coaching & Digital Transformation | JK Tech</title>
+    <meta name="description" content="Expert business coaching for startups and SMEs. Digital transformation, ERP implementation, process optimization and growth strategies.">
+    <meta name="keywords" content="business coaching Pakistan, digital transformation, ERP consulting, startup coaching, business strategy">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
 
-<title>Business Coaching & Digital Transformation | JK Tech</title>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/business-coaching.html">
 
-<meta name="description" content="Expert business coaching for startups and SMEs. Digital transformation, ERP implementation, process optimization and growth strategies.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Business Coaching & Digital Transformation | JK Tech">
+    <meta property="og:description" content="Scale your business with expert coaching, ERP strategy and automation consulting.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-coaching.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/business-coaching.html">
+    <meta property="og:site_name" content="JK Tech">
 
-<meta name="keywords" content="business coaching Pakistan, digital transformation, ERP consulting, startup coaching, business strategy">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/business-coaching.html">
+    <meta property="twitter:title" content="Business Coaching & Digital Transformation | JK Tech">
+    <meta property="twitter:description" content="Scale your business with expert coaching, ERP strategy and automation consulting.">
+    <meta property="twitter:image" content="https://www.jktech.pk/images/og-coaching.jpg">
 
-<meta name="author" content="Jehangir Khan">
-<meta name="robots" content="index, follow">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
 
-<link rel="canonical" href="https://www.jktech.pk/business-coaching.html">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<meta property="og:title" content="Business Coaching & Digital Transformation | JK Tech">
-<meta property="og:description" content="Scale your business with expert coaching, ERP strategy and automation consulting.">
-<meta property="og:image" content="https://www.jktech.pk/images/og-coaching.jpg">
-<meta property="og:type" content="website">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "JK Tech Business Coaching",
+        "url": "https://www.jktech.pk/business-coaching.html",
+        "description": "Expert business coaching for startups and SMEs. Digital transformation, ERP implementation, process optimization and growth strategies.",
+        "provider": {
+            "@type": "Person",
+            "name": "Jehangir Khan"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Pakistan"
+        },
+        "serviceType": [
+            "Business Coaching",
+            "ERP Consulting",
+            "Digital Transformation",
+            "Process Optimization",
+            "Startup Strategy"
+        ]
+    }
+    </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        /* ============================================
+           BUSINESS COACHING PAGE SPECIFIC STYLES
+           ============================================ */
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        /* Hero Override */
+        .page-hero .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: var(--space-lg) var(--space-md);
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+        }
+        .page-hero .hero-buttons {
+            display: flex;
+            gap: var(--space-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-<link rel="stylesheet" href="css/style.css">
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .service-card {
+            background: var(--bg-card);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform var(--transition-base);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .service-card .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: var(--space-xs);
+            display: inline-block;
+        }
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: var(--space-xs);
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        .service-card p {
+            font-size: 0.95rem;
+            margin: 0;
+            color: var(--text-dim);
+        }
 
-<script src="https://unpkg.com/scrollreveal" defer></script>
+        /* Expertise List */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .expertise-item {
+            background: var(--bg-card);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all var(--transition-base);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .expertise-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--border-medium);
+        }
+        .expertise-item .icon {
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
 
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Service",
- "serviceType":"Business Coaching",
- "provider":{
- "@type":"Person",
- "name":"Jehangir Khan"
- },
- "areaServed":{
- "@type":"Country",
- "name":"Pakistan"
- },
- "description":"Business coaching, ERP consulting and digital transformation services for startups and SMEs."
-}
-</script>
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .process-step {
+            background: var(--bg-card);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+        .process-step:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .process-step .step-number {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 48px;
+            border-radius: 50%;
+            margin-bottom: var(--space-sm);
+        }
+        .process-step h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-xs);
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        .process-step p {
+            font-size: 0.95rem;
+            margin: 0;
+            color: var(--text-dim);
+        }
 
+        /* Portfolio Items */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .portfolio-item {
+            background: var(--bg-card);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+        .portfolio-item:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .portfolio-item .icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: var(--space-xs);
+            display: block;
+        }
+        .portfolio-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--space-xs);
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        .portfolio-item p {
+            font-size: 0.95rem;
+            margin: 0;
+            color: var(--text-dim);
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .testimonial-card .quote-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            opacity: 0.3;
+            margin-bottom: var(--space-xs);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1rem;
+            margin: var(--space-xs) 0;
+            color: var(--text-dim);
+        }
+        .testimonial-card h4 {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+            align-items: stretch;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            background: var(--bg-card);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            background: rgba(142, 254, 0, 0.05);
+            transform: scale(1.02);
+        }
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-8px);
+        }
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            padding: 4px 20px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--text-light);
+        }
+        .pricing-card .price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+        }
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-dim);
+        }
+        .pricing-card ul {
+            text-align: left;
+            margin: var(--space-sm) 0 var(--space-md);
+            flex: 1;
+        }
+        .pricing-card ul li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dim);
+            border-bottom: 1px solid var(--border-light);
+            font-size: 0.95rem;
+        }
+        .pricing-card ul li:last-child {
+            border-bottom: none;
+        }
+        .pricing-card ul li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .pricing-card .btn {
+            width: 100%;
+            margin-top: auto;
+        }
+
+        /* Lead Form */
+        .lead-form {
+            background: rgba(26, 42, 10, 0.3);
+            padding: var(--space-xl) 0;
+        }
+        .lead-form .section-title {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        .lead-form .section-title h2 {
+            display: block;
+        }
+        .lead-form .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .lead-form .section-title p {
+            max-width: 600px;
+            margin: var(--space-sm) auto 0;
+            color: var(--text-dim);
+        }
+
+        .project-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+        }
+        .project-form .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--space-sm);
+        }
+        .project-form .form-group label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        .project-form .form-group input,
+        .project-form .form-group select,
+        .project-form .form-group textarea {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+            background: rgba(0, 0, 0, 0.4);
+            color: var(--text-light);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all var(--transition-base);
+            width: 100%;
+        }
+        .project-form .form-group input:focus,
+        .project-form .form-group select:focus,
+        .project-form .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(142, 254, 0, 0.1);
+        }
+        .project-form .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .project-form .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238EFE00' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            cursor: pointer;
+        }
+        .project-form .form-group select option {
+            background: var(--bg-dark);
+            color: var(--text-light);
+        }
+        .project-form .btn {
+            width: 100%;
+            padding: 0.9rem;
+            font-size: 1.05rem;
+            margin-top: var(--space-sm);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg) var(--space-xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            color: var(--bg-dark);
+            font-size: 2.8rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2::after {
+            background: var(--bg-dark);
+        }
+        .cta-section p {
+            color: rgba(3, 6, 0, 0.8);
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.15rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn {
+            background: var(--bg-dark);
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn:hover {
+            background: #0a1a00;
+            color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+            .page-hero .hero-content {
+                padding: var(--space-md) var(--space-sm);
+            }
+            .page-hero .hero-content h1 {
+                font-size: 2rem;
+            }
+            .project-form {
+                padding: var(--space-md);
+            }
+            .cta-section {
+                padding: var(--space-md);
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-hero .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-
-<header>
-
-<div class="logo">JK Tech</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="shopify.html">Shopify</a>
-<a href="odoo.html">Odoo ERP</a>
-<a href="social-media.html">Social Media</a>
-<a href="graphics.html">Graphics</a>
-<a href="python.html">Python</a>
-<a href="web-dev.html">Web Dev</a>
-<a href="business-coaching.html" aria-current="page">Business Coaching</a>
-<a href="experience.html">Experience</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-
-<main id="main-content">
-
-
-<!-- HERO -->
-
-<section class="hero page-hero">
-
-<div class="hero-content">
-
-<h1>Business Coaching & Digital Transformation</h1>
-
-<p class="hero-subtitle">
-
-Strategic guidance to optimize operations, implement technology and scale your business.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#packages" class="btn">View Programs</a>
-
-<a href="contact.html" class="btn btn-outline">Free Consultation</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services">
-
-<h2>Business Consulting Services</h2>
-
-<div class="cards-grid">
-
-<div class="service-card">
-<div class="card-icon">🚀</div>
-<h3>Startup Guidance</h3>
-<p>Business model validation, launch planning and growth strategy.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🏭</div>
-<h3>ERP Implementation</h3>
-<p>Odoo ERP consulting, deployment and training.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">⚙️</div>
-<h3>Process Optimization</h3>
-<p>Improve workflows and eliminate operational bottlenecks.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">💡</div>
-<h3>Digital Transformation</h3>
-<p>Adopt modern tools and cloud solutions for business efficiency.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">📊</div>
-<h3>Strategic Planning</h3>
-<p>Develop actionable roadmaps and performance metrics.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">👥</div>
-<h3>Team Training</h3>
-<p>Upskill teams on ERP systems and digital workflows.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EXPERTISE -->
-
-<section class="expertise">
-
-<h2>Consulting Expertise</h2>
-
-<ul class="expertise-list">
-
-<li>✔ Odoo ERP Strategy</li>
-<li>✔ Business Process Automation</li>
-<li>✔ Digital Transformation Planning</li>
-<li>✔ Startup Growth Strategy</li>
-<li>✔ Operational Efficiency Improvement</li>
-<li>✔ KPI Development</li>
-<li>✔ Technology Adoption Strategy</li>
-<li>✔ Team Productivity Systems</li>
-
-</ul>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section class="process">
-
-<h2>Our Consulting Process</h2>
-
-<div class="steps">
-
-<div class="step">
-<span class="step-number">1</span>
-<h3>Discovery</h3>
-<p>Analyze your business model, operations and challenges.</p>
-</div>
-
-<div class="step">
-<span class="step-number">2</span>
-<h3>Strategy</h3>
-<p>Create a roadmap with clear milestones and KPIs.</p>
-</div>
-
-<div class="step">
-<span class="step-number">3</span>
-<h3>Implementation</h3>
-<p>Support ERP deployment, automation and process changes.</p>
-</div>
-
-<div class="step">
-<span class="step-number">4</span>
-<h3>Optimization</h3>
-<p>Continuous improvement through monitoring and feedback.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio">
-
-<h2>Business Transformation Examples</h2>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<h3>Retail ERP Implementation</h3>
-<p>Implemented Odoo ERP to manage sales, inventory and accounting.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Startup Growth Strategy</h3>
-<p>Developed scalable business model and digital marketing strategy.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Operations Automation</h3>
-<p>Optimized workflows using automation and software integration.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<h2>Client Testimonials</h2>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-<p>Our ERP implementation became smooth with expert guidance.</p>
-<h4>Ahmed Raza</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Great insights for scaling our startup and improving operations.</p>
-<h4>Sarah Malik</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Professional consulting that improved our business processes.</p>
-<h4>Usman Khan</h4>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section class="pricing" id="packages">
-
-<h2>Business Coaching Programs</h2>
-
-<div class="pricing-grid">
-
-<div class="pricing-card">
-
-<h3>Strategy Session</h3>
-
-<p class="price">PKR 25,000 / session</p>
-
-<ul>
-<li>2 Hour Consulting Session</li>
-<li>Business Analysis</li>
-<li>Strategic Recommendations</li>
-<li>Follow-up Report</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Book Session</a>
-
-</div>
-
-
-<div class="pricing-card featured">
-
-<h3>Transformation Program</h3>
-
-<p class="price">PKR 150,000 / 3 months</p>
-
-<ul>
-<li>Bi-weekly Coaching Calls</li>
-<li>ERP Strategy</li>
-<li>Operational Audit</li>
-<li>Team Training</li>
-</ul>
-
-<a href="contact.html" class="btn">Get Started</a>
-
-</div>
-
-
-<div class="pricing-card">
-
-<h3>Consulting Retainer</h3>
-
-<p class="price">Custom Quote</p>
-
-<ul>
-<li>Ongoing Strategic Support</li>
-<li>Process Optimization</li>
-<li>Technology Consulting</li>
-<li>Priority Support</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Contact</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LEAD FORM -->
-
-<section class="lead-form">
-
-<h2>Transform Your Business</h2>
-
-<form class="project-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<input type="text" placeholder="Business Name">
-
-<select>
-
-<option>Select Service</option>
-<option>Business Coaching</option>
-<option>ERP Consulting</option>
-<option>Digital Transformation</option>
-
-</select>
-
-<textarea placeholder="Tell us about your business goals"></textarea>
-
-<button type="submit" class="btn">Send Request</button>
-
-</form>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="contact">
-
-<h2>Ready to Scale Your Business?</h2>
-
-<p>Let's design the strategy and systems to support your growth.</p>
-
-<a href="contact.html" class="btn">Schedule Free Consultation</a>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<p>© 2026 JK Tech | Business Coaching & Consulting</p>
-
-<p>Startup Strategy • ERP Consulting • Digital Transformation</p>
-
-</footer>
-
-
-<script src="js/script.js" defer></script>
-
-<script>
-
-document.addEventListener('DOMContentLoaded',function(){
-
-if(typeof ScrollReveal !== 'undefined'){
-
-ScrollReveal().reveal('.service-card,.step,.portfolio-item,.pricing-card,.testimonial-card',{interval:100,distance:'30px',origin:'bottom',duration:800});
-
-}
-
-});
-
-</script>
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shopify.html">Shopify</a>
+            <a href="social-media.html">Social Media</a>
+            <a href="python.html">Python</a>
+            <a href="web-dev.html">Web Dev</a>
+            <a href="business-coaching.html" aria-current="page">Coaching</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="hero-content">
+                <div class="badge">📈 Business Growth</div>
+                <h1>Business Coaching &amp; <span class="highlight">Digital Transformation</span></h1>
+                <p class="hero-subtitle">
+                    Strategic guidance to optimize operations, implement technology and scale your business.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn">View Programs</a>
+                    <a href="contact.html" class="btn btn-outline">Free Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="services-heading">Business <span class="highlight">Consulting Services</span></h2>
+                    <p>Strategic solutions to transform your business operations and drive growth.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-up">
+                        <div class="card-icon">🚀</div>
+                        <h3>Startup Guidance</h3>
+                        <p>Business model validation, launch planning and growth strategy.</p>
+                    </div>
+                    <div class="service-card fade-up">
+                        <div class="card-icon">🏭</div>
+                        <h3>ERP Implementation</h3>
+                        <p>Odoo ERP consulting, deployment and training for your business.</p>
+                    </div>
+                    <div class="service-card fade-up">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Process Optimization</h3>
+                        <p>Improve workflows and eliminate operational bottlenecks.</p>
+                    </div>
+                    <div class="service-card fade-up">
+                        <div class="card-icon">💡</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Adopt modern tools and cloud solutions for business efficiency.</p>
+                    </div>
+                    <div class="service-card fade-up">
+                        <div class="card-icon">📊</div>
+                        <h3>Strategic Planning</h3>
+                        <p>Develop actionable roadmaps and performance metrics.</p>
+                    </div>
+                    <div class="service-card fade-up">
+                        <div class="card-icon">👥</div>
+                        <h3>Team Training</h3>
+                        <p>Upskill teams on ERP systems and digital workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="expertise-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="expertise-heading">Consulting <span class="highlight">Expertise</span></h2>
+                    <p>Areas where I can provide strategic guidance and implementation support.</p>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-item"><span class="icon">✔</span> Odoo ERP Strategy</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Business Process Automation</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Digital Transformation Planning</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Startup Growth Strategy</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Operational Efficiency Improvement</div>
+                    <div class="expertise-item"><span class="icon">✔</span> KPI Development</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Technology Adoption Strategy</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Team Productivity Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section" aria-labelledby="process-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="process-heading">Our Consulting <span class="highlight">Process</span></h2>
+                    <p>A structured approach to deliver measurable business results.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step scale-in">
+                        <div class="step-number">1</div>
+                        <h3>Discovery</h3>
+                        <p>Analyze your business model, operations and challenges.</p>
+                    </div>
+                    <div class="process-step scale-in">
+                        <div class="step-number">2</div>
+                        <h3>Strategy</h3>
+                        <p>Create a roadmap with clear milestones and KPIs.</p>
+                    </div>
+                    <div class="process-step scale-in">
+                        <div class="step-number">3</div>
+                        <h3>Implementation</h3>
+                        <p>Support ERP deployment, automation and process changes.</p>
+                    </div>
+                    <div class="process-step scale-in">
+                        <div class="step-number">4</div>
+                        <h3>Optimization</h3>
+                        <p>Continuous improvement through monitoring and feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="portfolio-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="portfolio-heading">Business Transformation <span class="highlight">Examples</span></h2>
+                    <p>Real results from real consulting engagements.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item fade-up">
+                        <span class="icon">🏪</span>
+                        <h3>Retail ERP Implementation</h3>
+                        <p>Implemented Odoo ERP to manage sales, inventory and accounting.</p>
+                    </div>
+                    <div class="portfolio-item fade-up">
+                        <span class="icon">📈</span>
+                        <h3>Startup Growth Strategy</h3>
+                        <p>Developed scalable business model and digital marketing strategy.</p>
+                    </div>
+                    <div class="portfolio-item fade-up">
+                        <span class="icon">⚡</span>
+                        <h3>Operations Automation</h3>
+                        <p>Optimized workflows using automation and software integration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="testimonials-heading">Client <span class="highlight">Testimonials</span></h2>
+                    <p>What business owners say about working with me.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card scale-in">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Our ERP implementation became smooth with expert guidance.</p>
+                        <h4>Ahmed Raza</h4>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Great insights for scaling our startup and improving operations.</p>
+                        <h4>Sarah Malik</h4>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Professional consulting that improved our business processes.</p>
+                        <h4>Usman Khan</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" id="packages" aria-labelledby="pricing-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="pricing-heading">Business Coaching <span class="highlight">Programs</span></h2>
+                    <p>Choose the program that fits your business needs and goals.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card fade-up">
+                        <h3>Strategy Session</h3>
+                        <p class="price">PKR 25,000 <span>/ session</span></p>
+                        <ul>
+                            <li>2 Hour Consulting Session</li>
+                            <li>Business Analysis</li>
+                            <li>Strategic Recommendations</li>
+                            <li>Follow-up Report</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Book Session</a>
+                    </div>
+
+                    <div class="pricing-card featured fade-up">
+                        <h3>Transformation Program</h3>
+                        <p class="price">PKR 150,000 <span>/ 3 months</span></p>
+                        <ul>
+                            <li>Bi-weekly Coaching Calls</li>
+                            <li>ERP Strategy</li>
+                            <li>Operational Audit</li>
+                            <li>Team Training</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Get Started</a>
+                    </div>
+
+                    <div class="pricing-card fade-up">
+                        <h3>Consulting Retainer</h3>
+                        <p class="price">Custom Quote</p>
+                        <ul>
+                            <li>Ongoing Strategic Support</li>
+                            <li>Process Optimization</li>
+                            <li>Technology Consulting</li>
+                            <li>Priority Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEAD FORM -->
+        <section class="lead-form" aria-labelledby="form-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="form-heading">Transform Your <span class="highlight">Business</span></h2>
+                    <p>Send your requirements and get a personalized consultation strategy.</p>
+                </div>
+                <form class="project-form" action="https://formsubmit.co/ithelpdesktop1@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="🔥 Business Coaching Inquiry - JK Tech">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="form-group">
+                        <label for="coaching-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="coaching-name" name="Full Name" required placeholder="Your Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coaching-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="coaching-email" name="Email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coaching-business">Business Name</label>
+                        <input type="text" id="coaching-business" name="Business Name" placeholder="Your Business Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coaching-service">Service Required <span class="required">*</span></label>
+                        <select id="coaching-service" name="Service" required>
+                            <option value="">Select Service</option>
+                            <option value="Business Coaching">Business Coaching</option>
+                            <option value="ERP Consulting">ERP Consulting</option>
+                            <option value="Digital Transformation">Digital Transformation</option>
+                            <option value="Process Optimization">Process Optimization</option>
+                            <option value="Startup Strategy">Startup Strategy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coaching-details">Project Details</label>
+                        <textarea id="coaching-details" name="Project Details" rows="4" placeholder="Tell us about your business goals and challenges..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Request</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="container">
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Ready to Scale Your <span style="color: var(--bg-dark);">Business?</span></h2>
+                <p>Let's design the strategy and systems to support your growth.</p>
+                <a href="contact.html" class="btn">Schedule Free Consultation</a>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through technology and strategic consulting.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="business-coaching.html">Coaching</a>
+                    <a href="experience.html">Experience</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="business-coaching.html">Business Coaching</a>
+                    <a href="business-coaching.html#packages">ERP Consulting</a>
+                    <a href="business-coaching.html">Digital Transformation</a>
+                    <a href="business-coaching.html">Process Optimization</a>
+                    <a href="business-coaching.html">Startup Strategy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdesktop1@gmail.com">Email Us</a>
+                    <a href="https://wa.me/923001234567">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech | Business Coaching &amp; Consulting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Get Free Consultation</span>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
+
+            // ---- SCROLL REVEAL ----
+            const revealElements = document.querySelectorAll('.fade-up, .scale-in');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // ---- SMOOTH SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ---- LOG ----
+            console.log('🚀 JK Tech - Business Coaching page loaded');
+            console.log('💚 Theme: Dark Green / Lime Flash');
+
+        })();
+    </script>
 
 </body>
 </html>
