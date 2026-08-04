@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Contact Jehangir Khan | JK Tech – Premium Digital Solutions</title>
-    <meta name="title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
-    <meta name="description" content="Contact Jehangir Khan at JK Tech for Shopify, Web Development, Python Automation, and Business Solutions. Serious inquiries only.">
-    <meta name="keywords" content="contact Shopify developer Pakistan, hire web developer, Python automation expert, business consulting contact">
+    <title>Contact Jehangir Khan | JK Tech – Let's Build Something Amazing</title>
+    <meta name="title" content="Contact Jehangir Khan | JK Tech – Let's Build Something Amazing">
+    <meta name="description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, SEO, Graphic Design, and Business Coaching. Get a free consultation today.">
+    <meta name="keywords" content="contact Shopify developer Pakistan, hire web developer, Python automation expert, business consulting contact, SEO expert">
     <meta name="author" content="Jehangir Khan">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#030600">
@@ -16,16 +16,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.jktech.pk/contact.html">
-    <meta property="og:title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
-    <meta property="og:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, and Business Solutions.">
+    <meta property="og:title" content="Contact Jehangir Khan | JK Tech – Let's Build Something Amazing">
+    <meta property="og:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, SEO, Graphic Design, and Business Coaching.">
     <meta property="og:image" content="https://www.jktech.pk/images/og-contact.jpg">
     <meta property="og:site_name" content="JK Tech">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.jktech.pk/contact.html">
-    <meta property="twitter:title" content="Contact Jehangir Khan | JK Tech – Premium Digital Solutions">
-    <meta property="twitter:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, and Business Solutions.">
+    <meta property="twitter:title" content="Contact Jehangir Khan | JK Tech – Let's Build Something Amazing">
+    <meta property="twitter:description" content="Contact Jehangir Khan for Shopify, Web Development, Python Automation, SEO, Graphic Design, and Business Coaching.">
     <meta property="twitter:image" content="https://www.jktech.pk/images/og-contact.jpg">
     
     <!-- Canonical -->
@@ -48,15 +48,21 @@
     
     <style>
         /* ============================================
-           CONTACT PAGE SPECIFIC STYLES
+           CONTACT PAGE - EASY CONTACT STYLES
            ============================================ */
         
-        /* Hero Override */
+        /* ===== HERO ===== */
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+        }
         .page-hero .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
             padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            z-index: 2;
         }
         .page-hero .hero-content .badge {
             display: inline-block;
@@ -90,7 +96,63 @@
             flex-wrap: wrap;
         }
         
-        /* Contact Section */
+        /* ===== QUICK CONTACT ROW ===== */
+        .quick-contact {
+            padding: var(--space-md) 0;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .quick-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .quick-contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+            text-decoration: none;
+            color: var(--text-light);
+        }
+        .quick-contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+        .quick-contact-item .icon {
+            font-size: 2rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(142, 254, 0, 0.06);
+            border-radius: 50%;
+        }
+        .quick-contact-item .info h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin: 0;
+        }
+        .quick-contact-item .info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+        .quick-contact-item .info .highlight {
+            color: var(--primary);
+        }
+        
+        /* ===== CONTACT SECTION ===== */
         .contact-pro {
             padding: var(--space-xl) 0;
         }
@@ -199,6 +261,36 @@
             font-size: 1.3rem;
         }
         
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+        .trust-badges .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 0.4rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            transition: all var(--transition-base);
+        }
+        .trust-badges .badge:hover {
+            border-color: var(--primary);
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+        .trust-badges .badge i {
+            color: var(--primary);
+        }
+        
         /* Right Column - Form */
         .contact-form-box {
             background: var(--bg-card);
@@ -292,6 +384,12 @@
             opacity: 0.7;
         }
         
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-sm);
+        }
+        
         /* Form Submit Button */
         .contact-form-box .btn {
             width: 100%;
@@ -329,40 +427,336 @@
             margin: 0;
         }
         
-        /* Trust Badges */
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-xs);
-            margin-top: var(--space-md);
+        /* ============================================
+           HEADER & FOOTER
+           ============================================ */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(3, 6, 0, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: all var(--transition-base);
         }
-        .trust-badges .badge {
-            display: inline-flex;
+        header.shrink {
+            padding: 8px 0;
+            background: rgba(3, 6, 0, 0.95);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 6px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-full);
-            padding: 0.4rem 1rem;
-            font-size: 0.75rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+            z-index: 1001;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        nav a {
+            color: var(--text-light);
             font-weight: 500;
+            font-size: 0.9rem;
+            padding: 4px 0;
+            position: relative;
+            transition: color var(--transition-base);
+        }
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width var(--transition-base);
+        }
+        nav a:hover {
+            color: var(--primary);
+        }
+        nav a:hover::before,
+        nav a[aria-current="page"]::before {
+            width: 100%;
+        }
+        nav a[aria-current="page"] {
+            color: var(--primary);
+        }
+        .nav-cta {
+            background: var(--primary-gradient);
+            color: var(--bg-dark) !important;
+            padding: 0.4rem 1.2rem !important;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .nav-cta::before {
+            display: none !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+            color: var(--bg-dark) !important;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 3px 0;
+            border-radius: 2px;
+            transition: all var(--transition-base);
+        }
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        footer {
+            background: var(--bg-dark);
+            padding: var(--space-xl) 0 var(--space-md);
+            border-top: 1px solid var(--border-light);
+            margin-top: var(--space-xl);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .footer-brand .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        .footer-brand p {
+            color: var(--text-dim);
+            max-width: 300px;
+            margin: var(--space-sm) 0 var(--space-md);
+            font-size: 0.95rem;
+        }
+        .footer-socials {
+            display: flex;
+            gap: var(--space-sm);
+            font-size: 1.4rem;
+        }
+        .footer-socials a {
             color: var(--text-dim);
             transition: all var(--transition-base);
         }
-        .trust-badges .badge:hover {
-            border-color: var(--primary);
-            color: var(--text-light);
+        .footer-socials a:hover {
+            color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: var(--shadow-glow);
         }
-        .trust-badges .badge i {
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: var(--space-sm);
+        }
+        .footer-col a {
+            display: block;
+            color: var(--text-dim);
+            padding: 4px 0;
+            font-size: 0.9rem;
+            transition: color var(--transition-base);
+        }
+        .footer-col a:hover {
             color: var(--primary);
         }
-        
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 992px) {
+        .footer-bottom {
+            border-top: 1px solid var(--border-light);
+            margin-top: var(--space-lg);
+            padding-top: var(--space-md);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--shadow-glow);
+            min-width: 180px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left var(--transition-slow);
+            z-index: -1;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow-hover);
+            color: var(--bg-dark);
+        }
+        .btn:hover::before {
+            left: 100%;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* ===== FLOATING ELEMENTS ===== */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-gradient);
+            color: var(--bg-dark);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-glow);
+        }
+        #back-to-top:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow-glow-hover);
+        }
+        #back-to-top.visible {
+            display: flex;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: var(--radius-full);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+        }
+        .whatsapp-float i {
+            font-size: 1.5rem;
+        }
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+        }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 8px 16px;
+            z-index: 1001;
+            text-decoration: none;
+            border-radius: 0 0 var(--radius-sm) 0;
+            transition: top var(--transition-base);
+            font-weight: 600;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .quick-contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-lg);
@@ -373,15 +767,51 @@
             .trust-badges {
                 justify-content: flex-start;
             }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-md);
+            }
         }
-        
+
         @media (max-width: 768px) {
-            .contact-pro {
-                padding: var(--space-lg) 0;
+            body {
+                padding-top: 70px;
             }
-            .contact-form-box {
-                padding: var(--space-md);
+            .menu-toggle {
+                display: flex;
             }
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                transition: right var(--transition-base);
+                box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+                z-index: 1000;
+                border-left: 1px solid var(--border-light);
+                gap: var(--space-sm);
+                overflow-y: auto;
+                align-items: flex-start;
+            }
+            nav.active {
+                right: 0;
+            }
+            nav a {
+                font-size: 1.1rem;
+                padding: 0.5rem 0;
+            }
+            .nav-cta {
+                margin-top: var(--space-xs);
+            }
+            body.no-scroll {
+                overflow: hidden;
+            }
+
             .page-hero .hero-content {
                 padding: var(--space-lg) var(--space-sm);
             }
@@ -390,6 +820,42 @@
             }
             .page-hero .hero-content .hero-subtitle {
                 font-size: 1rem;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .quick-contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-xs);
+            }
+            .quick-contact-item {
+                padding: var(--space-xs);
+                flex-direction: column;
+                text-align: center;
+            }
+            .quick-contact-item .icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+            .quick-contact-item .info p {
+                font-size: 0.8rem;
+            }
+
+            .contact-pro {
+                padding: var(--space-lg) 0;
+            }
+            .contact-form-box {
+                padding: var(--space-md);
+            }
+            .form-row {
+                grid-template-columns: 1fr;
             }
             .benefits-list li {
                 font-size: 0.9rem;
@@ -403,17 +869,35 @@
                 gap: var(--space-xs);
                 justify-content: center;
             }
-            .hero-actions {
-                flex-direction: column;
-                align-items: center;
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+                text-align: center;
             }
-            .hero-actions .btn {
-                width: 100%;
-                max-width: 300px;
+            .footer-brand p {
+                margin: var(--space-sm) auto;
+            }
+            .footer-socials {
+                justify-content: center;
+            }
+            .whatsapp-float span {
+                display: none;
+            }
+            .whatsapp-float {
+                border-radius: 50%;
+                padding: 14px;
+            }
+            #back-to-top {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
             }
         }
-        
+
         @media (max-width: 480px) {
+            .quick-contact-grid {
+                grid-template-columns: 1fr;
+            }
             .contact-form-box {
                 padding: var(--space-sm);
             }
@@ -432,6 +916,9 @@
             .page-hero .hero-content h1 {
                 font-size: 1.8rem;
             }
+            .logo {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -444,19 +931,27 @@
     <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
 
     <!-- Header -->
-    <header>
-        <div class="logo">JK Tech</div>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="shopify.html">Shopify</a>
-            <a href="social-media.html">Social Media</a>
-            <a href="python.html">Python</a>
-            <a href="web-dev.html">Web Dev</a>
-            <a href="graphics.html">Graphics</a>
-            <a href="business-coaching.html">Coaching</a>
-            <a href="experience.html">Experience</a>
-            <a href="contact.html" aria-current="page">Contact</a>
-        </nav>
+    <header id="main-header">
+        <div class="header-inner">
+            <div class="logo">JK Tech</div>
+            <nav aria-label="Main navigation" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shopify.html">Shopify</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="python.html">Python</a>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="graphics.html">Graphics</a>
+                <a href="seo.html">SEO</a>
+                <a href="business-coaching.html">Coaching</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html" class="nav-cta" aria-current="page">Contact</a>
+            </nav>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </header>
 
     <main id="main-content">
@@ -468,11 +963,47 @@
                 <h1>Hire Me, <span class="highlight">Let's Build Your Digital Success</span></h1>
                 <p class="hero-subtitle">
                     I take on <strong>serious clients only</strong> who want results, not shortcuts.<br>
-                    Submit your project requirements and get a personalized strategy &amp; proposal.
+                    Choose how you'd like to connect — I'm here to help.
                 </p>
                 <div class="hero-actions">
                     <a href="#contact-form" class="btn">Send Requirements</a>
                     <a href="experience.html" class="btn btn-outline">View My Portfolio</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUICK CONTACT ROW -->
+        <section class="quick-contact" aria-label="Quick contact options">
+            <div class="container">
+                <div class="quick-contact-grid">
+                    <a href="mailto:ithelpdesktop1@gmail.com" class="quick-contact-item">
+                        <span class="icon"><i class="fas fa-envelope"></i></span>
+                        <div class="info">
+                            <h4>Email</h4>
+                            <p><span class="highlight">ithelpdesktop1@gmail.com</span></p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/923125262317" target="_blank" rel="noopener noreferrer" class="quick-contact-item">
+                        <span class="icon"><i class="fab fa-whatsapp" style="color: #25D366;"></i></span>
+                        <div class="info">
+                            <h4>WhatsApp</h4>
+                            <p><span class="highlight">+92 312 5262317</span></p>
+                        </div>
+                    </a>
+                    <a href="#" class="quick-contact-item">
+                        <span class="icon"><i class="fab fa-linkedin" style="color: #0A66C2;"></i></span>
+                        <div class="info">
+                            <h4>LinkedIn</h4>
+                            <p><span class="highlight">Connect with me</span></p>
+                        </div>
+                    </a>
+                    <a href="#" class="quick-contact-item">
+                        <span class="icon"><i class="fas fa-clock"></i></span>
+                        <div class="info">
+                            <h4>Response Time</h4>
+                            <p><span class="highlight">Within 24 Hours</span></p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -546,15 +1077,15 @@
                                 <input type="text" id="fullname" name="Full Name" required placeholder="Enter your full name">
                             </div>
 
-                            <div class="form-group">
-                                <label for="email">Email Address <span class="required">*</span></label>
-                                <input type="email" id="email" name="Email" required placeholder="your@email.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="whatsapp">WhatsApp Number</label>
-                                <input type="tel" id="whatsapp" name="WhatsApp" placeholder="+92 XXX XXX XXXX">
-                                <span class="helper-text">Optional — recommended for faster communication</span>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="Email" required placeholder="your@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="whatsapp">WhatsApp Number</label>
+                                    <input type="tel" id="whatsapp" name="WhatsApp" placeholder="+92 XXX XXX XXXX">
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -562,37 +1093,39 @@
                                 <input type="text" id="company" name="Company" placeholder="Your business or brand name">
                             </div>
 
-                            <div class="form-group">
-                                <label for="service">Service Required <span class="required">*</span></label>
-                                <select id="service" name="Service" required>
-                                    <option value="">Select a service</option>
-                                    <option value="Shopify Development">Shopify Development</option>
-                                    <option value="Website Development">Website Development</option>
-                                    <option value="SEO Optimization">SEO Optimization</option>
-                                    <option value="Python Automation">Python Automation</option>
-                                    <option value="Social Media Marketing">Social Media Marketing</option>
-                                    <option value="Graphic Design">Graphic Design</option>
-                                    <option value="Business Coaching">Business Coaching</option>
-                                    <option value="Odoo ERP">Odoo ERP</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="budget">Project Budget <span class="required">*</span></label>
-                                <select id="budget" name="Budget" required>
-                                    <option value="">Select budget range</option>
-                                    <option value="$100 - $500">$100 - $500</option>
-                                    <option value="$500 - $1,000">$500 - $1,000</option>
-                                    <option value="$1,000 - $3,000">$1,000 - $3,000</option>
-                                    <option value="$3,000 - $5,000">$3,000 - $5,000</option>
-                                    <option value="$5,000+">$5,000+</option>
-                                </select>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="service">Service Required <span class="required">*</span></label>
+                                    <select id="service" name="Service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="Shopify Development">Shopify Development</option>
+                                        <option value="Website Development">Website Development</option>
+                                        <option value="SEO Optimization">SEO Optimization</option>
+                                        <option value="Python Automation">Python Automation</option>
+                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                        <option value="Graphic Design">Graphic Design</option>
+                                        <option value="Business Coaching">Business Coaching</option>
+                                        <option value="Odoo ERP">Odoo ERP</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Project Budget <span class="required">*</span></label>
+                                    <select id="budget" name="Budget" required>
+                                        <option value="">Select budget range</option>
+                                        <option value="$100 - $500">$100 - $500</option>
+                                        <option value="$500 - $1,000">$500 - $1,000</option>
+                                        <option value="$1,000 - $3,000">$1,000 - $3,000</option>
+                                        <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+                                        <option value="$5,000+">$5,000+</option>
+                                    </select>
+                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="details">Project Details <span class="required">*</span></label>
                                 <textarea id="details" name="Project Details" rows="6" required 
                                     placeholder="Explain your project goals, current challenges, timeline, and desired outcomes. The more detail you provide, the better I can help."></textarea>
+                                <span class="helper-text">Detailed inquiries get priority response</span>
                             </div>
 
                             <button type="submit" class="btn btn-primary">
@@ -616,49 +1149,53 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">JK Tech</div>
-                    <p>Helping businesses grow through technology and digital solutions.</p>
-                    <div class="footer-socials">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="index.html">Home</a>
-                    <a href="shopify.html">Shopify</a>
-                    <a href="social-media.html">Social Media</a>
-                    <a href="python.html">Python</a>
-                    <a href="web-dev.html">Web Dev</a>
-                    <a href="graphics.html">Graphics</a>
-                    <a href="business-coaching.html">Coaching</a>
-                    <a href="experience.html">Experience</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="shopify.html">Shopify Development</a>
-                    <a href="web-dev.html">Web Development</a>
-                    <a href="python.html">Python Automation</a>
-                    <a href="social-media.html">Social Media</a>
-                    <a href="graphics.html">Graphic Design</a>
-                    <a href="business-coaching.html">Business Coaching</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="mailto:ithelpdesktop1@gmail.com">Email Me</a>
-                    <a href="https://wa.me/923125262317">WhatsApp</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">JK Tech</div>
+                <p>Helping businesses grow through technology and digital solutions.</p>
+                <div class="footer-socials">
+                    <a href="mailto:ithelpdesktop1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/923125262317" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://jk-itsolutions.github.io/Portfolio/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                © 2026 JK Tech | Digital Solutions Pakistan. All rights reserved.
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="shopify.html">Shopify</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="python.html">Python</a>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="graphics.html">Graphics</a>
+                <a href="seo.html">SEO</a>
+                <a href="business-coaching.html">Coaching</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
             </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="shopify.html">Shopify Development</a>
+                <a href="web-dev.html">Web Development</a>
+                <a href="seo.html">SEO Optimization</a>
+                <a href="python.html">Python Automation</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="graphics.html">Graphic Design</a>
+                <a href="business-coaching.html">Business Coaching</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="mailto:ithelpdesktop1@gmail.com">Email Me</a>
+                <a href="https://wa.me/923125262317">WhatsApp</a>
+                <a href="#">LinkedIn</a>
+                <a href="https://jk-itsolutions.github.io/Portfolio/">GitHub</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 JK Tech | Digital Solutions Pakistan. All rights reserved.
         </div>
     </footer>
 
@@ -678,14 +1215,59 @@
         (function() {
             'use strict';
 
+            // ---- HEADER SHRINK ----
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('shrink');
+                } else {
+                    header.classList.remove('shrink');
+                }
+            });
+
+            // ---- MOBILE MENU ----
+            const menuToggle = document.getElementById('mobile-menu');
+            const nav = document.getElementById('main-nav');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function() {
+                    const isOpen = nav.classList.contains('active');
+                    nav.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.setAttribute('aria-expanded', !isOpen);
+                    document.body.classList.toggle('no-scroll');
+                });
+
+                nav.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        nav.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (nav.classList.contains('active')) {
+                        const isClickInside = nav.contains(e.target) || menuToggle.contains(e.target);
+                        if (!isClickInside) {
+                            nav.classList.remove('active');
+                            menuToggle.classList.remove('active');
+                            menuToggle.setAttribute('aria-expanded', 'false');
+                            document.body.classList.remove('no-scroll');
+                        }
+                    }
+                });
+            }
+
             // ---- BACK TO TOP ----
             const backBtn = document.getElementById('back-to-top');
             if (backBtn) {
                 window.addEventListener('scroll', function() {
                     if (window.scrollY > 400) {
-                        backBtn.style.display = 'flex';
+                        backBtn.classList.add('visible');
                     } else {
-                        backBtn.style.display = 'none';
+                        backBtn.classList.remove('visible');
                     }
                 });
                 backBtn.addEventListener('click', function() {
