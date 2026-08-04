@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>SEO Portfolio | JK Tech – Search Engine Optimization Results</title>
+    <meta name="title" content="SEO Portfolio | JK Tech – Search Engine Optimization Results">
+    <meta name="description" content="View my SEO portfolio featuring successful search engine optimization campaigns, organic traffic growth, and keyword ranking improvements for diverse industries.">
+    <meta name="keywords" content="SEO portfolio, search engine optimization, organic traffic growth, keyword ranking, SEO results, SEO expert Pakistan">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/seo.html">
+    <meta property="og:title" content="SEO Portfolio | JK Tech – Search Engine Optimization Results">
+    <meta property="og:description" content="View my SEO portfolio featuring successful search engine optimization campaigns, organic traffic growth, and keyword ranking improvements.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-seo.jpg">
+    <meta property="og:site_name" content="JK Tech">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/seo.html">
+    <meta property="twitter:title" content="SEO Portfolio | JK Tech – Search Engine Optimization Results">
+    <meta property="twitter:description" content="View my SEO portfolio featuring successful search engine optimization campaigns, organic traffic growth, and keyword ranking improvements.">
+    <meta property="twitter:image" content="https://www.jktech.pk/images/og-seo.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/seo.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ============================================
+           SEO PORTFOLIO - ADVANCED STYLES
+           ============================================ */
+        
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --seo-gradient: linear-gradient(145deg, #f59e0b, #f97316, #ef4444);
+        }
+        
+        /* ===== HERO ===== */
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 700px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.25rem;
+            color: var(--text-dim);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(142, 254, 0, 0.12);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-full);
+            padding: 0.35rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+            letter-spacing: 0.5px;
+        }
+        .hero-badge i {
+            margin-right: 8px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-stats .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        .hero-stats .stat-number .plus {
+            font-size: 1.8rem;
+        }
+        .hero-stats .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        
+        /* Floating Shapes */
+        .floating-shapes {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .floating-shapes .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.06;
+            animation: floatShape 20s ease-in-out infinite;
+        }
+        .floating-shapes .shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            background: #f59e0b;
+            top: -100px;
+            right: -50px;
+            animation-delay: 0s;
+        }
+        .floating-shapes .shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background: #f97316;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: -7s;
+        }
+        .floating-shapes .shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: #ef4444;
+            top: 50%;
+            left: 30%;
+            animation-delay: -14s;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.1); }
+            66% { transform: translate(-20px, 30px) scale(0.9); }
+        }
+        
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--bg-card);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .trust-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        .trust-bar p {
+            color: var(--text-dim);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .trust-bar p strong {
+            color: var(--text-light);
+        }
+        .trust-icons {
+            display: flex;
+            gap: 32px;
+            font-size: 2.2rem;
+            color: var(--text-dim);
+        }
+        .trust-icons i {
+            transition: all var(--transition-base);
+            cursor: default;
+        }
+        .trust-icons i:hover {
+            color: var(--primary);
+            transform: scale(1.15) translateY(-3px);
+        }
+        
+        /* ===== SEO EXPERTISE ===== */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .expertise-item {
+            background: var(--bg-card);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all var(--transition-base);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .expertise-item:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+        .expertise-item .icon {
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* ===== PROJECT CARDS ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+        .project-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-lg);
+            border: 2px solid transparent;
+            transition: border-color var(--transition-slow);
+            pointer-events: none;
+        }
+        .project-card:hover::after {
+            border-color: var(--primary);
+        }
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-card-hover);
+        }
+        
+        .project-card .project-header {
+            background: var(--seo-gradient);
+            padding: var(--space-lg) var(--space-md) var(--space-md);
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        .project-card .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+        .project-card .project-header .icon {
+            font-size: 2.8rem;
+            color: var(--bg-dark);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .project-card .project-header .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .project-card .project-header h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .project-card .project-header .industry {
+            font-size: 0.8rem;
+            color: rgba(3, 6, 0, 0.7);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        
+        .project-card .project-body {
+            padding: var(--space-md);
+        }
+        .project-card .project-body .result-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(142, 254, 0, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid var(--border-light);
+            margin-bottom: var(--space-sm);
+        }
+        .project-card .project-body .result-badge i {
+            font-size: 0.9rem;
+        }
+        .project-card .project-body .seo-approach {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        .project-card .project-body p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin: 0 0 var(--space-sm);
+            line-height: 1.8;
+        }
+        .project-card .project-body .seo-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: var(--space-sm);
+        }
+        .project-card .project-body .seo-tags span {
+            background: rgba(142, 254, 0, 0.06);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+        .project-card .project-body .seo-tags span:hover {
+            background: rgba(142, 254, 0, 0.12);
+            border-color: var(--primary);
+            color: var(--text-light);
+        }
+        .project-card .project-body .project-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--space-xs);
+            margin: var(--space-sm) 0;
+            padding: var(--space-sm);
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+        .project-card .project-body .project-metrics .metric {
+            text-align: center;
+        }
+        .project-card .project-body .project-metrics .metric .value {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .project-card .project-body .project-metrics .metric .label {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+        .project-card .project-body .btn-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-base);
+            font-size: 0.9rem;
+        }
+        .project-card .project-body .btn-link i {
+            transition: transform var(--transition-base);
+        }
+        .project-card .project-body .btn-link:hover {
+            gap: 14px;
+            color: var(--primary-light);
+        }
+        .project-card .project-body .btn-link:hover i {
+            transform: translateX(6px);
+        }
+        
+        /* ===== SEO TOOLS ===== */
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tool-badge {
+            background: var(--bg-card);
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+        }
+        .tool-badge:hover {
+            transform: scale(1.06) translateY(-3px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+        .tool-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .tool-badge .dot.analytics { background: #F9AB00; }
+        .tool-badge .dot.console { background: #4285F4; }
+        .tool-badge .dot.semrush { background: #FF642D; }
+        .tool-badge .dot.ahrefs { background: #5C2D91; }
+        .tool-badge .dot.moz { background: #5E5E5E; }
+        .tool-badge .dot.screamingfrog { background: #FF6600; }
+        .tool-badge .dot.green { background: var(--primary); }
+        .tool-badge .dot.orange { background: #f59e0b; }
+        
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.15;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .testimonial-card .stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-xs);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1rem;
+            margin: var(--space-xs) 0 var(--space-sm);
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+        .testimonial-card .author {
+            font-weight: 700;
+            color: var(--text-light);
+            margin: 0;
+        }
+        .testimonial-card .role {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+        
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--seo-gradient);
+            color: var(--bg-dark);
+            border-radius: var(--radius-lg);
+            padding: 72px 56px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 50%;
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            color: var(--bg-dark);
+            font-size: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2::after {
+            background: var(--bg-dark);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .cta-section p {
+            color: rgba(3, 6, 0, 0.8);
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn {
+            background: var(--bg-dark);
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            padding: 16px 44px;
+        }
+        .cta-section .btn:hover {
+            background: #0a1a00;
+            color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-md);
+            }
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-stats {
+                gap: 32px;
+            }
+            .hero-stats .stat-number {
+                font-size: 2.2rem;
+            }
+            .trust-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero .hero-content {
+                padding: var(--space-lg) var(--space-sm);
+            }
+            .page-hero .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .page-hero .hero-content .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                gap: 20px;
+                margin-top: 32px;
+                padding-top: 24px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .project-card .project-header {
+                padding: var(--space-md);
+                min-height: 100px;
+            }
+            .project-card .project-header .icon {
+                font-size: 2.2rem;
+            }
+            .project-card .project-header h3 {
+                font-size: 1rem;
+            }
+            
+            .project-card .project-body .project-metrics {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 4px;
+            }
+            
+            .cta-section {
+                padding: 48px 24px;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            
+            .trust-icons {
+                gap: 20px;
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.5rem;
+            }
+            .hero-stats .stat-label {
+                font-size: 0.75rem;
+            }
+            
+            .project-card .project-body .project-metrics {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .project-card .project-body .project-metrics .metric {
+                display: flex;
+                justify-content: space-between;
+                padding: 4px 0;
+                border-bottom: 1px solid var(--border-light);
+            }
+            .project-card .project-body .project-metrics .metric:last-child {
+                border-bottom: none;
+            }
+            
+            .tool-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
+            }
+            .trust-icons {
+                gap: 14px;
+                font-size: 1.3rem;
+            }
+            .cta-section .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shopify.html">Shopify</a>
+            <a href="social-media.html">Social Media</a>
+            <a href="python.html">Python</a>
+            <a href="web-dev.html">Web Dev</a>
+            <a href="graphics.html">Graphics</a>
+            <a href="seo.html" aria-current="page">SEO</a>
+            <a href="business-coaching.html">Coaching</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-chart-line"></i> SEO Portfolio
+                </div>
+                <h1>Search Engine <span class="highlight">Optimization Results</span></h1>
+                <p class="hero-subtitle">
+                    Real SEO campaigns that delivered measurable organic traffic growth, 
+                    improved keyword rankings, and increased conversions.
+                </p>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="#projects" class="btn">View Case Studies</a>
+                    <a href="contact.html" class="btn btn-outline">Discuss Your SEO</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50<span class="plus">+</span></span>
+                        <span class="stat-label">SEO Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200<span class="plus">%</span></span>
+                        <span class="stat-label">Avg. Traffic Growth</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10<span class="plus">+</span></span>
+                        <span class="stat-label">Industries Served</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST BAR -->
+        <section class="trust-bar" aria-label="Trust indicators">
+            <div class="container">
+                <p>Delivering SEO results for brands in <strong>Pakistan, UAE, USA &amp; UK</strong></p>
+                <div class="trust-icons">
+                    <i class="fab fa-google" title="Google"></i>
+                    <i class="fab fa-bing" title="Bing"></i>
+                    <i class="fab fa-yahoo" title="Yahoo"></i>
+                    <i class="fas fa-search" title="Search Engines"></i>
+                    <i class="fas fa-chart-line" title="Analytics"></i>
+                    <i class="fas fa-key" title="Keywords"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO EXPERTISE -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="expertise-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="expertise-heading">SEO <span class="highlight">Expertise</span></h2>
+                    <p>Core areas where I deliver measurable SEO results.</p>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-item"><span class="icon">✔</span> On-Page SEO</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Technical SEO</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Keyword Research &amp; Strategy</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Content Optimization</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Link Building</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Local SEO</div>
+                    <div class="expertise-item"><span class="icon">✔</span> E-commerce SEO</div>
+                    <div class="expertise-item"><span class="icon">✔</span> SEO Audits &amp; Reporting</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO PROJECTS -->
+        <section class="section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="projects-heading">SEO <span class="highlight">Success Stories</span></h2>
+                    <p>Real SEO campaigns that delivered measurable results.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 - E-commerce SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🛒</span>
+                            <div class="header-content">
+                                <h3>E-commerce SEO</h3>
+                                <span class="industry">Online Retail</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-chart-line"></i> 250% Organic Traffic Increase
+                            </div>
+                            <div class="seo-approach">Strategy: Technical SEO + Content Optimization</div>
+                            <p>Comprehensive SEO strategy including technical audit, product page optimization, and content strategy that resulted in 250% organic traffic growth.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">250%</span>
+                                    <span class="label">Traffic Growth</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">#1</span>
+                                    <span class="label">Top Keywords</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">3×</span>
+                                    <span class="label">Sales Increase</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Technical SEO</span>
+                                <span>Content</span>
+                                <span>Keywords</span>
+                                <span>E-commerce</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Local SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📍</span>
+                            <div class="header-content">
+                                <h3>Local SEO</h3>
+                                <span class="industry">Real Estate</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-map-pin"></i> 150+ Local Leads Generated
+                            </div>
+                            <div class="seo-approach">Strategy: Local SEO + Google My Business</div>
+                            <p>Local SEO strategy with Google My Business optimization, local citations, and location-specific content that generated 150+ qualified leads.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">150+</span>
+                                    <span class="label">Local Leads</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">#1</span>
+                                    <span class="label">Local Pack</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4.8★</span>
+                                    <span class="label">GMB Rating</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Local SEO</span>
+                                <span>GMB</span>
+                                <span>Citations</span>
+                                <span>Leads</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 - Content SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📝</span>
+                            <div class="header-content">
+                                <h3>Content SEO</h3>
+                                <span class="industry">Blog &amp; Publishing</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-blog"></i> 300% Blog Traffic Growth
+                            </div>
+                            <div class="seo-approach">Strategy: Content Strategy + Keywords</div>
+                            <p>Content strategy with targeted keywords, blog optimization, and internal linking that increased blog traffic by 300% in 6 months.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">300%</span>
+                                    <span class="label">Traffic Growth</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">50+</span>
+                                    <span class="label">Featured Snippets</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">3×</span>
+                                    <span class="label">Engagement</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Content</span>
+                                <span>Keywords</span>
+                                <span>Featured Snippets</span>
+                                <span>Engagement</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 - Shopify SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🛍️</span>
+                            <div class="header-content">
+                                <h3>Shopify SEO</h3>
+                                <span class="industry">Fashion &amp; Apparel</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-rocket"></i> 200% Organic Sales Increase
+                            </div>
+                            <div class="seo-approach">Strategy: Shopify SEO + Product Optimization</div>
+                            <p>Shopify SEO optimization including product descriptions, meta tags, and store structure that drove 200% increase in organic sales.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">200%</span>
+                                    <span class="label">Sales Growth</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">40+</span>
+                                    <span class="label">Top 3 Rankings</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">5★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Shopify</span>
+                                <span>Product SEO</span>
+                                <span>Meta Tags</span>
+                                <span>Sales</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - Technical SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">⚙️</span>
+                            <div class="header-content">
+                                <h3>Technical SEO</h3>
+                                <span class="industry">SaaS &amp; Technology</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-tachometer-alt"></i> 70% Site Speed Improvement
+                            </div>
+                            <div class="seo-approach">Strategy: Technical Audit + Optimization</div>
+                            <p>Comprehensive technical SEO audit with site speed optimization, mobile-friendliness improvements, and indexation fixes.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">70%</span>
+                                    <span class="label">Speed Improvement</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">0</span>
+                                    <span class="label">Indexing Errors</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4.9★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Technical</span>
+                                <span>Speed</span>
+                                <span>Mobile</span>
+                                <span>Indexation</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 - Link Building SEO -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🔗</span>
+                            <div class="header-content">
+                                <h3>Link Building</h3>
+                                <span class="industry">Marketing &amp; PR</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-link"></i> 100+ High-Quality Backlinks
+                            </div>
+                            <div class="seo-approach">Strategy: Link Building + Authority</div>
+                            <p>Strategic link building campaign including guest posting, influencer outreach, and content promotion that built 100+ high-quality backlinks.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">100+</span>
+                                    <span class="label">Backlinks</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4×</span>
+                                    <span class="label">Domain Authority</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">5★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="seo-tags">
+                                <span>Link Building</span>
+                                <span>Authority</span>
+                                <span>Outreach</span>
+                                <span>Backlinks</span>
+                            </div>
+                            <a href="#" class="btn-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO TOOLS -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="tools-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="tools-heading">SEO <span class="highlight">Tools &amp; Technologies</span></h2>
+                    <p>Industry-leading tools I use for SEO analysis, tracking, and optimization.</p>
+                </div>
+                <div class="tools-grid">
+                    <span class="tool-badge"><span class="dot analytics"></span> Google Analytics</span>
+                    <span class="tool-badge"><span class="dot console"></span> Google Search Console</span>
+                    <span class="tool-badge"><span class="dot semrush"></span> Semrush</span>
+                    <span class="tool-badge"><span class="dot ahrefs"></span> Ahrefs</span>
+                    <span class="tool-badge"><span class="dot moz"></span> Moz</span>
+                    <span class="tool-badge"><span class="dot screamingfrog"></span> Screaming Frog</span>
+                    <span class="tool-badge"><span class="dot orange"></span> Keyword Planner</span>
+                    <span class="tool-badge"><span class="dot green"></span> Yoast SEO</span>
+                    <span class="tool-badge"><span class="dot green"></span> RankMath</span>
+                    <span class="tool-badge"><span class="dot green"></span> Ubersuggest</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="testimonials-heading">Client <span class="highlight">Testimonials</span></h2>
+                    <p>What clients say about my SEO work.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"Our organic traffic increased by 200% within 4 months. The SEO strategy was comprehensive and delivered real results."</p>
+                        <p class="author">Ahmed Raza</p>
+                        <p class="role">E-commerce Owner</p>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"Professional, data-driven, and results-oriented. Our local leads increased significantly after the SEO campaign."</p>
+                        <p class="author">Sara Malik</p>
+                        <p class="role">Real Estate Director</p>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"The technical SEO audit identified issues we didn't know existed. Our site speed improved by 70% and rankings followed."</p>
+                        <p class="author">Usman Khan</p>
+                        <p class="role">SaaS Founder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="container">
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Ready to Rank <br>on Page One?</h2>
+                <p>Let's create an SEO strategy that drives organic traffic and grows your business.</p>
+                <a href="contact.html" class="btn">Get Free SEO Audit</a>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through technology, design, and strategic consulting.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="graphics.html">Graphics</a>
+                    <a href="seo.html">SEO</a>
+                    <a href="business-coaching.html">Coaching</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="shopify.html">Shopify Development</a>
+                    <a href="web-dev.html">Web Development</a>
+                    <a href="python.html">Python Automation</a>
+                    <a href="social-media.html">Social Media Marketing</a>
+                    <a href="graphics.html">Graphic Design</a>
+                    <a href="seo.html">SEO Optimization</a>
+                    <a href="business-coaching.html">Business Coaching</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdesktop1@gmail.com">Email Me</a>
+                    <a href="https://wa.me/923125262317">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923125262317" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Get Free Consultation</span>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 400) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
+
+            // ---- SCROLL REVEAL ----
+            const revealElements = document.querySelectorAll('.fade-up, .scale-in');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // ---- SMOOTH SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ---- LOG ----
+            console.log('🚀 JK Tech - SEO Portfolio loaded');
+            console.log('💚 Theme: Dark Green / Lime Flash');
+            console.log('📈 6 SEO projects showcased');
+
+        })();
+    </script>
+
+</body>
+</html>
