@@ -1,415 +1,1300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Professional Website Development Pakistan | JK Tech</title>
-
-<meta name="description" content="Custom website development in Pakistan. Business websites, landing pages, Odoo integration, and SEO optimization. Fast, responsive and SEO optimized.">
-
-<meta name="keywords" content="website development Pakistan, web design Pakistan, business websites, landing pages, responsive design, SEO websites">
-
-<meta name="author" content="Jehangir Khan">
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://www.jktech.pk/web-dev.html">
-
-<meta property="og:title" content="Professional Website Development Pakistan | JK Tech">
-<meta property="og:description" content="Custom responsive websites designed for performance and conversions.">
-<meta property="og:image" content="https://www.jktech.pk/images/og-webdev.jpg">
-<meta property="og:type" content="website">
-
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
-
-<script src="https://unpkg.com/scrollreveal" defer></script>
-
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Service",
- "serviceType":"Website Development",
- "provider":{
- "@type":"Person",
- "name":"Jehangir Khan"
- },
- "areaServed":{
- "@type":"Country",
- "name":"Pakistan"
- },
- "description":"Professional website development including business websites, landing pages and Odoo integrated websites."
-}
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Web Development Portfolio | JK Tech – Custom Websites & Projects</title>
+    <meta name="title" content="Web Development Portfolio | JK Tech – Custom Websites & Projects">
+    <meta name="description" content="View my web development portfolio featuring custom websites, landing pages, Odoo integrations, and SEO-optimized projects for diverse industries.">
+    <meta name="keywords" content="web development portfolio, custom websites, landing pages, Odoo integration, web developer Pakistan">
+    <meta name="author" content="Jehangir Khan">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030600">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jktech.pk/web-dev.html">
+    <meta property="og:title" content="Web Development Portfolio | JK Tech – Custom Websites & Projects">
+    <meta property="og:description" content="View my web development portfolio featuring custom websites, landing pages, Odoo integrations, and SEO-optimized projects.">
+    <meta property="og:image" content="https://www.jktech.pk/images/og-webdev.jpg">
+    <meta property="og:site_name" content="JK Tech">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.jktech.pk/web-dev.html">
+    <meta property="twitter:title" content="Web Development Portfolio | JK Tech – Custom Websites & Projects">
+    <meta property="twitter:description" content="View my web development portfolio featuring custom websites, landing pages, Odoo integrations, and SEO-optimized projects.">
+    <meta property="twitter:image" content="https://www.jktech.pk/images/og-webdev.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.jktech.pk/web-dev.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* ============================================
+           WEB DEVELOPMENT PORTFOLIO - PURE PORTFOLIO
+           ============================================ */
+        
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --web-gradient: linear-gradient(145deg, #f472b6, #8b5cf6, #06b6d4);
+        }
+        
+        /* ===== HERO ===== */
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .page-hero .hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .page-hero .hero-content .hero-subtitle {
+            max-width: 700px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.25rem;
+            color: var(--text-dim);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(142, 254, 0, 0.12);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-full);
+            padding: 0.35rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+            letter-spacing: 0.5px;
+        }
+        .hero-badge i {
+            margin-right: 8px;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero-stats .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        .hero-stats .stat-number .plus {
+            font-size: 1.8rem;
+        }
+        .hero-stats .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        
+        /* Floating Shapes */
+        .floating-shapes {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .floating-shapes .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.06;
+            animation: floatShape 20s ease-in-out infinite;
+        }
+        .floating-shapes .shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            background: #f472b6;
+            top: -100px;
+            right: -50px;
+            animation-delay: 0s;
+        }
+        .floating-shapes .shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            background: #8b5cf6;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: -7s;
+        }
+        .floating-shapes .shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: #06b6d4;
+            top: 50%;
+            left: 30%;
+            animation-delay: -14s;
+        }
+        
+        @keyframes floatShape {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -40px) scale(1.1); }
+            66% { transform: translate(-20px, 30px) scale(0.9); }
+        }
+        
+        /* Code Brackets Animation */
+        .code-brackets {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin: var(--space-md) 0 var(--space-lg);
+            font-size: 2rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+            opacity: 0.4;
+        }
+        .code-brackets span {
+            animation: codePulse 3s ease-in-out infinite;
+        }
+        .code-brackets span:nth-child(2) { animation-delay: 0.5s; }
+        .code-brackets span:nth-child(3) { animation-delay: 1s; }
+        .code-brackets span:nth-child(4) { animation-delay: 1.5s; }
+        .code-brackets span:nth-child(5) { animation-delay: 2s; }
+        
+        @keyframes codePulse {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--bg-card);
+            padding: var(--space-md) 0;
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .trust-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        .trust-bar p {
+            color: var(--text-dim);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .trust-bar p strong {
+            color: var(--text-light);
+        }
+        .trust-icons {
+            display: flex;
+            gap: 32px;
+            font-size: 2.2rem;
+            color: var(--text-dim);
+        }
+        .trust-icons i {
+            transition: all var(--transition-base);
+            cursor: default;
+        }
+        .trust-icons i:hover {
+            color: var(--primary);
+            transform: scale(1.15) translateY(-3px);
+        }
+        
+        /* ===== EXPERTISE / SKILLS ===== */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .expertise-item {
+            background: var(--bg-card);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all var(--transition-base);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .expertise-item:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+        .expertise-item .icon {
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+        
+        /* ===== PROJECT CARDS ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+        .project-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+        .project-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius-lg);
+            border: 2px solid transparent;
+            transition: border-color var(--transition-slow);
+            pointer-events: none;
+        }
+        .project-card:hover::after {
+            border-color: var(--primary);
+        }
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-card-hover);
+        }
+        
+        .project-card .project-header {
+            background: var(--web-gradient);
+            padding: var(--space-lg) var(--space-md) var(--space-md);
+            position: relative;
+            overflow: hidden;
+            min-height: 120px;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+        .project-card .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+        .project-card .project-header .icon {
+            font-size: 2.8rem;
+            color: var(--bg-dark);
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .project-card .project-header .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .project-card .project-header h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--bg-dark);
+            margin: 0;
+            line-height: 1.3;
+        }
+        .project-card .project-header .industry {
+            font-size: 0.8rem;
+            color: rgba(3, 6, 0, 0.7);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        
+        .project-card .project-body {
+            padding: var(--space-md);
+        }
+        .project-card .project-body .result-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(142, 254, 0, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid var(--border-light);
+            margin-bottom: var(--space-sm);
+        }
+        .project-card .project-body .result-badge i {
+            font-size: 0.9rem;
+        }
+        .project-card .project-body .tech-used {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+        .project-card .project-body p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            margin: 0 0 var(--space-sm);
+            line-height: 1.8;
+        }
+        .project-card .project-body .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: var(--space-sm);
+        }
+        .project-card .project-body .tech-tags span {
+            background: rgba(142, 254, 0, 0.06);
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+        .project-card .project-body .tech-tags span:hover {
+            background: rgba(142, 254, 0, 0.12);
+            border-color: var(--primary);
+            color: var(--text-light);
+        }
+        .project-card .project-body .project-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: var(--space-xs);
+            margin: var(--space-sm) 0;
+            padding: var(--space-sm);
+            background: var(--bg);
+            border-radius: var(--radius-sm);
+        }
+        .project-card .project-body .project-metrics .metric {
+            text-align: center;
+        }
+        .project-card .project-body .project-metrics .metric .value {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .project-card .project-body .project-metrics .metric .label {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+        .project-card .project-body .btn-link {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all var(--transition-base);
+            font-size: 0.9rem;
+        }
+        .project-card .project-body .btn-link i {
+            transition: transform var(--transition-base);
+        }
+        .project-card .project-body .btn-link:hover {
+            gap: 14px;
+            color: var(--primary-light);
+        }
+        .project-card .project-body .btn-link:hover i {
+            transform: translateX(6px);
+        }
+        
+        /* ===== TECH STACK ===== */
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .tech-badge {
+            background: var(--bg-card);
+            padding: 0.6rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+        }
+        .tech-badge:hover {
+            transform: scale(1.06) translateY(-3px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+        .tech-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .tech-badge .dot.html { background: #E34F26; }
+        .tech-badge .dot.css { background: #1572B6; }
+        .tech-badge .dot.js { background: #F7DF1E; }
+        .tech-badge .dot.python { background: #306998; }
+        .tech-badge .dot.sql { background: #00758F; }
+        .tech-badge .dot.odoo { background: #7C6C4C; }
+        .tech-badge .dot.wordpress { background: #21759B; }
+        .tech-badge .dot.git { background: #F05032; }
+        .tech-badge .dot.green { background: var(--primary); }
+        
+        /* ===== TESTIMONIALS ===== */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: all var(--transition-base);
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.15;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+            border-color: var(--border-medium);
+        }
+        .testimonial-card .stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-xs);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1rem;
+            margin: var(--space-xs) 0 var(--space-sm);
+            color: var(--text-dim);
+            line-height: 1.7;
+        }
+        .testimonial-card .author {
+            font-weight: 700;
+            color: var(--text-light);
+            margin: 0;
+        }
+        .testimonial-card .role {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+        
+        /* ===== CTA ===== */
+        .cta-section {
+            background: var(--web-gradient);
+            color: var(--bg-dark);
+            border-radius: var(--radius-lg);
+            padding: 72px 56px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 50%;
+        }
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+        .cta-section h2 {
+            color: var(--bg-dark);
+            font-size: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2::after {
+            background: var(--bg-dark);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .cta-section p {
+            color: rgba(3, 6, 0, 0.8);
+            max-width: 600px;
+            margin: var(--space-sm) auto var(--space-md);
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section .btn {
+            background: var(--bg-dark);
+            color: var(--primary);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+            padding: 16px 44px;
+        }
+        .cta-section .btn:hover {
+            background: #0a1a00;
+            color: var(--primary-light);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-md);
+            }
+            .expertise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-stats {
+                gap: 32px;
+            }
+            .hero-stats .stat-number {
+                font-size: 2.2rem;
+            }
+            .trust-bar .container {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero .hero-content {
+                padding: var(--space-lg) var(--space-sm);
+            }
+            .page-hero .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .page-hero .hero-content .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                gap: 20px;
+                margin-top: 32px;
+                padding-top: 24px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .code-brackets {
+                font-size: 1.2rem;
+                gap: 4px;
+            }
+            
+            .project-card .project-header {
+                padding: var(--space-md);
+                min-height: 100px;
+            }
+            .project-card .project-header .icon {
+                font-size: 2.2rem;
+            }
+            .project-card .project-header h3 {
+                font-size: 1rem;
+            }
+            
+            .project-card .project-body .project-metrics {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 4px;
+            }
+            
+            .cta-section {
+                padding: 48px 24px;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            .cta-section p {
+                font-size: 1rem;
+            }
+            
+            .trust-icons {
+                gap: 20px;
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.5rem;
+            }
+            .hero-stats .stat-label {
+                font-size: 0.75rem;
+            }
+            
+            .code-brackets {
+                font-size: 1rem;
+                gap: 2px;
+            }
+            
+            .project-card .project-body .project-metrics {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .project-card .project-body .project-metrics .metric {
+                display: flex;
+                justify-content: space-between;
+                padding: 4px 0;
+                border-bottom: 1px solid var(--border-light);
+            }
+            .project-card .project-body .project-metrics .metric:last-child {
+                border-bottom: none;
+            }
+            
+            .tech-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
+            }
+            .trust-icons {
+                gap: 14px;
+                font-size: 1.3rem;
+            }
+            .cta-section .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-
-
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-
-<header>
-
-<div class="logo">JK Tech</div>
-
-<nav>
-
-<a href="index.html">Home</a>
-<a href="shopify.html">Shopify</a>
-<a href="odoo.html">Odoo ERP</a>
-<a href="social-media.html">Social Media</a>
-<a href="graphics.html">Graphics</a>
-<a href="python.html">Python</a>
-<a href="web-dev.html" aria-current="page">Web Dev</a>
-<a href="business-coaching.html">Business Coaching</a>
-<a href="experience.html">Experience</a>
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-
-<main id="main-content">
-
-
-<!-- HERO -->
-
-<section class="hero page-hero">
-
-<div class="hero-content">
-
-<h1>Professional Website Development</h1>
-
-<p class="hero-subtitle">
-Custom, responsive and SEO-optimized websites that build trust and grow your business online.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#packages" class="btn">View Packages</a>
-
-<a href="contact.html" class="btn btn-outline">Free Consultation</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="services">
-
-<h2>Website Development Services</h2>
-
-<div class="cards-grid">
-
-<div class="service-card">
-<div class="card-icon">🏢</div>
-<h3>Business Websites</h3>
-<p>Professional websites designed to showcase your company and services.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🎯</div>
-<h3>Landing Pages</h3>
-<p>High-converting landing pages for marketing campaigns.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">🔍</div>
-<h3>SEO Optimization</h3>
-<p>Technical SEO, meta tags, and performance optimization.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">📦</div>
-<h3>Odoo Website Integration</h3>
-<p>Fully integrated websites with Odoo ERP system.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">📱</div>
-<h3>Responsive Design</h3>
-<p>Optimized for desktop, tablet and mobile devices.</p>
-</div>
-
-<div class="service-card">
-<div class="card-icon">⚡</div>
-<h3>Website Speed Optimization</h3>
-<p>Fast loading websites optimized for performance.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TECHNOLOGIES -->
-
-<section class="expertise">
-
-<h2>Technologies We Use</h2>
-
-<ul class="expertise-list">
-
-<li>✔ HTML5 / CSS3</li>
-<li>✔ JavaScript</li>
-<li>✔ WordPress CMS</li>
-<li>✔ Odoo Website Builder</li>
-<li>✔ Shopify Storefront</li>
-<li>✔ SEO Optimization</li>
-<li>✔ Mobile-First Design</li>
-<li>✔ Website Performance Optimization</li>
-
-</ul>
-
-</section>
-
-
-<!-- PROCESS -->
-
-<section class="process">
-
-<h2>Our Website Development Process</h2>
-
-<div class="steps">
-
-<div class="step">
-<span class="step-number">1</span>
-<h3>Discovery</h3>
-<p>Understanding your business goals and audience.</p>
-</div>
-
-<div class="step">
-<span class="step-number">2</span>
-<h3>Design</h3>
-<p>Creating wireframes and visual layouts.</p>
-</div>
-
-<div class="step">
-<span class="step-number">3</span>
-<h3>Development</h3>
-<p>Building fast, secure and scalable websites.</p>
-</div>
-
-<div class="step">
-<span class="step-number">4</span>
-<h3>Launch</h3>
-<p>Testing, optimization and deployment.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PORTFOLIO -->
-
-<section class="portfolio">
-
-<h2>Recent Website Projects</h2>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<h3>Corporate Business Website</h3>
-<p>Professional company website with SEO optimization.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Ecommerce Website</h3>
-<p>Online store with product management and payments.</p>
-</div>
-
-<div class="portfolio-item">
-<h3>Landing Page Campaign</h3>
-<p>Marketing landing page designed for lead generation.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TESTIMONIALS -->
-
-<section class="testimonials">
-
-<h2>Client Testimonials</h2>
-
-<div class="testimonial-grid">
-
-<div class="testimonial-card">
-<p>Our business website looks amazing and loads very fast.</p>
-<h4>Ali Hassan</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Professional web development service with excellent support.</p>
-<h4>Fatima Khan</h4>
-</div>
-
-<div class="testimonial-card">
-<p>Great experience working with JK Tech for our company website.</p>
-<h4>Usman Tariq</h4>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section class="pricing" id="packages">
-
-<h2>Website Packages</h2>
-
-<div class="pricing-grid">
-
-<div class="pricing-card">
-
-<h3>Starter</h3>
-
-<p class="price">PKR 35,000</p>
-
-<ul>
-<li>5 Page Website</li>
-<li>Responsive Design</li>
-<li>Contact Form</li>
-<li>Basic SEO Setup</li>
-<li>1 Month Support</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Get Started</a>
-
-</div>
-
-
-<div class="pricing-card featured">
-
-<h3>Business Pro</h3>
-
-<p class="price">PKR 75,000</p>
-
-<ul>
-<li>10 Page Custom Website</li>
-<li>Advanced UI Design</li>
-<li>Blog / CMS</li>
-<li>SEO Optimization</li>
-<li>3 Months Support</li>
-</ul>
-
-<a href="contact.html" class="btn">Get Started</a>
-
-</div>
-
-
-<div class="pricing-card">
-
-<h3>Enterprise</h3>
-
-<p class="price">Custom Quote</p>
-
-<ul>
-<li>Custom Development</li>
-<li>Odoo / Shopify Integration</li>
-<li>Advanced SEO</li>
-<li>Performance Optimization</li>
-</ul>
-
-<a href="contact.html" class="btn btn-outline">Contact</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LEAD FORM -->
-
-<section class="lead-form">
-
-<h2>Start Your Website Project</h2>
-
-<form class="project-form">
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<input type="text" placeholder="Business Name">
-
-<select>
-
-<option>Select Service</option>
-<option>Business Website</option>
-<option>Landing Page</option>
-<option>Ecommerce Website</option>
-
-</select>
-
-<textarea placeholder="Tell us about your website project"></textarea>
-
-<button type="submit" class="btn">Send Project Request</button>
-
-</form>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="contact">
-
-<h2>Ready to Build Your Website?</h2>
-
-<p>Let's create a professional website that converts visitors into customers.</p>
-
-<a href="contact.html" class="btn">Start Your Project</a>
-
-</section>
-
-</main>
-
-
-<footer>
-
-<p>© 2026 JK Tech | Website Development Pakistan</p>
-
-<p>Web Design • SEO Websites • Odoo Websites • Business Websites</p>
-
-</footer>
-
-
-<script src="js/script.js" defer></script>
-
-<script>
-
-document.addEventListener('DOMContentLoaded',function(){
-
-if(typeof ScrollReveal !== 'undefined'){
-
-ScrollReveal().reveal('.service-card,.step,.portfolio-item,.pricing-card,.testimonial-card',{interval:100,distance:'30px',origin:'bottom',duration:800});
-
-}
-
-});
-
-</script>
+    <!-- Progress Bar -->
+    <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">JK Tech</div>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="shopify.html">Shopify</a>
+            <a href="social-media.html">Social Media</a>
+            <a href="python.html">Python</a>
+            <a href="web-dev.html" aria-current="page">Web Dev</a>
+            <a href="business-coaching.html">Coaching</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="page-hero hero">
+            <div class="floating-shapes">
+                <div class="shape"></div>
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-code"></i> Web Development Portfolio
+                </div>
+                <h1>Web Development <br><span class="highlight">Projects</span></h1>
+                <p class="hero-subtitle">
+                    Custom websites, landing pages, and Odoo integrations I've built for businesses 
+                    across multiple industries.
+                </p>
+                <div class="hero-actions" style="justify-content: center;">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="contact.html" class="btn btn-outline">Discuss Your Project</a>
+                </div>
+                
+                <div class="code-brackets">
+                    <span>&lt;</span>
+                    <span>html</span>
+                    <span>&gt;</span>
+                    <span>code</span>
+                    <span>&lt;/</span>
+                    <span>html</span>
+                    <span>&gt;</span>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50<span class="plus">+</span></span>
+                        <span class="stat-label">Websites Built</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99<span class="plus">%</span></span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10<span class="plus">+</span></span>
+                        <span class="stat-label">Industries Served</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST BAR -->
+        <section class="trust-bar" aria-label="Trust indicators">
+            <div class="container">
+                <p>Building websites for businesses in <strong>Pakistan, UAE, USA &amp; UK</strong></p>
+                <div class="trust-icons">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fab fa-wordpress" title="WordPress"></i>
+                    <i class="fab fa-git-alt" title="Git"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE / SKILLS -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="expertise-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="expertise-heading">Web Development <span class="highlight">Skills</span></h2>
+                    <p>Core competencies that deliver high-quality, responsive websites.</p>
+                </div>
+                <div class="expertise-grid">
+                    <div class="expertise-item"><span class="icon">✔</span> Frontend Development</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Backend Development</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Responsive Design</div>
+                    <div class="expertise-item"><span class="icon">✔</span> SEO Optimization</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Odoo Integration</div>
+                    <div class="expertise-item"><span class="icon">✔</span> WordPress Development</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Landing Page Design</div>
+                    <div class="expertise-item"><span class="icon">✔</span> Performance Optimization</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="projects-heading">Featured <span class="highlight">Web Projects</span></h2>
+                    <p>Custom websites and web applications I've built for diverse clients.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 - Corporate Website -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🏢</span>
+                            <div class="header-content">
+                                <h3>Corporate Business Site</h3>
+                                <span class="industry">Business Services</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-rocket"></i> 10-Page Custom Website
+                            </div>
+                            <div class="tech-used">Tech: HTML5, CSS3, JavaScript, PHP</div>
+                            <p>Built a professional 10-page corporate website with responsive design, contact forms, and SEO optimization. Increased online visibility and lead generation.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">10+</span>
+                                    <span class="label">Pages</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">40%</span>
+                                    <span class="label">Traffic Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">5★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>SEO</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Odoo Website -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📦</span>
+                            <div class="header-content">
+                                <h3>Odoo ERP Website</h3>
+                                <span class="industry">ERP &amp; Business Management</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-database"></i> Full Odoo Integration
+                            </div>
+                            <div class="tech-used">Tech: Odoo, Python, XML, PostgreSQL</div>
+                            <p>Developed a fully integrated Odoo website with custom theme, e-commerce functionality, inventory management, and CRM synchronization.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">100%</span>
+                                    <span class="label">ERP Integration</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">50+</span>
+                                    <span class="label">Products</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4.9★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>Odoo</span>
+                                <span>Python</span>
+                                <span>XML</span>
+                                <span>PostgreSQL</span>
+                                <span>E-commerce</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 - Landing Page -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🎯</span>
+                            <div class="header-content">
+                                <h3>Product Landing Page</h3>
+                                <span class="industry">Marketing &amp; Conversion</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-chart-line"></i> High-Converting Campaign
+                            </div>
+                            <div class="tech-used">Tech: HTML5, CSS3, JavaScript, MailChimp</div>
+                            <p>Created a high-converting landing page for a product launch with email capture, analytics tracking, and A/B testing optimization.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">35%</span>
+                                    <span class="label">Conversion Rate</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">2×</span>
+                                    <span class="label">Lead Generation</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4.8★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>MailChimp</span>
+                                <span>A/B Testing</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 - WordPress Site -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">📝</span>
+                            <div class="header-content">
+                                <h3>Blog &amp; Content Website</h3>
+                                <span class="industry">Media &amp; Publishing</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-blog"></i> Custom WordPress Theme
+                            </div>
+                            <div class="tech-used">Tech: WordPress, PHP, MySQL, CSS3</div>
+                            <p>Built a custom WordPress website with advanced content management, SEO optimization, and social media integration for a publishing company.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">200+</span>
+                                    <span class="label">Articles</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">50K+</span>
+                                    <span class="label">Monthly Visitors</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">5★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>WordPress</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>CSS3</span>
+                                <span>SEO</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - E-commerce Site -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🛍️</span>
+                            <div class="header-content">
+                                <h3>E-commerce Store</h3>
+                                <span class="industry">Retail &amp; E-commerce</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-shopping-cart"></i> 200% Sales Increase
+                            </div>
+                            <div class="tech-used">Tech: Python, Django, PostgreSQL, Stripe</div>
+                            <p>Developed a fully functional e-commerce store with payment integration, inventory management, and customer account system.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">200%</span>
+                                    <span class="label">Sales Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">500+</span>
+                                    <span class="label">Products</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">4.9★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>PostgreSQL</span>
+                                <span>Stripe</span>
+                                <span>E-commerce</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 - Portfolio Site -->
+                    <div class="project-card fade-up">
+                        <div class="project-header">
+                            <span class="icon">🎨</span>
+                            <div class="header-content">
+                                <h3>Creative Portfolio</h3>
+                                <span class="industry">Creative &amp; Design</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="result-badge">
+                                <i class="fas fa-star"></i> 5-Star Design
+                            </div>
+                            <div class="tech-used">Tech: HTML5, CSS3, JavaScript, GSAP</div>
+                            <p>Designed and built a visually stunning portfolio website with animations, smooth scrolling, and interactive elements for a creative professional.</p>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <span class="value">95%</span>
+                                    <span class="label">Design Score</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">3×</span>
+                                    <span class="label">Inquiries</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="value">5★</span>
+                                    <span class="label">Client Rating</span>
+                                </div>
+                            </div>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>GSAP</span>
+                                <span>Animation</span>
+                            </div>
+                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECH STACK -->
+        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="tech-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="tech-heading">Web Development <span class="highlight">Tech Stack</span></h2>
+                    <p>Modern tools and technologies I use to build websites.</p>
+                </div>
+                <div class="tech-grid">
+                    <span class="tech-badge"><span class="dot html"></span> HTML5</span>
+                    <span class="tech-badge"><span class="dot css"></span> CSS3</span>
+                    <span class="tech-badge"><span class="dot js"></span> JavaScript</span>
+                    <span class="tech-badge"><span class="dot python"></span> Python</span>
+                    <span class="tech-badge"><span class="dot sql"></span> SQLite</span>
+                    <span class="tech-badge"><span class="dot odoo"></span> Odoo ERP</span>
+                    <span class="tech-badge"><span class="dot wordpress"></span> WordPress</span>
+                    <span class="tech-badge"><span class="dot git"></span> Git</span>
+                    <span class="tech-badge"><span class="dot green"></span> Django</span>
+                    <span class="tech-badge"><span class="dot green"></span> Flask</span>
+                    <span class="tech-badge"><span class="dot green"></span> PHP</span>
+                    <span class="tech-badge"><span class="dot green"></span> MySQL</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="testimonials-heading">Client <span class="highlight">Testimonials</span></h2>
+                    <p>What business owners say about my web development work.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"Jehangir built our corporate website from scratch. The design is professional and our leads have increased significantly."</p>
+                        <p class="author">Ahmed Raza</p>
+                        <p class="role">CEO, Business Services</p>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"The Odoo website integration was seamless. Our operations are now fully automated and we've seen a huge efficiency boost."</p>
+                        <p class="author">Sara Malik</p>
+                        <p class="role">Operations Director</p>
+                    </div>
+                    <div class="testimonial-card scale-in">
+                        <div class="stars">★★★★★</div>
+                        <p>"Professional, reliable, and delivered ahead of schedule. The landing page converted at 35% – best campaign ever!"</p>
+                        <p class="author">Usman Khan</p>
+                        <p class="role">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="container">
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <h2 id="cta-heading">Ready to Build Your <br>Website?</h2>
+                <p>Let's create a site that represents your brand and converts visitors into customers.</p>
+                <a href="contact.html" class="btn">Discuss Your Project</a>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">JK Tech</div>
+                    <p>Helping businesses grow through professional web development.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="shopify.html">Shopify</a>
+                    <a href="social-media.html">Social Media</a>
+                    <a href="python.html">Python</a>
+                    <a href="web-dev.html">Web Dev</a>
+                    <a href="business-coaching.html">Coaching</a>
+                    <a href="experience.html">Experience</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="web-dev.html#projects">Web Development</a>
+                    <a href="web-dev.html#projects">SEO Optimization</a>
+                    <a href="web-dev.html#projects">Odoo Integration</a>
+                    <a href="web-dev.html#projects">Landing Pages</a>
+                    <a href="web-dev.html#projects">Maintenance</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="mailto:ithelpdeskto1@gmail.com">Email Us</a>
+                    <a href="https://wa.me/923001234567">WhatsApp</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 JK Tech | Web Development Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Get Free Consultation</span>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- ============================================
+    SCRIPTS
+    ============================================ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ---- BACK TO TOP ----
+            const backBtn = document.getElementById('back-to-top');
+            if (backBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 400) {
+                        backBtn.style.display = 'flex';
+                    } else {
+                        backBtn.style.display = 'none';
+                    }
+                });
+                backBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ---- SCROLL PROGRESS ----
+            const progressBar = document.getElementById('progress-bar');
+            if (progressBar) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                    progressBar.style.width = progress + '%';
+                });
+            }
+
+            // ---- SCROLL REVEAL ----
+            const revealElements = document.querySelectorAll('.fade-up, .scale-in');
+            const revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealElements.forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // ---- SMOOTH SCROLL ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ---- LOG ----
+            console.log('🚀 JK Tech - Web Development Portfolio loaded');
+            console.log('💚 Theme: Dark Green / Lime Flash');
+            console.log('💻 6 web development projects showcased');
+
+        })();
+    </script>
 
 </body>
 </html>
