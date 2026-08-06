@@ -650,16 +650,25 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
-        }
+ /* ===== LOGO - Image Version ===== */
         .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
             z-index: 1001;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 70px;  /* Adjust this value to your preferred size */
+            width: auto;
+            display: block;
+            /* Add a subtle glow effect to match your theme */
+            filter: drop-shadow(0 0 10px rgba(142, 254, 0, 0.2));
+            transition: filter var(--transition-base);
+        }
+
+        .logo img:hover {
+            filter: drop-shadow(0 0 20px rgba(142, 254, 0, 0.4));
         }
         nav {
             display: flex;
