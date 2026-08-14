@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Graphic Design Portfolio | JK Tech – Creative Visual Identity</title>
     <meta name="title" content="Graphic Design Portfolio | JK Tech – Creative Visual Identity">
@@ -12,7 +12,7 @@
     <meta name="author" content="Jehangir Khan">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#030600">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.jktech.pk/graphics.html">
@@ -20,42 +20,145 @@
     <meta property="og:description" content="7+ years of creative graphic design experience. 100+ logos, 999+ social media posts, 700+ print designs.">
     <meta property="og:image" content="https://www.jktech.pk/images/og-graphics.jpg">
     <meta property="og:site_name" content="JK Tech">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.jktech.pk/graphics.html">
     <meta property="twitter:title" content="Graphic Design Portfolio | JK Tech – Creative Visual Identity">
     <meta property="twitter:description" content="Professional graphic design portfolio featuring logo design, social media creatives, branding, and print design.">
     <meta property="twitter:image" content="https://www.jktech.pk/images/og-graphics.jpg">
-    
+
     <!-- Canonical -->
     <link rel="canonical" href="https://www.jktech.pk/graphics.html">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    
+
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
+
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
         /* ============================================
-           GRAPHIC DESIGN PORTFOLIO - CONSISTENT STYLES
+           GRAPHIC DESIGN PORTFOLIO - COMPLETE STYLES
            ============================================ */
-        
-        /* ===== CSS VARIABLES (Consistent with theme) ===== */
+
+        /* ===== CSS VARIABLES ===== */
         :root {
-            --design-gradient: linear-gradient(145deg, #ec4899, #8b5cf6, #3b82f6);
+            --bg-dark: #030600;
+            --bg-medium: #0b1a05;
+            --bg-card: rgba(15, 31, 10, 0.6);
+            --bg-card-hover: rgba(21, 42, 14, 0.8);
+            --border-light: rgba(142, 254, 0, 0.08);
+            --border-medium: rgba(142, 254, 0, 0.15);
+            --border-active: rgba(142, 254, 0, 0.35);
+            --primary: #8efe00;
+            --primary-dark: #6bcc00;
+            --primary-glow: rgba(142, 254, 0, 0.15);
+            --primary-gradient: linear-gradient(135deg, #8efe00 0%, #6bcc00 100%);
+            --text-light: #f0f7ea;
+            --text-dim: #b3c9a8;
+            --text-muted: #6a8460;
+            --shadow-glow: 0 0 40px rgba(142, 254, 0, 0.12);
+            --shadow-glow-hover: 0 0 60px rgba(142, 254, 0, 0.2);
+            --shadow-card-hover: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(142, 254, 0, 0.15);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-full: 40px;
+            --transition-base: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
         }
-        
+
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: 80px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-gradient);
+            border-radius: 10px;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 30px var(--primary-glow);
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 10px 20px;
+            z-index: 10000;
+            font-weight: 700;
+            border-radius: 0 0 8px 0;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
         /* ===== HEADER ===== */
         header {
             position: fixed;
@@ -78,29 +181,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
         }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.5px;
-            z-index: 1001;
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s;
         }
+        .logo img:hover {
+            transform: scale(1.03);
+        }
+
         nav {
             display: flex;
             align-items: center;
             gap: 20px;
         }
         nav a {
-            color: var(--text-light);
+            color: var(--text-dim);
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             padding: 4px 0;
             position: relative;
             transition: color var(--transition-base);
@@ -116,7 +219,7 @@
             transition: width var(--transition-base);
         }
         nav a:hover {
-            color: var(--primary);
+            color: var(--text-light);
         }
         nav a:hover::before,
         nav a[aria-current="page"]::before {
@@ -128,17 +231,18 @@
         .nav-cta {
             background: var(--primary-gradient);
             color: var(--bg-dark) !important;
-            padding: 0.4rem 1.2rem !important;
+            padding: 0.4rem 1.4rem !important;
             border-radius: var(--radius-full);
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem !important;
+            box-shadow: var(--shadow-glow);
         }
         .nav-cta::before {
             display: none !important;
         }
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-glow);
+            box-shadow: var(--shadow-glow-hover);
             color: var(--bg-dark) !important;
         }
         .menu-toggle {
@@ -151,11 +255,11 @@
             z-index: 1001;
         }
         .bar {
-            width: 25px;
-            height: 3px;
+            width: 26px;
+            height: 2.5px;
             background: var(--text-light);
             margin: 3px 0;
-            border-radius: 2px;
+            border-radius: 4px;
             transition: all var(--transition-base);
         }
         .menu-toggle.active .bar:nth-child(1) {
@@ -163,10 +267,9 @@
         }
         .menu-toggle.active .bar:nth-child(2) {
             opacity: 0;
-            transform: translateX(-10px);
         }
         .menu-toggle.active .bar:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
         /* ===== HERO ===== */
@@ -201,7 +304,7 @@
             border-radius: 50%;
             animation: floatShape 25s ease-in-out infinite reverse;
         }
-        
+
         @keyframes floatShape {
             0%, 100% { transform: translate(0, 0) scale(1); }
             33% { transform: translate(30px, -40px) scale(1.1); }
@@ -216,7 +319,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-badge {
             display: inline-block;
             background: rgba(142, 254, 0, 0.12);
@@ -232,10 +335,13 @@
         .hero-badge i {
             margin-right: 8px;
         }
-        
+
         .hero-content h1 {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(3rem, 7vw, 5rem);
             margin-bottom: var(--space-sm);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
         }
         .hero-content h1 .highlight {
             background: var(--primary-gradient);
@@ -248,105 +354,16 @@
             margin: var(--space-sm) auto var(--space-md);
             font-size: 1.25rem;
             color: var(--text-dim);
+            line-height: 1.8;
         }
-        
+
         .hero-actions {
             display: flex;
             gap: var(--space-sm);
             justify-content: center;
             flex-wrap: wrap;
         }
-        
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 56px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border-light);
-            flex-wrap: wrap;
-        }
-        .hero-stats .stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .hero-stats .stat-number {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: var(--primary);
-            line-height: 1.2;
-        }
-        .hero-stats .stat-number .plus {
-            font-size: 1.8rem;
-        }
-        .hero-stats .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            font-weight: 500;
-            margin-top: 2px;
-        }
 
-        /* ===== SECTION TITLES ===== */
-        .section {
-            padding: 80px 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: var(--space-xl);
-        }
-        .section-title .sub-title {
-            display: inline-block;
-            background: rgba(142, 254, 0, 0.08);
-            border: 1px solid var(--border-light);
-            border-radius: var(--radius-full);
-            padding: 0.2rem 1rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: var(--space-sm);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .section-title h2 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            display: inline-block;
-            position: relative;
-            margin-bottom: 16px;
-            color: var(--text-light);
-        }
-        .section-title h2 .highlight {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
-        }
-        .section-title p {
-            max-width: 600px;
-            margin: var(--space-md) auto 0;
-            color: var(--text-dim);
-            font-size: 1.15rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ===== BUTTONS ===== */
         .btn {
             display: inline-block;
             background: var(--primary-gradient);
@@ -364,7 +381,7 @@
             box-shadow: var(--shadow-glow);
             min-width: 180px;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         .btn::before {
             content: '';
@@ -397,316 +414,222 @@
             box-shadow: var(--shadow-glow);
         }
 
-        /* ===== EXPERTISE ===== */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-md);
-            max-width: 1100px;
-            margin: 0 auto;
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
         }
-        .expertise-item {
-            background: var(--bg-card);
-            padding: var(--space-lg) var(--space-md);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            text-align: center;
-            transition: all var(--transition-slow);
-            position: relative;
-            overflow: hidden;
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .expertise-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-            transform: scaleX(0);
-            transition: transform var(--transition-base);
-        }
-        .expertise-item:hover::before {
-            transform: scaleX(1);
-        }
-        .expertise-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: var(--shadow-card-hover);
-            border-color: var(--primary);
-        }
-        .expertise-item .icon {
-            font-size: 3.2rem;
-            margin-bottom: var(--space-sm);
-            display: block;
-        }
-        .expertise-item .count {
-            display: block;
-            font-size: 1.8rem;
-            font-weight: 800;
+        .hero-stats .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 900;
             color: var(--primary);
-            margin-bottom: 4px;
+            line-height: 1.2;
+            text-shadow: 0 0 40px var(--primary-glow);
         }
-        .expertise-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: var(--space-xs);
-            font-weight: 700;
-            color: var(--text-light);
+        .hero-stats .stat-number .plus {
+            font-size: 1.8rem;
         }
-        .expertise-item p {
+        .hero-stats .stat-label {
             font-size: 0.9rem;
-            margin: 0;
             color: var(--text-dim);
+            font-weight: 500;
+            margin-top: 2px;
         }
 
-        /* ===== PORTFOLIO GALLERY ===== */
+        /* ===== SECTION TITLES ===== */
+        .section {
+            padding: 80px 0;
+        }
+        .section-alt {
+            background: var(--bg-medium);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        .section-title .sub-title {
+            display: inline-block;
+            background: rgba(142, 254, 0, 0.08);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 0.2rem 1.2rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--space-sm);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .section-title h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 16px;
+            color: var(--text-light);
+            letter-spacing: -0.02em;
+        }
+        .section-title h2 .highlight {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+        .section-title p {
+            max-width: 600px;
+            margin: var(--space-md) auto 0;
+            color: var(--text-dim);
+            font-size: 1.05rem;
+        }
+
+        /* ===== PORTFOLIO GRID - UNIVERSAL ===== */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
+        .portfolio-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .portfolio-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
         .portfolio-item {
             position: relative;
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            aspect-ratio: 4/3;
             background: var(--bg-card);
             border: 1px solid var(--border-light);
             transition: all var(--transition-slow);
             cursor: pointer;
+            backdrop-filter: blur(5px);
         }
         .portfolio-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: var(--shadow-card-hover);
-            border-color: var(--primary);
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--border-active);
+            box-shadow: var(--shadow-glow-hover);
         }
         .portfolio-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
-            transition: transform var(--transition-slow);
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .portfolio-item:hover img {
             transform: scale(1.08);
         }
-        
-        .portfolio-item .portfolio-overlay {
+        .portfolio-item .overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(3, 6, 0, 0.75), rgba(3, 6, 0, 0.92));
+            background: linear-gradient(180deg, 
+                rgba(3, 6, 0, 0.1) 0%, 
+                rgba(3, 6, 0, 0.85) 100%
+            );
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
+            padding: 20px;
             opacity: 0;
             transition: opacity var(--transition-base);
-            padding: var(--space-md);
-            text-align: center;
+            z-index: 2;
         }
-        .portfolio-item:hover .portfolio-overlay {
+        .portfolio-item:hover .overlay {
             opacity: 1;
         }
-        .portfolio-item .portfolio-overlay .icon-badge {
-            font-size: 2.5rem;
-            margin-bottom: var(--space-xs);
-            display: block;
-        }
-        .portfolio-item .portfolio-overlay h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
+        .portfolio-item .overlay .tag {
+            font-size: 0.6rem;
+            font-weight: 600;
             color: var(--primary);
-            margin-bottom: var(--space-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            text-shadow: 0 0 20px var(--primary-glow);
         }
-        .portfolio-item .portfolio-overlay p {
-            font-size: 0.9rem;
+        .portfolio-item .overlay h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .portfolio-item .overlay p {
+            font-size: 0.75rem;
             color: var(--text-dim);
-            margin: 0 0 var(--space-sm);
+            margin: 0;
         }
-        .portfolio-item .portfolio-overlay .view-icon {
-            width: 48px;
-            height: 48px;
+        .portfolio-item .overlay .view-icon {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: var(--primary-gradient);
             color: var(--bg-dark);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
-            transition: transform var(--transition-base);
+            font-size: 0.8rem;
+            opacity: 0;
+            transform: scale(0.6) rotate(-45deg);
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-glow);
         }
-        .portfolio-item:hover .portfolio-overlay .view-icon {
-            transform: scale(1.15);
+        .portfolio-item:hover .overlay .view-icon {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
         }
 
-        /* ===== PROJECT CARDS ===== */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-lg);
-        }
-        .project-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            transition: all var(--transition-slow);
-            position: relative;
-        }
-        .project-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius-lg);
-            border: 2px solid transparent;
-            transition: border-color var(--transition-slow);
-            pointer-events: none;
-        }
-        .project-card:hover::after {
-            border-color: var(--primary);
-        }
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-card-hover);
-        }
-        
-        .project-card .project-header {
-            background: var(--primary-gradient);
-            padding: var(--space-lg) var(--space-md) var(--space-md);
-            position: relative;
-            overflow: hidden;
-            min-height: 100px;
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-        }
-        .project-card .project-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 200px;
-            height: 200px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 50%;
-        }
-        .project-card .project-header .icon {
-            font-size: 2.8rem;
-            color: var(--bg-dark);
-            flex-shrink: 0;
-            position: relative;
-            z-index: 2;
-        }
-        .project-card .project-header .header-content {
-            position: relative;
-            z-index: 2;
-        }
-        .project-card .project-header h3 {
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--bg-dark);
-            margin: 0;
-            line-height: 1.3;
-        }
-        .project-card .project-header .category {
-            font-size: 0.8rem;
-            color: rgba(3, 6, 0, 0.7);
-            font-weight: 500;
-            margin-top: 2px;
-        }
-        
-        .project-card .project-body {
-            padding: var(--space-md);
-        }
-        .project-card .project-body .result-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(142, 254, 0, 0.1);
-            color: var(--primary);
-            padding: 4px 14px;
-            border-radius: var(--radius-full);
-            font-size: 0.75rem;
-            font-weight: 700;
-            border: 1px solid var(--border-light);
-            margin-bottom: var(--space-sm);
-        }
-        .project-card .project-body .stats-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: var(--space-xs) 0 var(--space-sm);
-        }
-        .project-card .project-body .stats-row .stat-item {
-            background: rgba(142, 254, 0, 0.06);
-            padding: 2px 12px;
-            border-radius: var(--radius-full);
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--primary);
-            border: 1px solid var(--border-light);
-        }
-        .project-card .project-body p {
-            font-size: 0.95rem;
-            color: var(--text-dim);
-            margin: 0 0 var(--space-sm);
-            line-height: 1.8;
-        }
-        .project-card .project-body .design-tools {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: var(--space-sm);
-        }
-        .project-card .project-body .design-tools span {
-            background: rgba(142, 254, 0, 0.06);
-            padding: 4px 14px;
-            border-radius: var(--radius-full);
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            border: 1px solid var(--border-light);
-            transition: all var(--transition-base);
-        }
-        .project-card .project-body .design-tools span:hover {
-            background: rgba(142, 254, 0, 0.12);
-            border-color: var(--primary);
-            color: var(--text-light);
-        }
-        .project-card .project-body .btn-link {
-            color: var(--primary);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all var(--transition-base);
-            font-size: 0.9rem;
-        }
-        .project-card .project-body .btn-link i {
-            transition: transform var(--transition-base);
-        }
-        .project-card .project-body .btn-link:hover {
-            gap: 14px;
-            color: var(--primary-light);
-        }
-        .project-card .project-body .btn-link:hover i {
-            transform: translateX(6px);
-        }
+        /* Aspect ratios */
+        .aspect-square { aspect-ratio: 1/1; }
+        .aspect-4-3 { aspect-ratio: 4/3; }
+        .aspect-16-9 { aspect-ratio: 16/9; }
+        .aspect-9-16 { aspect-ratio: 9/16; }
+        .aspect-3-4 { aspect-ratio: 3/4; }
+        .aspect-5-4 { aspect-ratio: 5/4; }
 
         /* ===== TOOLS ===== */
         .tools-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-sm);
+            gap: 12px;
             justify-content: center;
             max-width: 900px;
             margin: 0 auto;
         }
         .tool-badge {
             background: var(--bg-card);
+            backdrop-filter: blur(10px);
             padding: 0.7rem 1.8rem;
             border-radius: var(--radius-full);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border: 1px solid var(--border-light);
             transition: all var(--transition-base);
             display: inline-flex;
@@ -734,71 +657,18 @@
         .tool-badge .dot.figma { background: #A259FF; }
         .tool-badge .dot.green { background: var(--primary); }
 
-        /* ===== WORKING WITH ME ===== */
-        .working-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .working-card {
-            background: var(--bg-card);
-            padding: var(--space-lg) var(--space-md);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-light);
-            text-align: center;
-            transition: all var(--transition-slow);
-            position: relative;
-            overflow: hidden;
-        }
-        .working-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-            transform: scaleX(0);
-            transition: transform var(--transition-base);
-        }
-        .working-card:hover::before {
-            transform: scaleX(1);
-        }
-        .working-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-card-hover);
-            border-color: var(--border-medium);
-        }
-        .working-card .icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-sm);
-            display: block;
-        }
-        .working-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: var(--space-xs);
-            font-weight: 700;
-            color: var(--text-light);
-        }
-        .working-card p {
-            font-size: 0.95rem;
-            margin: 0;
-            color: var(--text-dim);
-        }
-
         /* ===== TESTIMONIALS ===== */
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
+            gap: 24px;
         }
         .testimonial-card {
             background: var(--bg-card);
-            padding: var(--space-lg);
-            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
             border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 32px 28px;
             text-align: center;
             transition: all var(--transition-slow);
             position: relative;
@@ -810,24 +680,24 @@
             left: 20px;
             font-size: 4rem;
             color: var(--primary);
-            opacity: 0.12;
+            opacity: 0.08;
             font-family: Georgia, serif;
             line-height: 1;
         }
         .testimonial-card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-card-hover);
-            border-color: var(--border-medium);
+            border-color: var(--border-active);
+            box-shadow: var(--shadow-glow-hover);
         }
         .testimonial-card .stars {
             color: #f59e0b;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             letter-spacing: 2px;
-            margin-bottom: var(--space-xs);
+            margin-bottom: 12px;
         }
         .testimonial-card p {
             font-style: italic;
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin: var(--space-xs) 0 var(--space-sm);
             color: var(--text-dim);
             line-height: 1.7;
@@ -838,7 +708,7 @@
             margin: 0;
         }
         .testimonial-card .role {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-dim);
             margin: 0;
         }
@@ -852,6 +722,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 0 80px var(--primary-glow);
         }
         .cta-section::before {
             content: '';
@@ -862,6 +733,7 @@
             height: 500px;
             background: rgba(255,255,255,0.06);
             border-radius: 50%;
+            animation: floatBlob 15s ease-in-out infinite;
         }
         .cta-section::after {
             content: '';
@@ -872,8 +744,14 @@
             height: 300px;
             background: rgba(255,255,255,0.04);
             border-radius: 50%;
+            animation: floatBlob 20s ease-in-out infinite reverse;
+        }
+        @keyframes floatBlob {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 20px) scale(1.2); }
         }
         .cta-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
             color: var(--bg-dark);
             font-size: 3.2rem;
             position: relative;
@@ -919,9 +797,9 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: var(--space-lg);
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
         }
         .footer-brand .logo {
             font-size: 1.8rem;
@@ -952,16 +830,18 @@
             transform: translateY(-3px);
         }
         .footer-col h4 {
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--text-light);
             margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .footer-col a {
             display: block;
             color: var(--text-dim);
             padding: 4px 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: color var(--transition-base);
         }
         .footer-col a:hover {
@@ -973,12 +853,12 @@
             padding-top: var(--space-md);
             text-align: center;
             color: var(--text-dim);
-            font-size: 0.9rem;
-            max-width: 1200px;
+            font-size: 0.85rem;
+            max-width: 1280px;
             margin-left: auto;
             margin-right: auto;
-            padding-left: 24px;
-            padding-right: 24px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
 
         /* ===== FLOATING ELEMENTS ===== */
@@ -1036,52 +916,6 @@
         .whatsapp-float i {
             font-size: 1.5rem;
         }
-        #progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-            z-index: 9999;
-            width: 0%;
-            transition: width 0.1s;
-        }
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary);
-            color: var(--bg-dark);
-            padding: 8px 16px;
-            z-index: 1001;
-            text-decoration: none;
-            border-radius: 0 0 var(--radius-sm) 0;
-            transition: top var(--transition-base);
-            font-weight: 600;
-        }
-        .skip-link:focus {
-            top: 0;
-        }
-
-        /* ===== ANIMATIONS ===== */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .scale-in {
-            opacity: 0;
-            transform: scale(0.92);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .scale-in.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
 
         /* ===== LIGHTBOX ===== */
         #lightbox {
@@ -1106,7 +940,8 @@
             max-height: 90%;
             border-radius: var(--radius-lg);
             object-fit: contain;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border-active);
+            box-shadow: var(--shadow-glow-hover);
         }
         #lightbox .close-btn {
             position: absolute;
@@ -1119,21 +954,37 @@
         }
         #lightbox .close-btn:hover {
             color: var(--primary);
+            transform: rotate(90deg);
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
         @media (max-width: 1024px) {
             .portfolio-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-md);
-            }
-            .expertise-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .working-grid {
+            .portfolio-grid-3 {
                 grid-template-columns: repeat(2, 1fr);
             }
             .testimonials-grid {
@@ -1147,13 +998,18 @@
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: var(--space-md);
             }
         }
 
         @media (max-width: 768px) {
             body {
                 padding-top: 70px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+            .header-inner {
+                padding: 0 20px;
             }
             .menu-toggle {
                 display: flex;
@@ -1180,7 +1036,7 @@
                 right: 0;
             }
             nav a {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 padding: 0.5rem 0;
             }
             .nav-cta {
@@ -1214,29 +1070,18 @@
 
             .portfolio-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: var(--space-sm);
+                gap: 16px;
             }
-            .projects-grid {
+            .portfolio-grid-3 {
                 grid-template-columns: 1fr;
-                gap: var(--space-md);
             }
-            .expertise-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .working-grid {
+            .portfolio-grid-2 {
                 grid-template-columns: 1fr;
             }
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
-            .project-card .project-header {
-                padding: var(--space-md);
-                min-height: 80px;
-            }
-            .project-card .project-header .icon {
-                font-size: 2rem;
-            }
             .cta-section {
                 padding: 48px 24px;
             }
@@ -1251,8 +1096,8 @@
             }
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: var(--space-md);
                 text-align: center;
+                gap: var(--space-md);
             }
             .footer-brand p {
                 margin: var(--space-sm) auto;
@@ -1272,12 +1117,12 @@
                 height: 44px;
                 font-size: 1.2rem;
             }
+            .section {
+                padding: 60px 0;
+            }
         }
 
         @media (max-width: 480px) {
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
@@ -1299,14 +1144,11 @@
                 font-size: 0.95rem;
                 width: 100%;
             }
-            .logo {
-                font-size: 1.4rem;
+            .logo img {
+                height: 40px;
             }
             .section-title h2 {
                 font-size: 1.8rem;
-            }
-            .project-card .project-header h3 {
-                font-size: 0.95rem;
             }
         }
     </style>
@@ -1323,21 +1165,21 @@
     <header id="main-header">
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <img src="images/jk-logo.png" alt="JK Tech Logo" height="70">
+                <img src="images/jk-logo.png" alt="JK Tech Logo">
             </a>
             <nav aria-label="Main navigation" id="main-nav">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="shopify.html">Shopify</a>
-    <a href="social-media.html">Social Media</a>
-    <a href="python.html">Python</a>
-    <a href="web-dev.html">Web Dev</a>
-    <a href="graphics.html"aria-current="page">Graphics</a>
-    <a href="seo.html">SEO</a>
-    <a href="odoo.html">Odoo ERP</a>
-    <a href="business-coaching.html">Coaching</a>
-    <a href="experience.html">Experience</a>
-    <a href="contact.html" class="nav-cta">Contact</a>
-</nav>
+                <a href="index.html">Home</a>
+                <a href="shopify.html">Shopify</a>
+                <a href="social-media.html">Social Media</a>
+                <a href="python.html">Python</a>
+                <a href="web-dev.html">Web Dev</a>
+                <a href="graphics.html" aria-current="page">Graphics</a>
+                <a href="seo.html">SEO</a>
+                <a href="odoo.html">Odoo ERP</a>
+                <a href="business-coaching.html">Coaching</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </nav>
             <button class="menu-toggle" id="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -1348,7 +1190,9 @@
 
     <main id="main-content">
 
-        <!-- HERO -->
+        <!-- ============================================
+           HERO
+           ============================================ -->
         <section class="page-hero hero">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -1360,7 +1204,7 @@
                     700+ print designs — all crafted to make your brand unforgettable.
                 </p>
                 <div class="hero-actions">
-                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#logos" class="btn">Explore My Work</a>
                     <a href="contact.html" class="btn btn-outline">Start a Project</a>
                 </div>
                 <div class="hero-stats">
@@ -1384,103 +1228,50 @@
             </div>
         </section>
 
-        <!-- DESIGN EXPERTISE -->
-        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="expertise-heading">
+        <!-- ============================================
+           SECTION 01: LOGOS
+           ============================================ -->
+        <section class="section section-alt" id="logos" aria-labelledby="logos-heading">
             <div class="container">
                 <div class="section-title">
-                    <span class="sub-title">What I Create</span>
-                    <h2 id="expertise-heading">Design <span class="highlight">Expertise</span></h2>
-                    <p>Core areas where I create impactful visual designs for brands.</p>
-                </div>
-                <div class="expertise-grid">
-                    <div class="expertise-item scale-in">
-                        <span class="icon">🎨</span>
-                        <span class="count">100+</span>
-                        <h3>Logo Design</h3>
-                        <p>Unique and memorable logos designed to represent your brand identity professionally.</p>
-                    </div>
-                    <div class="expertise-item scale-in">
-                        <span class="icon">📱</span>
-                        <span class="count">999+</span>
-                        <h3>Social Media Design</h3>
-                        <p>Engaging social media creatives that increase brand awareness and audience engagement.</p>
-                    </div>
-                    <div class="expertise-item scale-in">
-                        <span class="icon">🪪</span>
-                        <span class="count">700+</span>
-                        <h3>Print &amp; Branding</h3>
-                        <p>Business cards, brochures, flyers and complete brand identity packages.</p>
-                    </div>
-                    <div class="expertise-item scale-in">
-                        <span class="icon">📦</span>
-                        <span class="count">1000+</span>
-                        <h3>Product Design</h3>
-                        <p>Packaging, labels, mockups and product presentations that captivate customers.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PORTFOLIO GALLERY -->
-        <section class="section" id="portfolio" aria-labelledby="portfolio-heading">
-            <div class="container">
-                <div class="section-title">
-                    <span class="sub-title">My Portfolio</span>
-                    <h2 id="portfolio-heading">Selected <span class="highlight">Work</span></h2>
-                    <p>A collection of graphic design projects created for brands and businesses.</p>
+                    <span class="sub-title">01 — Brand Identity</span>
+                    <h2 id="logos-heading">Logo <span class="highlight">Design</span></h2>
+                    <p>100+ unique, memorable logos crafted to represent your brand's identity and values.</p>
                 </div>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item fade-up">
+                    <div class="portfolio-item aspect-square fade-up">
                         <img src="images/design1.gif" alt="Modern Logo Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">🎨</span>
-                            <h3>Modern Logo Design</h3>
-                            <p>Brand Identity</p>
+                        <div class="overlay">
+                            <span class="tag">Logo Design</span>
+                            <h4>Modern Minimal</h4>
+                            <p>Clean &amp; Professional</p>
                             <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-up">
-                        <img src="images/design2.gif" alt="Social Media Post Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">📱</span>
-                            <h3>Social Media Post</h3>
-                            <p>Instagram Marketing</p>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design2.gif" alt="Luxury Logo" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Logo Design</span>
+                            <h4>Luxury Brand</h4>
+                            <p>Elegant &amp; Premium</p>
                             <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-up">
-                        <img src="images/design3.gif" alt="Brand Identity Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">🪪</span>
-                            <h3>Brand Identity</h3>
-                            <p>Complete Branding</p>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design3.gif" alt="Tech Logo" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Logo Design</span>
+                            <h4>Tech Startup</h4>
+                            <p>Modern &amp; Dynamic</p>
                             <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-up">
-                        <img src="images/design4.gif" alt="Business Card Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">📄</span>
-                            <h3>Business Card</h3>
-                            <p>Print Design</p>
-                            <span class="view-icon"><i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up">
-                        <img src="images/design5.gif" alt="Website Banner Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">🖥️</span>
-                            <h3>Website Banner</h3>
-                            <p>Digital Marketing</p>
-                            <span class="view-icon"><i class="fas fa-expand"></i></span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up">
-                        <img src="images/design6.gif" alt="Promotional Flyer Design" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <span class="icon-badge">📢</span>
-                            <h3>Promotional Flyer</h3>
-                            <p>Print Design</p>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design4.gif" alt="Creative Logo" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Logo Design</span>
+                            <h4>Creative Studio</h4>
+                            <p>Artistic &amp; Unique</p>
                             <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
@@ -1488,193 +1279,675 @@
             </div>
         </section>
 
-        <!-- PROJECT DETAILS -->
-        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="projects-heading">
+        <!-- ============================================
+           SECTION 02: SOCIAL MEDIA POSTS
+           ============================================ -->
+        <section class="section" id="social" aria-labelledby="social-heading">
             <div class="container">
                 <div class="section-title">
-                    <span class="sub-title">Featured Projects</span>
-                    <h2 id="projects-heading">Featured <span class="highlight">Design Projects</span></h2>
-                    <p>Detailed case studies of my graphic design work.</p>
+                    <span class="sub-title">02 — Digital Marketing</span>
+                    <h2 id="social-heading">Social Media <span class="highlight">Posts</span></h2>
+                    <p>999+ engaging social media graphics designed to boost brand awareness and drive engagement.</p>
                 </div>
-                <div class="projects-grid">
-                    <!-- Project 1 - Logo Design -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">🎨</span>
-                            <div class="header-content">
-                                <h3>Business Logo Design</h3>
-                                <span class="category">100+ Logos Created</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-star"></i> 100+ Logos Designed
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">100+ Logos</span>
-                                <span class="stat-item">50+ Brands</span>
-                                <span class="stat-item">4.9★ Rating</span>
-                            </div>
-                            <p>Created 100+ unique and memorable logos for businesses across various industries. Each logo is designed to represent the brand's identity professionally and effectively.</p>
-                            <div class="design-tools">
-                                <span>Adobe Illustrator</span>
-                                <span>CorelDRAW</span>
-                                <span>Canva</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design2.gif" alt="Instagram Post" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Social Media</span>
+                            <h4>Instagram Post</h4>
+                            <p>Product Showcase</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-
-                    <!-- Project 2 - Social Media Graphics -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">📱</span>
-                            <div class="header-content">
-                                <h3>Social Media Graphics</h3>
-                                <span class="category">999+ Posts Created</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-chart-line"></i> 999+ Posts Created
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">999+ Posts</span>
-                                <span class="stat-item">500+ Banners</span>
-                                <span class="stat-item">200% Engagement</span>
-                            </div>
-                            <p>Designed 999+ social media graphics including posts, stories, and carousel ads for Facebook and Instagram. Created 500+ website banners that increased brand visibility.</p>
-                            <div class="design-tools">
-                                <span>Photoshop</span>
-                                <span>Canva</span>
-                                <span>Instagram</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design5.gif" alt="Facebook Post" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Social Media</span>
+                            <h4>Facebook Post</h4>
+                            <p>Brand Story</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-
-                    <!-- Project 3 - Print & Branding -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">🪪</span>
-                            <div class="header-content">
-                                <h3>Print &amp; Branding Design</h3>
-                                <span class="category">700+ Print Designs</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-check-circle"></i> 700+ Print Designs
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">700+ Print</span>
-                                <span class="stat-item">25+ CVs</span>
-                                <span class="stat-item">15+ Shop Banners</span>
-                            </div>
-                            <p>Created 700+ print designs including business cards, brochures, flyers, and marketing materials. Designed 25+ professionally crafted CVs (Resumes) and 15+ shop banners for local businesses.</p>
-                            <div class="design-tools">
-                                <span>Illustrator</span>
-                                <span>InDesign</span>
-                                <span>CorelDRAW</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design6.gif" alt="Carousel Post" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Social Media</span>
+                            <h4>Carousel Design</h4>
+                            <p>Multi-Slide Campaign</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
-
-                    <!-- Project 4 - Product Design -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">📦</span>
-                            <div class="header-content">
-                                <h3>Product &amp; Packaging Design</h3>
-                                <span class="category">1000+ Product Designs</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-box"></i> 1000+ Product Designs
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">1000+ Products</span>
-                                <span class="stat-item">99+ Mockups</span>
-                                <span class="stat-item">5★ Rating</span>
-                            </div>
-                            <p>Created 1000+ product designs including packaging, labels, and product mockups. Developed 99+ realistic mockup designs for product presentations and client approvals.</p>
-                            <div class="design-tools">
-                                <span>Photoshop</span>
-                                <span>Illustrator</span>
-                                <span>CorelDRAW</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 - YouTube Thumbnails -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">▶️</span>
-                            <div class="header-content">
-                                <h3>YouTube Thumbnails</h3>
-                                <span class="category">100+ Thumbnails</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-play"></i> 100+ Thumbnails Created
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">100+ Thumbnails</span>
-                                <span class="stat-item">144+ Profile Pics</span>
-                                <span class="stat-item">High CTR</span>
-                            </div>
-                            <p>Created 100+ eye-catching YouTube thumbnails that drive high click-through rates. Also designed 144+ professional profile pictures and enhanced images for personal branding.</p>
-                            <div class="design-tools">
-                                <span>Photoshop</span>
-                                <span>Canva</span>
-                                <span>Illustrator</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 - Shop & Marketing Banners -->
-                    <div class="project-card fade-up">
-                        <div class="project-header">
-                            <span class="icon">🏪</span>
-                            <div class="header-content">
-                                <h3>Shop &amp; Marketing Banners</h3>
-                                <span class="category">700+ Banners</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="result-badge">
-                                <i class="fas fa-bullhorn"></i> 700+ Banners Designed
-                            </div>
-                            <div class="stats-row">
-                                <span class="stat-item">700+ Banners</span>
-                                <span class="stat-item">15+ Shops</span>
-                                <span class="stat-item">50+ Clients</span>
-                            </div>
-                            <p>Designed 700+ print banners for businesses including 15+ local shop banners and promotional materials. Created impactful marketing visuals that helped businesses attract customers.</p>
-                            <div class="design-tools">
-                                <span>CorelDRAW</span>
-                                <span>Photoshop</span>
-                                <span>Illustrator</span>
-                            </div>
-                            <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design1.gif" alt="Story Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Social Media</span>
+                            <h4>Instagram Story</h4>
+                            <p>Interactive Design</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TOOLS -->
-        <section class="section" aria-labelledby="tools-heading">
+        <!-- ============================================
+           SECTION 03: WEB BANNERS
+           ============================================ -->
+        <section class="section section-alt" id="banners" aria-labelledby="banners-heading">
             <div class="container">
                 <div class="section-title">
-                    <span class="sub-title">My Toolkit</span>
+                    <span class="sub-title">03 — Digital Ads</span>
+                    <h2 id="banners-heading">Web <span class="highlight">Banners</span></h2>
+                    <p>500+ high-converting web banners designed for websites, ads, and digital campaigns.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design5.gif" alt="Web Banner" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Web Banner</span>
+                            <h4>Hero Banner</h4>
+                            <p>Website Header</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design3.gif" alt="Ad Banner" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Web Banner</span>
+                            <h4>Google Ad</h4>
+                            <p>Display Campaign</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design6.gif" alt="Promo Banner" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Web Banner</span>
+                            <h4>Promotional</h4>
+                            <p>Sale Campaign</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 04: POSTERS
+           ============================================ -->
+        <section class="section" id="posters" aria-labelledby="posters-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">04 — Print Marketing</span>
+                    <h2 id="posters-heading">Posters &amp; <span class="highlight">Banners</span></h2>
+                    <p>Professional posters and banners for events, promotions, and brand awareness campaigns.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design6.gif" alt="Poster Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Poster</span>
+                            <h4>Event Poster</h4>
+                            <p>Concert Promo</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design4.gif" alt="Poster Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Poster</span>
+                            <h4>Brand Poster</h4>
+                            <p>Product Launch</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design1.gif" alt="Poster Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Poster</span>
+                            <h4>Campaign Poster</h4>
+                            <p>Social Cause</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design5.gif" alt="Poster Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Poster</span>
+                            <h4>Exhibition Poster</h4>
+                            <p>Art Show</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 05: FLYERS
+           ============================================ -->
+        <section class="section section-alt" id="flyers" aria-labelledby="flyers-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">05 — Promotional</span>
+                    <h2 id="flyers-heading">Flyers &amp; <span class="highlight">Brochures</span></h2>
+                    <p>Creative flyers and brochures designed to capture attention and deliver your message effectively.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design6.gif" alt="Flyer Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Flyer</span>
+                            <h4>Business Flyer</h4>
+                            <p>Service Promotion</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design4.gif" alt="Brochure Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Brochure</span>
+                            <h4>Corporate Brochure</h4>
+                            <p>Company Profile</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design2.gif" alt="Flyer Design" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Flyer</span>
+                            <h4>Event Flyer</h4>
+                            <p>Party &amp; Celebration</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 06: YOUTUBE THUMBNAILS
+           ============================================ -->
+        <section class="section" id="thumbnails" aria-labelledby="thumbnails-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">06 — Video Marketing</span>
+                    <h2 id="thumbnails-heading">YouTube <span class="highlight">Thumbnails</span></h2>
+                    <p>100+ high-click-through-rate YouTube thumbnails designed to maximize views and engagement.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design3.gif" alt="YouTube Thumbnail" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Thumbnail</span>
+                            <h4>Tech Tutorial</h4>
+                            <p>High CTR Design</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design5.gif" alt="YouTube Thumbnail" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Thumbnail</span>
+                            <h4>Gaming Video</h4>
+                            <p>Eye-Catching</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design1.gif" alt="YouTube Thumbnail" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Thumbnail</span>
+                            <h4>Vlog Episode</h4>
+                            <p>Engaging Design</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design6.gif" alt="YouTube Thumbnail" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Thumbnail</span>
+                            <h4>Educational</h4>
+                            <p>Learning Content</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 07: ICONS
+           ============================================ -->
+        <section class="section section-alt" id="icons" aria-labelledby="icons-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">07 — UI/UX Design</span>
+                    <h2 id="icons-heading">Icon <span class="highlight">Design</span></h2>
+                    <p>Custom icon sets designed for websites, apps, and brand identity systems.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design2.gif" alt="Icon Set" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Icons</span>
+                            <h4>UI Icon Set</h4>
+                            <p>24 Icons</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design4.gif" alt="Icon Set" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Icons</span>
+                            <h4>Social Icons</h4>
+                            <p>16 Icons</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design1.gif" alt="Icon Set" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Icons</span>
+                            <h4>Business Icons</h4>
+                            <p>32 Icons</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design5.gif" alt="Icon Set" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Icons</span>
+                            <h4>Custom Icons</h4>
+                            <p>20 Icons</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 08: BUSINESS CARDS
+           ============================================ -->
+        <section class="section" id="business-cards" aria-labelledby="business-cards-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">08 — Stationery</span>
+                    <h2 id="business-cards-heading">Business <span class="highlight">Cards</span></h2>
+                    <p>200+ premium business card designs that make a lasting first impression.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-5-4 fade-up">
+                        <img src="images/design4.gif" alt="Business Card" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Business Card</span>
+                            <h4>Corporate Card</h4>
+                            <p>Minimal &amp; Professional</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-5-4 fade-up">
+                        <img src="images/design2.gif" alt="Business Card" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Business Card</span>
+                            <h4>Creative Card</h4>
+                            <p>Unique &amp; Artistic</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-5-4 fade-up">
+                        <img src="images/design6.gif" alt="Business Card" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Business Card</span>
+                            <h4>Luxury Card</h4>
+                            <p>Premium &amp; Elegant</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-5-4 fade-up">
+                        <img src="images/design3.gif" alt="Business Card" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Business Card</span>
+                            <h4>Modern Card</h4>
+                            <p>Contemporary Design</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 09: LETTERHEADS
+           ============================================ -->
+        <section class="section section-alt" id="letterheads" aria-labelledby="letterheads-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">09 — Stationery</span>
+                    <h2 id="letterheads-heading">Letterheads &amp; <span class="highlight">Stationery</span></h2>
+                    <p>Professional letterhead designs that maintain brand consistency across all communication.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design1.gif" alt="Letterhead" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Letterhead</span>
+                            <h4>Corporate Letterhead</h4>
+                            <p>Branded Stationery</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design5.gif" alt="Stationery" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Stationery</span>
+                            <h4>Complete Set</h4>
+                            <p>Letterhead + Envelope</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design3.gif" alt="Letterhead" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Letterhead</span>
+                            <h4>Creative Letterhead</h4>
+                            <p>Design Agency</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 10: COLOR PALETTES
+           ============================================ -->
+        <section class="section" id="color-palettes" aria-labelledby="color-palettes-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">10 — Brand Guidelines</span>
+                    <h2 id="color-palettes-heading">Color <span class="highlight">Palettes</span></h2>
+                    <p>Strategic color palettes that define brand identity and emotional connection.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design2.gif" alt="Color Palette" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Color Palette</span>
+                            <h4>Minimal Palette</h4>
+                            <p>Clean &amp; Modern</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design6.gif" alt="Color Palette" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Color Palette</span>
+                            <h4>Vibrant Palette</h4>
+                            <p>Bold &amp; Energetic</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design4.gif" alt="Color Palette" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Color Palette</span>
+                            <h4>Pastel Palette</h4>
+                            <p>Soft &amp; Calming</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-square fade-up">
+                        <img src="images/design1.gif" alt="Color Palette" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Color Palette</span>
+                            <h4>Dark Palette</h4>
+                            <p>Premium &amp; Sophisticated</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 11: BRANDING MATERIALS
+           ============================================ -->
+        <section class="section section-alt" id="branding-materials" aria-labelledby="branding-materials-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">11 — Brand Identity</span>
+                    <h2 id="branding-materials-heading">Branding <span class="highlight">Materials</span></h2>
+                    <p>Complete brand identity packages including all collateral materials.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design3.gif" alt="Branding" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Branding</span>
+                            <h4>Full Identity</h4>
+                            <p>Complete Package</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design1.gif" alt="Branding" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Branding</span>
+                            <h4>Brand Guidelines</h4>
+                            <p>Style Guide</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design5.gif" alt="Branding" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Branding</span>
+                            <h4>Collateral Set</h4>
+                            <p>All Materials</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 12: REELS & SHORTS
+           ============================================ -->
+        <section class="section" id="reels" aria-labelledby="reels-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">12 — Video Content</span>
+                    <h2 id="reels-heading">Reels &amp; <span class="highlight">Shorts</span></h2>
+                    <p>Engaging short-form video content designed for maximum reach and virality.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-9-16 fade-up">
+                        <img src="images/design2.gif" alt="Reel" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Reel</span>
+                            <h4>Product Reel</h4>
+                            <p>12.4K Views</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-9-16 fade-up">
+                        <img src="images/design5.gif" alt="Reel" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Reel</span>
+                            <h4>Design Process</h4>
+                            <p>8.7K Views</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-9-16 fade-up">
+                        <img src="images/design6.gif" alt="Reel" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Reel</span>
+                            <h4>Before &amp; After</h4>
+                            <p>15.2K Views</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-9-16 fade-up">
+                        <img src="images/design4.gif" alt="Short" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Short</span>
+                            <h4>Brand Story</h4>
+                            <p>6.8K Views</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 13: LOCAL WALL HANGINGS
+           ============================================ -->
+        <section class="section section-alt" id="wall-hangings" aria-labelledby="wall-hangings-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">13 — Local Marketing</span>
+                    <h2 id="wall-hangings-heading">Wall Hangings &amp; <span class="highlight">Banners</span></h2>
+                    <p>Local wall hanging banners and posters designed for retail stores and local businesses.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design6.gif" alt="Wall Hanging" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Wall Hanging</span>
+                            <h4>Retail Banner</h4>
+                            <p>Store Display</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design1.gif" alt="Wall Hanging" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Wall Hanging</span>
+                            <h4>Promotional Banner</h4>
+                            <p>Sale Campaign</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-3-4 fade-up">
+                        <img src="images/design3.gif" alt="Wall Hanging" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Wall Hanging</span>
+                            <h4>Brand Banner</h4>
+                            <p>Store Front</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 14: SIGNBOARD GRAPHICS
+           ============================================ -->
+        <section class="section" id="signboards" aria-labelledby="signboards-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">14 — Outdoor Advertising</span>
+                    <h2 id="signboards-heading">Signboard <span class="highlight">Graphics</span></h2>
+                    <p>Professional signboard designs for retail stores, shops, and outdoor advertising.</p>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design5.gif" alt="Signboard" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Signboard</span>
+                            <h4>Store Signage</h4>
+                            <p>Retail Shop</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design2.gif" alt="Signboard" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Signboard</span>
+                            <h4>Billboard Design</h4>
+                            <p>Outdoor Advertising</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design4.gif" alt="Signboard" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Signboard</span>
+                            <h4>Shop Front Sign</h4>
+                            <p>Business Signage</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-16-9 fade-up">
+                        <img src="images/design6.gif" alt="Signboard" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Signboard</span>
+                            <h4>Directional Sign</h4>
+                            <p>Wayfinding</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 15: CASH MEMO DESIGN
+           ============================================ -->
+        <section class="section section-alt" id="cash-memo" aria-labelledby="cash-memo-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">15 — Business Forms</span>
+                    <h2 id="cash-memo-heading">Cash Memo &amp; <span class="highlight">Invoice Design</span></h2>
+                    <p>Professional cash memo and invoice designs for retailers and businesses.</p>
+                </div>
+                <div class="portfolio-grid-3">
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design3.gif" alt="Cash Memo" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Cash Memo</span>
+                            <h4>Retail Invoice</h4>
+                            <p>Store Receipt</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design1.gif" alt="Invoice" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Invoice</span>
+                            <h4>Professional Invoice</h4>
+                            <p>Business Billing</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item aspect-4-3 fade-up">
+                        <img src="images/design5.gif" alt="Receipt" loading="lazy">
+                        <div class="overlay">
+                            <span class="tag">Receipt</span>
+                            <h4>Custom Receipt</h4>
+                            <p>Branded Format</p>
+                            <span class="view-icon"><i class="fas fa-expand"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+           SECTION 16: TOOLS
+           ============================================ -->
+        <section class="section" id="tools" aria-labelledby="tools-heading">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">16 — My Toolkit</span>
                     <h2 id="tools-heading">Design <span class="highlight">Tools</span></h2>
-                    <p>Software and tools I use to create professional designs.</p>
+                    <p>Professional software and tools I use to create every design.</p>
                 </div>
                 <div class="tools-grid">
                     <span class="tool-badge"><span class="dot illustrator"></span> Adobe Illustrator</span>
@@ -1685,43 +1958,19 @@
                     <span class="tool-badge"><span class="dot figma"></span> Figma</span>
                     <span class="tool-badge"><span class="dot green"></span> Adobe XD</span>
                     <span class="tool-badge"><span class="dot green"></span> Procreate</span>
+                    <span class="tool-badge"><span class="dot green"></span> After Effects</span>
+                    <span class="tool-badge"><span class="dot green"></span> Premiere Pro</span>
                 </div>
             </div>
         </section>
 
-        <!-- WORKING WITH ME -->
-        <section class="section" style="background: rgba(26, 42, 10, 0.2);" aria-labelledby="working-heading">
+        <!-- ============================================
+           SECTION 17: TESTIMONIALS
+           ============================================ -->
+        <section class="section section-alt" id="testimonials" aria-labelledby="testimonials-heading">
             <div class="container">
                 <div class="section-title">
-                    <span class="sub-title">Why Work With Me</span>
-                    <h2 id="working-heading">Working With <span class="highlight">Me</span></h2>
-                    <p>What you can expect when you work with me on your design projects.</p>
-                </div>
-                <div class="working-grid">
-                    <div class="working-card fade-up">
-                        <span class="icon">💬</span>
-                        <h3>Direct Communication</h3>
-                        <p>You work directly with the designer. No agency layers, no delays — just clear communication and fast results.</p>
-                    </div>
-                    <div class="working-card fade-up">
-                        <span class="icon">🧠</span>
-                        <h3>Creative Strategy</h3>
-                        <p>Every design is built with strategy to help your brand stand out visually and attract customers.</p>
-                    </div>
-                    <div class="working-card fade-up">
-                        <span class="icon">✨</span>
-                        <h3>Modern Design Standards</h3>
-                        <p>Clean, modern and minimal design styles that follow today's digital branding trends.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS -->
-        <section class="section" aria-labelledby="testimonials-heading">
-            <div class="container">
-                <div class="section-title">
-                    <span class="sub-title">Client Feedback</span>
+                    <span class="sub-title">17 — Client Feedback</span>
                     <h2 id="testimonials-heading">Client <span class="highlight">Testimonials</span></h2>
                     <p>What clients say about my graphic design work.</p>
                 </div>
@@ -1748,7 +1997,9 @@
             </div>
         </section>
 
-        <!-- CTA -->
+        <!-- ============================================
+           CTA
+           ============================================ -->
         <div class="container">
             <section class="cta-section" aria-labelledby="cta-heading">
                 <h2 id="cta-heading">Let's Create <br>Something Amazing</h2>
@@ -1759,7 +2010,9 @@
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- ============================================
+       FOOTER
+       ============================================ -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
@@ -1789,11 +2042,16 @@
             </div>
             <div class="footer-col">
                 <h4>Services</h4>
-                <a href="graphics.html#portfolio">Logo Design</a>
-                <a href="graphics.html#portfolio">Social Media Design</a>
-                <a href="graphics.html#portfolio">Brand Identity</a>
-                <a href="graphics.html#portfolio">Print Design</a>
-                <a href="graphics.html#portfolio">Marketing Materials</a>
+                <a href="#logos">Logo Design</a>
+                <a href="#social">Social Media</a>
+                <a href="#banners">Web Banners</a>
+                <a href="#posters">Posters</a>
+                <a href="#flyers">Flyers</a>
+                <a href="#thumbnails">Thumbnails</a>
+                <a href="#icons">Icons</a>
+                <a href="#business-cards">Business Cards</a>
+                <a href="#reels">Reels</a>
+                <a href="#signboards">Signboards</a>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
@@ -1825,8 +2083,8 @@
     </div>
 
     <!-- ============================================
-    SCRIPTS
-    ============================================ -->
+       SCRIPTS
+       ============================================ -->
     <script>
         (function() {
             'use strict';
@@ -1976,9 +2234,9 @@
             });
 
             // ---- LOG ----
-            console.log('🚀 JK Tech - Graphic Design Portfolio loaded');
-            console.log('💚 Theme: Dark Green / Lime Flash');
-            console.log('🎨 7+ years, 100+ logos, 999+ social media posts');
+            console.log('🚀 JK Tech - Graphic Design Portfolio (Complete Edition)');
+            console.log('💚 17+ Dedicated Sections with proper titles and descriptions');
+            console.log('📋 Sections: Logos, Social, Banners, Posters, Flyers, Thumbnails, Icons, Business Cards, Letterheads, Color Palettes, Branding Materials, Reels, Wall Hangings, Signboards, Cash Memo, Tools, Testimonials');
 
         })();
     </script>
